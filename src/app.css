@@ -1,0 +1,15 @@
+@import "@fontsource/rubik/800.css";
+@import "@fontsource/inter/400.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    font-family: Inter;
+    box-sizing: border-box;
+}
+
+body {
+    scroll-behavior: smooth;
+}
