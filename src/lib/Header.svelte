@@ -7,11 +7,11 @@
 </script>
 
 <header 
-    class="px-3 py-3 fixed w-full transition-colors"
+    class="py-3 fixed w-full transition-colors z-50"
     class:bg-white={solid}
     class:shadow-lg={solid}
 >
-    <div class="flex max-w-[1280px] mx-auto justify-between">
+    <div class="flex max-w-[1440px] px-3 lg:px-8 mx-auto justify-between">
         <Logo variant={transparent ? 'white' : solid ? 'normal' : undefined} />
     </div>
 </header>

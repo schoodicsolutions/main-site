@@ -6,12 +6,14 @@
 </script>
 
 <div class="flex items-center select-none" aria-roledescription="logo">
-    <Mark 
-        height="31px"
-        variant={normal ? 'blue' : white ? 'white' : undefined}
-    />
+    <div class="h-6 md:h-8">
+        <Mark 
+            height="100%"
+            variant={normal ? 'blue' : white ? 'white' : undefined}
+        />
+    </div>
     <span
-        class="font-brand font-bold text-3xl tracking-tight transition-colors"
+        class="font-brand font-bold text-2xl md:text-3xl tracking-tight transition-colors"
         class:text-black={normal}
         class:text-white={white}
     >
