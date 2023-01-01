@@ -1,13 +1,15 @@
 <script lang="ts">
     import { page } from '$app/stores';
+	import { scrollTo } from './scroll';
+	import { currentSection } from './scroll/stores';
 
     export let color: 'black' | 'white' = 'black';
     $: [black, white] = [color === 'black', color === 'white']
 
     const menu = [
-        {caption: 'Home', path: '/'},
-        {caption: 'Services', path: '/', hash: '#services', submenu: []},
-        {caption: 'Contact', path: '/', hash: '#contact'},
+        {caption: 'Home', scrollTo: '__top'},
+        {caption: 'Services', scrollTo: 'services'},
+        {caption: 'Contact', scrollTo: 'contact'},
     ]
 
 </script>
@@ -20,13 +22,14 @@
 >
     <ul class="flex gap-8 font-semibold">
         {#each menu as link}
-            <li class="flex flex-col">
-                <a href={`${link.path}${link.hash || ''}`}>{link.caption}</a>
+            <li class="flex flex-col mt-1">
+                <!-- svelte-ignore a11y-missing-attribute -->
+                <a use:scrollTo={link.scrollTo}>{link.caption}</a>
                 <div 
-                    class="h-0.5 w-full"
+                    class="h-0.5 w-full -mt-0.5"
                     class:bg-brand={black}
                     class:bg-white={white}
-                    class:invisible={`${link.path}${link.hash || ""}` !== `${$page.url.pathname}${$page.url.hash}`}
+                    class:invisible={$currentSection !== link.scrollTo}
                 />
             </li>
         {/each}

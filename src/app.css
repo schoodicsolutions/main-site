@@ -21,11 +21,7 @@
         scroll-behavior: smooth;
     }
     section {
-      @apply snap-y flex flex-col gap-6 py-6 lg:py-12;
-    }
-
-    h2[data-autohash] {
-        @apply scroll-mt-24;
+      @apply snap-y scroll-mt-24 flex flex-col gap-6 py-6 lg:py-12;
     }
 }
 

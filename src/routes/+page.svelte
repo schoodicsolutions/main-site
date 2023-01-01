@@ -1,15 +1,15 @@
 <script lang="ts">
 	import Hero from "$lib/Hero.svelte";
     import Input from "$lib/Input.svelte";
+	import { scrollRef } from "$lib/scroll";
 	import ServiceIcon from "$lib/ServiceIcon.svelte";
 </script>
 
 <main>
-    <div id="__top" data-autohash />
 
     <Hero />
 
-    <section class="py-6 lg:py-12">
+    <section class="py-6 lg:py-12" use:scrollRef={'services'}>
         <h2 data-autohash id="services">
             Services We Offer
         </h2>
@@ -42,7 +42,7 @@
         </div>
     </section>
     
-    <section class="bg-almond">
+    <section class="bg-almond" use:scrollRef={'contact'}>
         <h2 data-autohash id="contact">Contact</h2>
         <form class="max-w-full w-96 m-auto px-4">
             <fieldset class="flex flex-col gap-4 items-center width-content">
