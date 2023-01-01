@@ -7,7 +7,7 @@
 <main>
     <Hero />
 
-    <section class="py-6 lg:py-12">
+    <section class="py-6 lg:py-12" id="services">
         <h2>
             Services We Offer
         </h2>
@@ -40,7 +40,7 @@
         </div>
     </section>
     
-    <section class="bg-almond">
+    <section class="bg-almond" id="contact">
         <h2>Contact</h2>
         <form class="max-w-full w-96 m-auto px-4">
             <fieldset class="flex flex-col gap-4 items-center width-content">
@@ -49,7 +49,7 @@
                 <Input name="company" label="Organization" placeholder="Acme Industries" />
                 <Input name="phone" label="Phone" placeholder="(207) 555-0195" required />
                 <Input name="message" label="Message" placeholder="Additional information here" required multiline />
-                <button class="ml-auto">Submit</button>
+                <button class="button button-blue ml-auto">Submit</button>
             </fieldset>
         </form>
     </section>

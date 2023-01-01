@@ -17,6 +17,6 @@
         class:text-black={normal}
         class:text-white={white}
     >
-        Schoodic Media
+        Schoodic&nbsp;Media
     </span>
 </div>
