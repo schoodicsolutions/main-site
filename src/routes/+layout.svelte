@@ -14,9 +14,12 @@
     let variant: 'solid' | 'transparent' = 'transparent';
     $: variant = scrollY > 64 ? 'solid' : 'transparent';
 
+    /* Disable scroll navigation for now
     onMount(() => {
         const options = { threshold: 1 };
         const callback = (e: IntersectionObserverEntry[]) => {
+
+            console.log(e.map(({isIntersecting, target}) => ({id: target && target.id, isIntersecting})));
             const entry = e.find(entry => entry.isIntersecting);
 
             if (!entry || !entry.target || !entry.target.id) {
@@ -24,8 +27,6 @@
             }
 
             const navOptions = { replaceState: true, noScroll: true };
-
-            console.log(entry.target.id);
 
             if (entry.target.id === '__top') {
                 goto($page.url.pathname, navOptions);
@@ -42,6 +43,7 @@
             (i) => observer.observe(i)
         );
     });
+    */
 </script>
 
 <svelte:head> 
