@@ -12,6 +12,7 @@
         {caption: 'Contact', scrollTo: 'contact'},
     ]
 
+    $: section = $currentSection;
 </script>
 
 <nav 
@@ -29,7 +30,7 @@
                     class="h-0.5 w-full -mt-0.5"
                     class:bg-brand={black}
                     class:bg-white={white}
-                    class:invisible={$currentSection !== link.scrollTo}
+                    class:invisible={section !== link.scrollTo}
                 />
             </li>
         {/each}
