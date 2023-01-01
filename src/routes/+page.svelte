@@ -5,10 +5,12 @@
 </script>
 
 <main>
+    <div id="__top" data-autohash />
+
     <Hero />
 
-    <section class="py-6 lg:py-12" data-autohash id="services">
-        <h2>
+    <section class="py-6 lg:py-12">
+        <h2 data-autohash id="services">
             Services We Offer
         </h2>
         <div class="flex flex-col gap-16 lg:gap-0 lg:flex-row justify-center items-center pb-6 lg:pb-12">
@@ -40,8 +42,8 @@
         </div>
     </section>
     
-    <section class="bg-almond" data-autohash id="contact">
-        <h2>Contact</h2>
+    <section class="bg-almond">
+        <h2 data-autohash id="contact">Contact</h2>
         <form class="max-w-full w-96 m-auto px-4">
             <fieldset class="flex flex-col gap-4 items-center width-content">
                 <Input name="name" label="Name" placeholder="John Doe" required />

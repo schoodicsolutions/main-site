@@ -12,7 +12,7 @@
 
 <svelte:window bind:scrollY />
 
-<section class="hero" id="__top" data-autohash bind:clientHeight style:opacity>
+<section class="hero" bind:clientHeight style:opacity>
     <div 
         class="lg:h-[768px] h-[calc(100vh+32px)] max-w-[1440px] mx-auto overflow-hidden relative pt-40 justify-center lg:justify-start"
     >

@@ -24,8 +24,8 @@
       @apply  flex flex-col gap-6 py-6 lg:py-12;
     }
 
-    section::before {
-        @apply h-72 -mt-72 invisible;
+    h2[data-autohash]::before {
+        @apply block h-10 -mt-10 invisible;
         content: " ";
     }
 }

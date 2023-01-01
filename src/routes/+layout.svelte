@@ -15,30 +15,32 @@
     $: variant = scrollY > 64 ? 'solid' : 'transparent';
 
     onMount(() => {
-        let observer = new IntersectionObserver(
-            (e) => {
-                const entries = e.filter(entry => entry.isIntersecting)
-                const last = entries.pop();
-                if (!last || !last.target) {
-                    return;
-                }
-                if (last.target.id) {
-                    console.log(last.target.id);
-                    const navOptions = { replaceState: true, noScroll: true };
-                    if (last.target.id === '__top') {
-                        goto($page.url.pathname, navOptions);
-                        return;
-                    }
-                    const hash = `#${last.target.id}`;
-                    goto(`${$page.url.pathname}${hash}`, navOptions);
-                }
-            },
-            {
-                threshold: 1,
-            }
-        );
+        const options = { threshold: 1 };
+        const callback = (e: IntersectionObserverEntry[]) => {
+            const entry = e.find(entry => entry.isIntersecting);
 
-        document.querySelectorAll("[data-autohash]").forEach(i => observer.observe(i));
+            if (!entry || !entry.target || !entry.target.id) {
+                return;
+            }
+
+            const navOptions = { replaceState: true, noScroll: true };
+
+            console.log(entry.target.id);
+
+            if (entry.target.id === '__top') {
+                goto($page.url.pathname, navOptions);
+                return;
+            }
+
+            const hash = `#${entry.target.id}`;
+            goto(`${$page.url.pathname}${hash}`, navOptions);
+        };
+
+        let observer = new IntersectionObserver(callback, options);
+
+        document.querySelectorAll("[data-autohash]").forEach(
+            (i) => observer.observe(i)
+        );
     });
 </script>
 
