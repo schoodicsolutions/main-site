@@ -18,7 +18,7 @@
     {/if}
     {#if multiline}
         <textarea
-            class="textbox"
+            class="textbox resize-none h-40"
             {name}
             id={name} 
             {required} 
