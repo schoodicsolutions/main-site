@@ -4,9 +4,10 @@
     export let label: string | undefined = undefined;
     export let placeholder: string | undefined = undefined;
     export let required: boolean = false;
+    export let multiline: boolean = false;
 </script>
 
-<div class="flex flex-col gap-0.5 max-w-[400px]">
+<div class="flex flex-col gap-0.5 w-full">
     {#if label}
         <label for={name}>
             <span>{label}</span>
@@ -15,12 +16,23 @@
             {/if}
         </label>
     {/if}
-    <input
-        class="rounded-sm p-1 border border-gray-200 w-full"
-        {type}
-        {name}
-        id={name} 
-        {required} 
-        {placeholder}
-    />
+    {#if multiline}
+        <textarea
+            class="textbox"
+            {name}
+            id={name} 
+            {required} 
+            {placeholder}
+        />
+    {/if}
+    {#if !multiline}
+        <input
+            class="textbox"
+            {type}
+            {name}
+            id={name} 
+            {required} 
+            {placeholder}
+        />
+    {/if}
 </div>

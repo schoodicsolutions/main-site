@@ -4,10 +4,13 @@
     export let variant: 'transparent' | 'solid' = 'solid';
 
     $: [transparent, solid] = [variant === 'transparent', variant === 'solid'];
+
 </script>
 
 <header 
-    class="py-3 fixed w-full transition-colors z-50"
+    class="fixed w-full transition-colors transition-spacing z-50"
+    class:py-6={transparent}
+    class:py-3={solid}
     class:bg-white={solid}
     class:shadow-lg={solid}
 >

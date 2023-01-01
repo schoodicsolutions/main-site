@@ -10,6 +10,9 @@ module.exports = {
       },
       fontFamily: {
         'brand': 'Rubik',
+      },
+      transitionProperty: {
+        'spacing': 'margin, padding',
       }
     },
   },
