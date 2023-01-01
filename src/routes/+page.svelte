@@ -55,9 +55,11 @@
 </main>
 
 <footer>
-    <Wave class="bg-almond text-croix" height="100%" />
+    <div class="w-full h-8 lg:h-[6vw] bg-almond">
+        <Wave class="text-croix" height="100%" />
+    </div>
     <div class="bg-croix text-white">
-        <div class="flex gap-4">
+        <div class="flex justify-center gap-4 py-20">
             <div class="flex flex-col">
                 <h2>Services</h2>
                 <p>Lorem Ipsum</p>
@@ -69,5 +71,4 @@
         </div>
     </div>
 </footer>
-
 
