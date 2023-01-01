@@ -1,21 +1,12 @@
 <script lang="ts">
 	import Hero from "$lib/Hero.svelte";
-import Input from "$lib/Input.svelte";
-    import Mark from "$lib/Mark.svelte";
-	import Wave from "$lib/Wave.svelte";
-    
-    let scrollY: number;
-    let clientHeight: number;
-
-    $: scrollY; $: clientHeight;
-
-    $: opacity = 1 - Math.round(Math.min(1, scrollY / clientHeight) * 100) / 100;
+    import Input from "$lib/Input.svelte";
 </script>
 
 <svelte:window bind:scrollY />
 
 <main>
-    <Hero bind:clientHeight {opacity} />
+    <Hero />
 
     <section class="py-6 lg:py-12">
         <h2>

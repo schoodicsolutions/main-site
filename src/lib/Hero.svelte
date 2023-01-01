@@ -2,9 +2,15 @@
 	import Mark from "./Mark.svelte";
 	import Wave from "./Wave.svelte";
 
-    export let clientHeight: number;
-    export let opacity: number;
+    let scrollY: number;
+    let clientHeight: number;
+
+    $: scrollY; $: clientHeight;
+
+    $: opacity = 1 - Math.round(Math.min(1, scrollY / clientHeight) * 100) / 100;
 </script>
+
+<svelte:window bind:scrollY />
 
 <section class="hero" bind:clientHeight style:opacity>
     <div 
