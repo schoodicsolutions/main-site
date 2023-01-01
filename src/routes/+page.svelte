@@ -1,5 +1,6 @@
 <script lang="ts">
-	import Mark from "$lib/Mark.svelte";
+	import Input from "$lib/Input.svelte";
+import Mark from "$lib/Mark.svelte";
 	import Wave from "$lib/Wave.svelte";
     
     let scrollY: number;
@@ -47,10 +48,19 @@
         </h2>
     </div>
     
-    <div class="py-6 lg:py-12 bg-almond">
+    <div class="flex flex-col gap-4 py-6 lg:py-12 bg-almond">
         <h2 class="text-5xl font-extrabold tracking-tight text-center">
             Contact
         </h2>
+        <form class="flex flex-col gap-4 items-center">
+            <Input name="name" label="Name" placeholder="John Doe" required />
+            <Input name="name" label="Name" placeholder="John Doe" required />
+            <Input name="name" label="Name" placeholder="John Doe" required />
+            <Input name="name" label="Name" placeholder="John Doe" required />
+            <Input name="name" label="Name" placeholder="John Doe" required />
+            <Input name="name" label="Name" placeholder="John Doe" required />
+            <Input name="name" label="Name" placeholder="John Doe" required />
+        </form>
     </div>
 </main>
 
