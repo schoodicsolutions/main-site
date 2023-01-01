@@ -42,6 +42,7 @@ export function scrollRef(node: HTMLElement, name: string) {
     const currentSections = get(sections);
 
     if (currentSections.has(name)) {
+        console.error(`Duplicate section '${name}'`);
         return;
     }
 
