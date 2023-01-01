@@ -5,7 +5,7 @@
     $: [normal, white] = [variant === 'normal', variant === 'white']
 </script>
 
-<div class="flex items-center select-none" aria-roledescription="logo">
+<div class="flex items-center select-none" aria-roledescription="logo" aria-label="Schoodic Media Logo">
     <div class="h-6 md:h-8">
         <Mark 
             height="100%"

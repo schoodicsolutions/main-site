@@ -6,7 +6,7 @@
     export let required: boolean = false;
 </script>
 
-<div class="flex flex-col gap-0.5">
+<div class="flex flex-col gap-0.5 max-w-[400px]">
     {#if label}
         <label for={name}>
             <span>{label}</span>
@@ -16,7 +16,7 @@
         </label>
     {/if}
     <input
-        class="rounded-sm p-1 border border-gray-200"
+        class="rounded-sm p-1 border border-gray-200 w-full"
         {type}
         {name}
         id={name} 

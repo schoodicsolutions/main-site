@@ -1,3 +1,4 @@
+@import "@fontsource/rubik/700.css";
 @import "@fontsource/rubik/800.css";
 
 @import "@fontsource/inter/400.css";
@@ -9,6 +10,23 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+    h1 {
+      @apply text-5xl md:text-6xl font-extrabold tracking-tight;
+    }
+    h2 {
+      @apply text-3xl lg:text-5xl font-extrabold tracking-tight text-center;
+    }
+    section {
+      @apply flex flex-col gap-4 py-6 lg:py-12;
+    }
+}
+
+@layer components {
+    section.hero {
+        @apply bg-croix block p-0;
+    }
+}
 * {
     font-family: Inter;
     font-size: 16px;
