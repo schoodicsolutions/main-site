@@ -9,7 +9,7 @@
     <div class="w-full h-8 lg:h-[6vw] bg-almond">
         <Wave class="text-croix" height="100%" />
     </div>
-    <div class="bg-croix text-white py-10">
+    <div class="bg-croix text-white">
         <div class="flex flex-col lg:flex-row justify-center gap-10 lg:gap-40 py-20">
             <section class="flex flex-col items-center lg:order-1 gap-1 lg:gap-4">
                 <Logo variant="white" />
