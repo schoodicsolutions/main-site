@@ -15,27 +15,27 @@
             <div class="service-card">
                 <h3 class="text-2xl xl:text-3xl leading-tight tracking-tighter font-semibold">Full-Stack Web Development</h3>
                 <ServiceIcon variant="blue" height="125px" icon="toolbox" />
-                <button>Learn More</button>
+                <button class="button button-blue">Learn More</button>
             </div>
             <div class="service-card">
                 <h3 class="text-2xl xl:text-3xl leading-tight tracking-tighter font-semibold">Responsive<br />Web Design</h3>
                 <ServiceIcon variant="blue" height="125px" icon="phone" />
-                <button>Learn More</button>
+                <button class="button button-blue">Learn More</button>
             </div>
             <div class="service-card">
                 <h3 class="text-2xl xl:text-3xl leading-tight tracking-tighter font-semibold">Digital<br>Marketing</h3>
                 <ServiceIcon variant="blue" height="125px" icon="megaphone" />
-                <button>Learn More</button>
+                <button class="button button-blue">Learn More</button>
             </div>
             <div class="service-card">
                 <h3 class="text-2xl xl:text-3xl leading-tight tracking-tighter font-semibold">Search Engine Optimization</h3>
                 <ServiceIcon variant="blue" height="125px" icon="magnifier" />
-                <button>Learn More</button>
+                <button class="button button-blue">Learn More</button>
             </div>
             <div class="service-card">
                 <h3 class="text-2xl xl:text-3xl leading-tight tracking-tighter font-semibold">Managed<br />Hosting</h3>
                 <ServiceIcon variant="blue" height="125px" icon="servers" />
-                <button>Learn More</button>
+                <button class="button button-blue">Learn More</button>
             </div>
         </div>
     </section>
