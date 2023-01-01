@@ -11,24 +11,29 @@
         <h2>
             Services We Offer
         </h2>
-        <div class="flex gap-4 justify-center pb-6 lg:pb-12">
+        <div class="flex flex-col gap-16 lg:gap-0 lg:flex-row justify-center items-center pb-6 lg:pb-12">
             <div class="service-card">
-                <h3 class="text-3xl leading-tight tracking-tighter font-semibold">Full-Stack Web Development</h3>
+                <h3 class="text-2xl xl:text-3xl leading-tight tracking-tighter font-semibold">Full-Stack Web Development</h3>
                 <ServiceIcon variant="blue" height="125px" icon="toolbox" />
                 <button>Learn More</button>
             </div>
             <div class="service-card">
-                <h3 class="text-3xl leading-tight tracking-tighter font-semibold">Responsive<br>Web Design</h3>
+                <h3 class="text-2xl xl:text-3xl leading-tight tracking-tighter font-semibold">Responsive<br />Web Design</h3>
                 <ServiceIcon variant="blue" height="125px" icon="phone" />
                 <button>Learn More</button>
             </div>
             <div class="service-card">
-                <h3 class="text-3xl leading-tight tracking-tighter font-semibold">Search Engine Optimization</h3>
+                <h3 class="text-2xl xl:text-3xl leading-tight tracking-tighter font-semibold">Digital<br>Marketing</h3>
+                <ServiceIcon variant="blue" height="125px" icon="megaphone" />
+                <button>Learn More</button>
+            </div>
+            <div class="service-card">
+                <h3 class="text-2xl xl:text-3xl leading-tight tracking-tighter font-semibold">Search Engine Optimization</h3>
                 <ServiceIcon variant="blue" height="125px" icon="magnifier" />
                 <button>Learn More</button>
             </div>
             <div class="service-card">
-                <h3 class="text-3xl leading-tight tracking-tighter font-semibold">Managed<br>Hosting</h3>
+                <h3 class="text-2xl xl:text-3xl leading-tight tracking-tighter font-semibold">Managed<br />Hosting</h3>
                 <ServiceIcon variant="blue" height="125px" icon="servers" />
                 <button>Learn More</button>
             </div>
