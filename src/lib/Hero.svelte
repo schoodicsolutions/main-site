@@ -1,6 +1,5 @@
 <script lang="ts">
 	import Mark from "./Mark.svelte";
-	import { sections } from "./scroll/stores";
 	import Wave from "./Wave.svelte";
 
     let scrollY: number;
@@ -33,7 +32,6 @@
                     & App Development<br/>
                     in Downeast Maine
                 </h2>
-                <p>{Array.from($sections.keys())}</p>
             </div>
         </div>
     </div>

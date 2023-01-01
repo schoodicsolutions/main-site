@@ -49,4 +49,13 @@ export function scrollRef(node: HTMLElement, name: string) {
         prev.set(name, node);
         return prev;
     });
+
+    return {
+        destroy() {
+            sections.update(prev => {
+                prev.delete(name);
+                return prev;
+            });  
+        }
+    }
 }
