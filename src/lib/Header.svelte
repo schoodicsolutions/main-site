@@ -17,6 +17,6 @@
 >
     <div class="flex max-w-[1440px] px-3 lg:px-8 mx-auto justify-between items-center">
         <Logo variant={transparent ? 'white' : solid ? 'normal' : undefined} />
-        <Nav />
+        <Nav color={transparent ? 'white' : solid ? 'black' : undefined} />
     </div>
 </header>
