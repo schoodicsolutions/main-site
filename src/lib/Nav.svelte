@@ -23,7 +23,9 @@
             <li class="flex flex-col">
                 <a href={`${link.path}${link.hash || ''}`}>{link.caption}</a>
                 <div 
-                    class="h-0.5 w-full bg-brand"
+                    class="h-0.5 w-full"
+                    class:bg-brand={black}
+                    class:bg-white={white}
                     class:invisible={`${link.path}${link.hash || ""}` !== `${$page.url.pathname}${$page.url.hash}`}
                 />
             </li>
