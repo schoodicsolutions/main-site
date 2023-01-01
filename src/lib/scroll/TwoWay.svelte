@@ -12,10 +12,14 @@
                 return;
             }
 
-            for (let [name, section] of $sections.entries()) {
+            for (let [name, section] of $sections) {
                 const boundingRect = section.getBoundingClientRect();
-                console.log(name, boundingRect.top, window.scrollY);
-                if (boundingRect.top <= window.screen.height / 2 && boundingRect.top > 0) {
+
+                const withinTopHalf = boundingRect.top <= window.screen.height / 2;
+                const aboveScreen = boundingRect.top > 0;
+                const isLastSection = section === Array.from($sections.values()).at(-1);
+
+                if (withinTopHalf && (aboveScreen || isLastSection)) {
                     $currentSection = name;
                     break;
                 }
