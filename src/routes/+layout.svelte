@@ -23,17 +23,22 @@
                     return;
                 }
                 if (last.target.id) {
+                    console.log(last.target.id);
+                    const navOptions = { replaceState: true, noScroll: true };
+                    if (last.target.id === '__top') {
+                        goto($page.url.pathname, navOptions);
+                        return;
+                    }
                     const hash = `#${last.target.id}`;
-                    goto(`${$page.url.pathname}${hash}`)
+                    goto(`${$page.url.pathname}${hash}`, navOptions);
                 }
             },
             {
-                rootMargin: '0px',
                 threshold: 1,
             }
         );
 
-        document.querySelectorAll("section").forEach(i => observer.observe(i));
+        document.querySelectorAll("[data-autohash]").forEach(i => observer.observe(i));
     });
 </script>
 

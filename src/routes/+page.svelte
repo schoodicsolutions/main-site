@@ -7,7 +7,7 @@
 <main>
     <Hero />
 
-    <section class="py-6 lg:py-12" id="services">
+    <section class="py-6 lg:py-12" data-autohash id="services">
         <h2>
             Services We Offer
         </h2>
@@ -40,7 +40,7 @@
         </div>
     </section>
     
-    <section class="bg-almond" id="contact">
+    <section class="bg-almond" data-autohash id="contact">
         <h2>Contact</h2>
         <form class="max-w-full w-96 m-auto px-4">
             <fieldset class="flex flex-col gap-4 items-center width-content">
