@@ -10,8 +10,8 @@
 
         for (let [name, section] of $sections.entries()) {
             const boundingRect = section.getBoundingClientRect();
-            console.log(boundingRect.top, window.scrollY);
-            if (boundingRect.top > window.scrollY) {
+            console.log(name, boundingRect.top, window.scrollY);
+            if (boundingRect.top <= window.screen.height / 2 && boundingRect.top > 0) {
                 $currentSection = name;
                 break;
             }
