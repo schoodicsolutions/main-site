@@ -7,6 +7,7 @@ import { goto } from "$app/navigation";
 
 interface ScrollLinkOptions {
     pathname?: string;
+    onNavigate?: () => void;
     scrollTo: string;
 }
 
@@ -16,6 +17,8 @@ export function scrollTo(node: HTMLAnchorElement, options: ScrollLinkOptions) {
     const listener = async (e: MouseEvent) => {
         e.preventDefault();
         
+        options.onNavigate && options.onNavigate();
+
         if (pathname) {
             await goto(pathname);
         } else {

@@ -4,6 +4,10 @@
 	import { currentSection } from './scroll/stores';
 
     export let color: 'black' | 'white' = 'black';
+    export let variant: 'row' | 'col' = 'row';
+    export let onNavigate: (() => void) | undefined = undefined;
+
+    $: [row, col] = [variant === 'row', variant === 'col'];
     $: [black, white] = [color === 'black', color === 'white']
 
     const menu = [
@@ -38,7 +42,12 @@
     class:text-black={black}
     class:text-white={white}
 >
-    <ul class="flex gap-8 font-semibold">
+    <ul 
+        class="flex gap-8 font-semibold" 
+        class:flex-row={row}
+        class:flex-col={col}
+        class:items-center={col}
+    >
         {#each menu as link}
             <li class="flex flex-col mt-1">
                 <!-- svelte-ignore a11y-missing-attribute -->
@@ -47,6 +56,7 @@
                         use:scrollTo={{
                             pathname: link.pathname,
                             scrollTo: link.scrollTo,
+                            onNavigate,
                         }}
                     >
                         {link.caption}
