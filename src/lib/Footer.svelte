@@ -6,7 +6,7 @@
     const year = new Date().getFullYear();
 </script>
 
-<footer class="text-center font-medium">
+<footer class="text-center">
     {#if !$page.error}
         <div class="w-full h-8 lg:h-[6vw] bg-almond">
             <Wave class="text-croix" height="100%" />

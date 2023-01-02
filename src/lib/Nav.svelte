@@ -13,6 +13,11 @@
             scrollTo: '+top',
         },
         {
+            caption: 'About',
+            pathname: '/',
+            scrollTo: 'about',
+        },
+        {
             caption: 'Services',
             pathname: '/',
             scrollTo: 'services',
