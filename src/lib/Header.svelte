@@ -27,7 +27,13 @@
         </MediaQuery>
         <MediaQuery query="(max-width: 1024px)" let:matches>
             {#if matches}
-                <button class="button button-icon" class:text-white={transparent} class:text-black={solid} on:click={() => $drawerOpen = !$drawerOpen}>
+                <button 
+                    class="button button-icon"
+                    class:text-white={transparent}
+                    class:text-black={solid}
+                    aria-haspopup="true"
+                    aria-label="Main Menu"
+                    on:click={() => $drawerOpen = !$drawerOpen}>
                     <MenuIcon />
                 </button>
 
