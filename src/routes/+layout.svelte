@@ -8,7 +8,7 @@
     $: scrollY;
 
     let variant: 'solid' | 'transparent' = 'transparent';
-    $: variant = $page.error || $page.url.pathname === "/" ? (scrollY > 64 ? 'solid' : 'transparent') : 'solid';
+    $: variant = $page.error || $page.url.pathname === "/" ? (scrollY > 0 ? 'solid' : 'transparent') : 'solid';
 </script>
 
 <svelte:head> 
