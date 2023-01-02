@@ -1,5 +1,6 @@
 ---
    title: Privacy Policy
+   contactBlurb: Need to contact us about a legal matter?
 ---
 
 **Privacy Policy**

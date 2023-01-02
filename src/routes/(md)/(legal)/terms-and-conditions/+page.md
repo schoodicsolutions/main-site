@@ -1,5 +1,6 @@
 ---
    title: Terms and Conditions
+   contactBlurb: Need to contact us about a legal matter?
 ---
 
 **Terms and Conditions**
