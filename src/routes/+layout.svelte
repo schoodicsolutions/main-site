@@ -12,13 +12,15 @@
 
     let variant: 'solid' | 'transparent' = 'transparent';
     $: variant = scrollY > 0 ? 'solid' : 'transparent';
-
-    // This works but breaks SSR
-    // $: document.body.style.overflow = drawerOpen ? 'hidden' : 'auto';
 </script>
 
 <svelte:head> 
     <title>Schoodic Media</title>
+    {#if $drawerOpen}
+        <style>
+            body { overflow: hidden }
+        </style>
+    {/if}
 </svelte:head>
 
 <svelte:window bind:scrollY />
