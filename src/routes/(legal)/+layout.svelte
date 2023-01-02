@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { metadata } from "../../../stores";
+	import { metadata } from "../../stores";
 	import { scrollTo } from "$lib/scroll";
 	import ServiceHeader from "$lib/ServiceHeader.svelte";
 
