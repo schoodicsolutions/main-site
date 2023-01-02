@@ -3,7 +3,7 @@
 	import Footer from "$lib/Footer.svelte";
 	import Header from "$lib/Header.svelte";
 	import Nav from "$lib/Nav.svelte";
-	import { drawerOpen } from "../stores";
+	import { drawerOpen, metadata } from "../stores";
 	import MediaQuery from "svelte-media-queries";
     import "../app.css";
 
@@ -12,15 +12,28 @@
 
     let variant: 'solid' | 'transparent' = 'transparent';
     $: variant = scrollY > 0 ? 'solid' : 'transparent';
+
+    $: title = $metadata.title ? $metadata.title + ' | ' : '';
+    $: suffix = $metadata.suffix ? ' | ' + $metadata.suffix : '';
 </script>
 
 <svelte:head> 
-    <title>Schoodic Media</title>
+    <title>{title}Schoodic Media{suffix}</title>
     {#if $drawerOpen}
         <style>
             body { overflow: hidden }
         </style>
     {/if}
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MKT51K17JR"></script>
+
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-MKT51K17JR');
+    </script>
 </svelte:head>
 
 <svelte:window bind:scrollY />

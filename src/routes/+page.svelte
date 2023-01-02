@@ -4,7 +4,10 @@
 	import { scrollRef } from "$lib/scroll";
 	import TwoWay from "$lib/scroll/TwoWay.svelte";
 	import ServiceIcon from "$lib/ServiceIcon.svelte";
-	import Wave from "$lib/Wave.svelte";
+	import { metadata } from "../stores";
+
+    $metadata.title = '';
+    $metadata.suffix = 'Web Design in Calais, Maine';
 </script>
 
 <TwoWay />
