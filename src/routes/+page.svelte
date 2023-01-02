@@ -16,7 +16,10 @@
         <h2 data-autohash id="services">
             Services We Offer
         </h2>
-        <div class="flex flex-col gap-16 lg:gap-0 lg:flex-row justify-center items-center pb-6 lg:pb-12">
+        <nav 
+            class="flex flex-col gap-16 lg:gap-0 lg:flex-row justify-center items-center pb-6 lg:pb-12"
+            aria-label="Services"
+        >
             <div class="service-card">
                 <h3 class="text-2xl xl:text-3xl leading-tight tracking-tighter font-semibold">Full-Stack Web Development</h3>
                 <ServiceIcon variant="blue" height="125px" icon="toolbox" />
@@ -42,7 +45,7 @@
                 <ServiceIcon variant="blue" height="125px" icon="servers" />
                 <button class="button button-blue">Learn More</button>
             </div>
-        </div>
+        </nav>
     </section>
     
     <section class="bg-almond" use:scrollRef={'contact'}>
