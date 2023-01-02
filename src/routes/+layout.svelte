@@ -13,7 +13,8 @@
     let variant: 'solid' | 'transparent' = 'transparent';
     $: variant = scrollY > 0 ? 'solid' : 'transparent';
 
-    $: document.body.style.overflow = $drawerOpen ? 'hidden' : 'auto';
+    // This works but breaks SSR
+    // $: document.body.style.overflow = drawerOpen ? 'hidden' : 'auto';
 </script>
 
 <svelte:head> 

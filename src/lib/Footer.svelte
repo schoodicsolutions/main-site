@@ -24,18 +24,18 @@
             <section class="flex flex-col items-center gap-1 lg:gap-4">
                 <h3 class="text-xl font-bold">Services</h3>
                 <ul>
-                    <li>Full Stack Web Development</li>
-                    <li>Responsive Web Design</li>
-                    <li>Digital Marketing</li>
-                    <li>Search Engine Optimization</li>
-                    <li>Managed Hosting</li>
+                    <li><a href="full-stack">Full Stack Web Development</a></li>
+                    <li><a href="full-stack">Responsive Web Design</a></li>
+                    <li><a href="full-stack">Digital Marketing</a></li>
+                    <li><a href="full-stack">Search Engine Optimization</a></li>
+                    <li><a href="full-stack">Managed Hosting</a></li>
                 </ul>
             </section>
             <section class="flex flex-col items-center gap-1 lg:gap-4 order-2">
                 <h3 class="text-xl font-bold">Legal</h3>
                 <ul>
-                    <li>Privacy Policy</li>
-                    <li>Terms and Conditions</li>
+                    <li><a href="privacy-policy">Privacy Policy</a></li>
+                    <li><a href="terms-and-conditions">Terms and Conditions</a></li>
                 </ul>
             </section>
         </div>
