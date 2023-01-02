@@ -13,7 +13,7 @@
         </div>
     {/if}
     <div class="bg-croix text-white">
-        <div class="flex flex-col lg:flex-row justify-center lg:items-start gap-10 lg:gap-40 py-20">
+        <div class="flex flex-col lg:flex-row justify-center lg:items-start gap-10 md:gap-20 xl:gap-40 py-20">
             <section class="flex flex-col items-center lg:order-1 gap-1 lg:gap-4">
                 <Logo variant="white" />
                 <div>
