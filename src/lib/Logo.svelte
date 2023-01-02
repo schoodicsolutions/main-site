@@ -6,14 +6,14 @@
 </script>
 
 <div class="flex items-center select-none" aria-roledescription="logo" aria-label="Schoodic Media Logo">
-    <div class="h-6 md:h-8">
+    <div class="h-5 md:h-7">
         <Mark 
             height="100%"
             variant={normal ? 'blue' : white ? 'white' : undefined}
         />
     </div>
     <span
-        class="font-brand font-bold text-2xl md:text-3xl tracking-tight transition-colors"
+        class="font-brand font-bold text-xl md:text-2xl tracking-tight transition-colors"
         class:text-black={normal}
         class:text-white={white}
     >

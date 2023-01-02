@@ -7,13 +7,11 @@
     export let variant: 'transparent' | 'solid' = 'solid';
 
     $: [transparent, solid] = [variant === 'transparent', variant === 'solid'];
-
+    $: padding = transparent ? 'py-3 lg:py-6' : solid ? 'py-1 lg:py-3' : '';
 </script>
 
 <header 
-    class="fixed w-full transition-colors transition-spacing z-50"
-    class:py-6={transparent}
-    class:py-3={solid}
+    class={`fixed w-full transition-colors transition-spacing z-50 ${padding}`}
     class:bg-white={solid}
     class:shadow-lg={solid}
 >
