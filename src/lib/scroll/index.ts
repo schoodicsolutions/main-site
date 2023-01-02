@@ -16,8 +16,10 @@ export function scrollTo(node: HTMLAnchorElement, options: ScrollLinkOptions) {
     const listener = async (e: MouseEvent) => {
         e.preventDefault();
 
-        if (pathname && get(page).url.pathname !== pathname) {
+        if (pathname) {
             await goto(pathname);
+        } else {
+            await goto(get(page).url.pathname);
         }
 
         if (scrollTo === TOP) {
