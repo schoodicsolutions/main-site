@@ -1,14 +1,17 @@
 <script>
-	import Logo from "./Logo.svelte";
+	import { page } from "$app/stores";
+import Logo from "./Logo.svelte";
 	import Wave from "./Wave.svelte";
 
     const year = new Date().getFullYear();
 </script>
 
 <footer class="text-center font-medium">
-    <div class="w-full h-8 lg:h-[6vw] bg-almond">
-        <Wave class="text-croix" height="100%" />
-    </div>
+    {#if !$page.error}
+        <div class="w-full h-8 lg:h-[6vw] bg-almond">
+            <Wave class="text-croix" height="100%" />
+        </div>
+    {/if}
     <div class="bg-croix text-white">
         <div class="flex flex-col lg:flex-row justify-center gap-10 lg:gap-40 py-20">
             <section class="flex flex-col items-center lg:order-1 gap-1 lg:gap-4">

@@ -4,6 +4,7 @@
 	import { scrollRef } from "$lib/scroll";
 	import TwoWay from "$lib/scroll/TwoWay.svelte";
 	import ServiceIcon from "$lib/ServiceIcon.svelte";
+	import Wave from "$lib/Wave.svelte";
 </script>
 
 <TwoWay />
