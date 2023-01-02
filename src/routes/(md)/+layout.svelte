@@ -2,7 +2,6 @@
 	import { metadata } from "../../stores";
 	import { scrollTo } from "$lib/scroll";
 	import ServiceHeader from "$lib/ServiceHeader.svelte";
-
 </script>
 
 <ServiceHeader>
@@ -16,6 +15,6 @@
 </section>
 
 <section class="bg-almond">
-    <h3 class="font-bold text-4xl text-center px-6 tracking-tight">Need to contact us regarding our policies?</h3>
+    <h3 class="font-bold text-4xl text-center px-6 tracking-tight">{$metadata.contactBlurb || 'Want to work with us?'}</h3>
     <a class="button button-blue" use:scrollTo={{pathname: '/', scrollTo: 'contact'}}>Get in Touch</a>
 </section>
