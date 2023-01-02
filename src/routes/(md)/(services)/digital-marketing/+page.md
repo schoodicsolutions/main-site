@@ -1,5 +1,6 @@
 ---
 title: Digital Marketing
+description: Get your business noticed with our comprehensive digital marketing services from Schoodic Media.
 ---
 At Schoodic Media, we know that having a great website is just the first step in building a successful online presence. That's why we offer a range of digital marketing services to help your business reach its full potential.
 

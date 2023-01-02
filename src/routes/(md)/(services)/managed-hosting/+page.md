@@ -1,5 +1,6 @@
 ---
 title: Managed Hosting
+description: Let Schoodic Media handle the technical details of hosting your website with our managed hosting services.
 ---
 At Schoodic Media, we understand that managing a website can be time-consuming and technical. That's why we offer Managed Hosting services to take the burden off your shoulders and let you focus on running your business.
 

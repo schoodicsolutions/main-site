@@ -1,5 +1,7 @@
 ---
    title: Privacy Policy
+   description: Our privacy policy explains how we collect and use your personal data.
+   contactBlurb: Need to contact us?
 ---
 
 **Privacy Policy**

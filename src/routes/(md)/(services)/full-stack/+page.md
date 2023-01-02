@@ -1,5 +1,6 @@
 ---
 title: Full-Stack Development
+description: At Schoodic Media, we offer full stack development services for businesses in Maine.
 ---
 At Schoodic Media, we pride ourselves on our full-stack web development capabilities. We are proficient in a wide range of technologies, including React, Svelte, Node.js, TypeScript, Express.js, WordPress, PHP and more.
 

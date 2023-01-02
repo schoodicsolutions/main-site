@@ -1,6 +1,7 @@
 ---
    title: Terms and Conditions
-   contactBlurb: Need to contact us about a legal matter?
+   description: Our terms and conditions outline the rules and regulations for using our website and services.
+   contactBlurb: Need to contact us?
 ---
 
 **Terms and Conditions**

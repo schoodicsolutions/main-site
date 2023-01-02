@@ -21,6 +21,8 @@
 <svelte:head> 
     <title>{titleString}</title>
 
+    <meta name="description" content={$metadata.description} />
+    
     {#if $drawerOpen}
         <style>
             body { overflow: hidden }

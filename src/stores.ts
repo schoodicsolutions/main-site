@@ -2,6 +2,7 @@ import { writable } from "svelte/store";
 
 class Metadata {
     title?: string = '';
+    description: string = '';
     contactBlurb?: string = '';
     suffix?: string = '';
 }

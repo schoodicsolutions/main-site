@@ -1,5 +1,6 @@
 ---
 title: Responsive Design
+description: Our web design team creates responsive, user-friendly websites for optimal viewing on any device.
 ---
 At Schoodic Media, we understand the importance of having a website that looks great on any device. That's why we prioritize responsive design in all of our web development projects.
 

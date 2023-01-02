@@ -1,5 +1,6 @@
 ---
 title: Search Engine Optimization
+description: Improve your website's visibility and search rankings with Schoodic Media's SEO services.
 ---
 At Schoodic Media, we understand the importance of search engine optimization (SEO) in driving traffic to your website and increasing your online visibility. That's why we offer a range of SEO services to help your business rank higher in search engine results and attract more qualified leads.
 
