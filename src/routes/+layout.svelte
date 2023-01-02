@@ -13,12 +13,14 @@
     let variant: 'solid' | 'transparent' = 'transparent';
     $: variant = scrollY > 0 ? 'solid' : 'transparent';
 
-    $: title = $metadata.title ? $metadata.title + ' | ' : '';
-    $: suffix = $metadata.suffix ? ' | ' + $metadata.suffix : '';
+    const site = 'Schoodic Media';
+    $: titleString = [$metadata.title, site, $metadata.suffix].filter(v => !!v).join(' | ');
+
 </script>
 
 <svelte:head> 
-    <title>{title}Schoodic Media{suffix}</title>
+    <title>{titleString}</title>
+
     {#if $drawerOpen}
         <style>
             body { overflow: hidden }
