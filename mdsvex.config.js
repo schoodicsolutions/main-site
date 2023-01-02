@@ -20,7 +20,7 @@ const config = defineConfig({
 		parse(frontmatter, messages) {
 			try {
 				let content = yaml.load(frontmatter);
-				return {fm: content, ...content};
+				return {fm: content};
 			} catch (e) {
 				messages.push(
 					"Parsing error on line " +
