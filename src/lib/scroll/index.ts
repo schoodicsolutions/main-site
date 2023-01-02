@@ -40,7 +40,12 @@ export function scrollTo(node: HTMLAnchorElement, options: ScrollLinkOptions) {
     };
 
     node.addEventListener('click', listener);
-    node.href = "/";
+
+    if (pathname) {
+        node.href = pathname;
+    } else {
+        node.href = '/';
+    }
 
     return {
         destroy() {
