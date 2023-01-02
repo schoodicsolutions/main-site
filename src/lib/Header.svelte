@@ -16,7 +16,9 @@
     class:shadow-lg={solid}
 >
     <div class="flex max-w-[1440px] px-3 pl-6 lg:px-8 mx-auto justify-between items-center">
-        <Logo variant={transparent ? 'white' : solid ? 'normal' : undefined} />
+        <a href="/">
+            <Logo variant={transparent ? 'white' : solid ? 'normal' : undefined} />
+        </a>
         <MediaQuery query="(min-width: 1024px)" let:matches>
             {#if matches}
                 <Nav color={transparent ? 'white' : solid ? 'black' : undefined} />
