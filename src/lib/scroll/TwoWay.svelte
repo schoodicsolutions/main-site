@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { TOP } from "./constants";
+	import { reserved } from "./constants";
 	import { currentSection, sections } from "./stores";
 
     let timer: number | NodeJS.Timeout;
@@ -8,7 +8,7 @@
         clearTimeout(timer);
         timer = setTimeout(() => {
             if (window.scrollY === 0) {
-                $currentSection = TOP;
+                $currentSection = reserved.top;
                 return;
             }
 

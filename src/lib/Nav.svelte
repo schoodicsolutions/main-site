@@ -10,7 +10,7 @@
         {
             caption: 'Home',
             pathname: '/', 
-            scrollTo: '__top',
+            scrollTo: '+top',
         },
         {
             caption: 'Services',

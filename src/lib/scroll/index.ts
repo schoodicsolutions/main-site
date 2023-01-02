@@ -1,7 +1,7 @@
 import { get } from "svelte/store";
 import { page } from "$app/stores";
 
-import { TOP } from "./constants";
+import { reserved } from "./constants";
 import { currentSection, sections } from "./stores";
 import { goto } from "$app/navigation";
 
@@ -13,22 +13,25 @@ interface ScrollLinkOptions {
 export function scrollTo(node: HTMLAnchorElement, options: ScrollLinkOptions) {
     const {pathname, scrollTo} = options;
 
-    const listener = async (e: MouseEvent) => {
-        e.preventDefault();
-
+    const navigate = async () => {
         if (pathname) {
             await goto(pathname);
         } else {
             await goto(get(page).url.pathname);
         }
+    }
 
-        if (scrollTo === TOP) {
-            window.scrollTo({top: 0});
+    const listener = async (e: MouseEvent) => {
+        e.preventDefault();
+
+        if (scrollTo === reserved.top) {
+            await navigate();
         } else {
             const currentSections = get(sections);
             const wantedSection = currentSections.get(scrollTo);
 
             if (wantedSection) {
+                await navigate();
                 wantedSection.scrollIntoView(true);
             } else {
                 return;
@@ -50,8 +53,8 @@ export function scrollTo(node: HTMLAnchorElement, options: ScrollLinkOptions) {
 }
 
 export function scrollRef(node: HTMLElement, name: string) {
-    if (name === TOP) {
-        throw new Error(`${TOP} is a reserved name`);
+    if (name[1] === "+") {
+        throw new Error(`${name} is a reserved name`);
     }
     
     const currentSections = get(sections);

@@ -1,5 +1,5 @@
 import { writable } from 'svelte/store';
-import { TOP } from './constants';
+import { reserved } from './constants';
 
-export const currentSection = writable(TOP);
+export const currentSection = writable(reserved.top);
 export const sections = writable<Map<string, HTMLElement>>(new Map());

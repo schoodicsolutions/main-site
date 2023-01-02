@@ -1,1 +1,3 @@
-export const TOP = '__top';
+export const reserved = {
+    top: '+top',
+};
