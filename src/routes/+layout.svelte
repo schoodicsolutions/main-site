@@ -6,6 +6,7 @@
 	import { drawerOpen, metadata } from "../stores";
 	import MediaQuery from "svelte-media-queries";
     import "../app.css";
+	import { page } from "$app/stores";
 
     let scrollY: number;
     $: scrollY;
@@ -14,7 +15,11 @@
     $: variant = scrollY > 0 ? 'solid' : 'transparent';
 
     const site = 'Schoodic Media';
-    $: titleString = [$metadata.title, site, $metadata.suffix].filter(v => !!v).join(' | ');
+    $: titleString = [
+        $page.url.pathname !== '/' && $metadata.title,
+        site, 
+        $metadata.suffix
+    ].filter(v => !!v).join(' | ');
 
 </script>
 
@@ -22,7 +27,7 @@
     <title>{titleString}</title>
 
     <meta name="description" content={$metadata.description} />
-    
+
     {#if $drawerOpen}
         <style>
             body { overflow: hidden }
