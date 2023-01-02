@@ -23,19 +23,21 @@
             </section>
             <section class="flex flex-col items-center gap-1 lg:gap-4">
                 <h3 class="text-xl font-bold">Services</h3>
-                <ul>
-                    <li><a href="full-stack">Full Stack Web Development</a></li>
-                    <li><a href="full-stack">Responsive Web Design</a></li>
-                    <li><a href="full-stack">Digital Marketing</a></li>
-                    <li><a href="full-stack">Search Engine Optimization</a></li>
-                    <li><a href="full-stack">Managed Hosting</a></li>
-                </ul>
+                <nav aria-label="Footer">
+                    <ul>
+                        <li><a href="/full-stack">Full Stack Web Development</a></li>
+                        <li><a href="/responsive-design">Responsive Web Design</a></li>
+                        <li><a href="/digital-marketing">Digital Marketing</a></li>
+                        <li><a href="/search-engine-optimization">Search Engine Optimization</a></li>
+                        <li><a href="/managed-hosting">Managed Hosting</a></li>
+                    </ul>
+                </nav>
             </section>
             <section class="flex flex-col items-center gap-1 lg:gap-4 order-2">
                 <h3 class="text-xl font-bold">Legal</h3>
                 <ul>
-                    <li><a href="privacy-policy">Privacy Policy</a></li>
-                    <li><a href="terms-and-conditions">Terms and Conditions</a></li>
+                    <li><a href="/privacy-policy">Privacy Policy</a></li>
+                    <li><a href="/terms-and-conditions">Terms and Conditions</a></li>
                 </ul>
             </section>
         </div>
