@@ -1,5 +1,12 @@
+<script>
+	import ServiceHeader from "$lib/ServiceHeader.svelte";
+
+</script>
+<ServiceHeader>
+    <h1>Full Stack Development</h1>
+</ServiceHeader>
+
 <section>
-    <h2>Full Stack Web Development</h2>
     <div class="w-[1440px] max-w-full flex flex-col gap-4 text-xl">
         <p>At Schoodic Media, we pride ourselves on our full-stack web development capabilities. Our team of experienced developers is proficient in a wide range of technologies, including React, Svelte, Node.js, TypeScript, Express.js, WordPress, PHP and more.</p>
         <p>Using these powerful tools, we are able to create dynamic and interactive websites and applications that offer a seamless user experience. Our front-end development techniques ensure that your website looks great on any device, while our back-end work ensures that your website is fast, efficient, and secure.</p>
