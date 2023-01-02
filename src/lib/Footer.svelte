@@ -1,6 +1,6 @@
 <script>
 	import { page } from "$app/stores";
-import Logo from "./Logo.svelte";
+    import Logo from "./Logo.svelte";
 	import Wave from "./Wave.svelte";
 
     const year = new Date().getFullYear();

@@ -13,29 +13,26 @@ interface ScrollLinkOptions {
 export function scrollTo(node: HTMLAnchorElement, options: ScrollLinkOptions) {
     const {pathname, scrollTo} = options;
 
-    const navigate = async () => {
+    const listener = async (e: MouseEvent) => {
+        e.preventDefault();
+        
         if (pathname) {
             await goto(pathname);
         } else {
             await goto(get(page).url.pathname);
         }
-    }
-
-    const listener = async (e: MouseEvent) => {
-        e.preventDefault();
 
         if (scrollTo === reserved.top) {
-            await navigate();
-        } else {
-            const currentSections = get(sections);
-            const wantedSection = currentSections.get(scrollTo);
+            return;
+        }
 
-            if (wantedSection) {
-                await navigate();
-                wantedSection.scrollIntoView(true);
-            } else {
-                return;
-            }
+        const currentSections = get(sections);
+        const wantedSection = currentSections.get(scrollTo);
+
+        if (wantedSection) {
+            wantedSection.scrollIntoView(true);
+        } else {
+            return;
         }
 
         currentSection.set(scrollTo);

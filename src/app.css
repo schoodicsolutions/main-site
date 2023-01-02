@@ -12,7 +12,7 @@
 
 @layer base {
     h1 {
-      @apply text-5xl md:text-6xl font-extrabold tracking-tight;
+      @apply text-5xl md:text-6xl font-extrabold tracking-tight text-center;
     }
     h2 {
       @apply text-3xl lg:text-5xl font-extrabold tracking-tight text-center;
@@ -27,8 +27,9 @@
 
 @layer components {
     .button {
-        @apply px-6 py-0 h-12 rounded-md text-lg font-semibold;
+        @apply block px-6 py-0 h-12 rounded-md text-lg font-semibold leading-[48px];
         @apply transition-colors hover:bg-white;
+        appearance: button;
     }
 
     .button-icon {

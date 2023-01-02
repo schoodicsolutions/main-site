@@ -14,7 +14,7 @@
     <Hero />
 
     <section class="py-6 lg:py-12" use:scrollRef={'services'}>
-        <h2 data-autohash id="services">
+        <h2>
             Services We Offer
         </h2>
         <nav 
@@ -24,33 +24,33 @@
             <div class="service-card">
                 <h3 class="text-2xl xl:text-3xl leading-tight tracking-tighter font-semibold">Full-Stack Web Development</h3>
                 <ServiceIcon variant="blue" height="125px" icon="toolbox" />
-                <button class="button button-blue">Learn More</button>
+                <a class="button button-blue" href="/full-stack">Learn More</a>
             </div>
             <div class="service-card">
                 <h3 class="text-2xl xl:text-3xl leading-tight tracking-tighter font-semibold">Responsive<br />Web Design</h3>
                 <ServiceIcon variant="blue" height="125px" icon="phone" />
-                <button class="button button-blue">Learn More</button>
+                <a class="button button-blue" href="/responsive-design">Learn More</a>
             </div>
             <div class="service-card">
                 <h3 class="text-2xl xl:text-3xl leading-tight tracking-tighter font-semibold">Digital<br>Marketing</h3>
                 <ServiceIcon variant="blue" height="125px" icon="megaphone" />
-                <button class="button button-blue">Learn More</button>
+                <a class="button button-blue" href="/digital-marketing">Learn More</a>
             </div>
             <div class="service-card">
                 <h3 class="text-2xl xl:text-3xl leading-tight tracking-tighter font-semibold">Search Engine Optimization</h3>
                 <ServiceIcon variant="blue" height="125px" icon="magnifier" />
-                <button class="button button-blue">Learn More</button>
+                <a class="button button-blue" href="/search-engine-optimization">Learn More</a>
             </div>
             <div class="service-card">
                 <h3 class="text-2xl xl:text-3xl leading-tight tracking-tighter font-semibold">Managed<br />Hosting</h3>
                 <ServiceIcon variant="blue" height="125px" icon="servers" />
-                <button class="button button-blue">Learn More</button>
+                <a class="button button-blue" href="/managed-hosting">Learn More</a>
             </div>
         </nav>
     </section>
     
     <section class="bg-almond" use:scrollRef={'contact'}>
-        <h2 data-autohash id="contact">Contact</h2>
+        <h2>Contact</h2>
         <form class="max-w-full w-96 m-auto px-4">
             <fieldset class="flex flex-col gap-4 items-center width-content">
                 <Input name="name" label="Name" placeholder="John Doe" required />

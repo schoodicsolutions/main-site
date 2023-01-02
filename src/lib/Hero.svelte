@@ -21,7 +21,7 @@
         </div>
         <div class="flex absolute top-0 h-full w-full flex-col lg:flex-row  px-4">
             <div class="w-full" />
-            <div class="w-full flex flex-col gap-5 items-center justify-center grow text-white text-center">
+            <div class="w-full flex flex-col gap-5 items-center justify-center grow text-white">
                 <h1>
                     Let's Design<br />
                     Your Business<br />

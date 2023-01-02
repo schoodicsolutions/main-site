@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { page } from "$app/stores";
 	import Footer from "$lib/Footer.svelte";
 	import Header from "$lib/Header.svelte";
     import "../app.css";
@@ -7,7 +8,7 @@
     $: scrollY;
 
     let variant: 'solid' | 'transparent' = 'transparent';
-    $: variant = scrollY > 64 ? 'solid' : 'transparent';
+    $: variant = $page.error || $page.url.pathname === "/" ? (scrollY > 64 ? 'solid' : 'transparent') : 'solid';
 </script>
 
 <svelte:head> 
