@@ -1,7 +1,4 @@
-<script>
-	import { scrollRef } from "$lib/scroll";
-</script>
-<section use:scrollRef={'full-stack'}>
+<section>
     <h2>Full Stack Web Development</h2>
     <div class="w-[1440px] max-w-full flex flex-col gap-4 text-xl">
         <p>At Schoodic Media, we pride ourselves on our full-stack web development capabilities. Our team of experienced developers is proficient in a wide range of technologies, including React, Svelte, Node.js, TypeScript, Express.js, WordPress, PHP and more.</p>
