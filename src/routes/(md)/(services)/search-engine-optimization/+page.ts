@@ -1,7 +1,6 @@
-import type { Metadata } from "src/types/metadata";
+import type { Metadata } from "src/types";
 
 export async function load() {
-    console.log(import.meta.glob('./*'));
     const page = Object.values(import.meta.glob('./+page.md'))[0];
     const { metadata } = await page() as {metadata: Metadata};
     return metadata;
