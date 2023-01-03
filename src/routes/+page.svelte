@@ -1,7 +1,8 @@
 <script lang="ts">
+    import { scrollRef } from "$lib/scroll";
+
 	import Hero from "$lib/Hero.svelte";
     import Input from "$lib/Input.svelte";
-	import { scrollRef } from "$lib/scroll";
 	import TwoWay from "$lib/scroll/TwoWay.svelte";
 	import ServiceIcon from "$lib/ServiceIcon.svelte";
 </script>

@@ -1,20 +1,21 @@
 <script lang="ts">
+    import MediaQuery from "svelte-media-queries";
+
+    import "../app.css";
+
 	import Drawer from "$lib/Drawer.svelte";
 	import Footer from "$lib/Footer.svelte";
 	import Header from "$lib/Header.svelte";
+    import Meta from "$lib/Meta.svelte";
 	import Nav from "$lib/Nav.svelte";
+
 	import { drawerOpen } from "../stores";
-	import MediaQuery from "svelte-media-queries";
-    import "../app.css";
-	import { page } from "$app/stores";
-	import Meta from "$lib/Meta.svelte";
 
     let scrollY: number;
     $: scrollY;
 
     let variant: 'solid' | 'transparent' = 'transparent';
     $: variant = scrollY > 0 ? 'solid' : 'transparent';
-
 </script>
 
 <Meta />
