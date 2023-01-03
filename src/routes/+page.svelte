@@ -31,27 +31,27 @@
             <div class="service-card">
                 <h3 class="text-2xl xl:text-3xl leading-tight tracking-tighter font-semibold">Full-Stack Web Development</h3>
                 <ServiceIcon variant="blue" height="125px" icon="toolbox" />
-                <a class="button button-blue" href="/full-stack">Learn More</a>
+                <a class="button button-blue" href="/full-stack" aria-label="Full-Stack Web Development">Learn More</a>
             </div>
             <div class="service-card">
                 <h3 class="text-2xl xl:text-3xl leading-tight tracking-tighter font-semibold">Responsive<br />Web Design</h3>
                 <ServiceIcon variant="blue" height="125px" icon="phone" />
-                <a class="button button-blue" href="/responsive-design">Learn More</a>
+                <a class="button button-blue" href="/responsive-design" aria-label="Responsive Web Design">Learn More</a>
             </div>
             <div class="service-card">
                 <h3 class="text-2xl xl:text-3xl leading-tight tracking-tighter font-semibold">Digital<br>Marketing</h3>
                 <ServiceIcon variant="blue" height="125px" icon="megaphone" />
-                <a class="button button-blue" href="/digital-marketing">Learn More</a>
+                <a class="button button-blue" href="/digital-marketing" aria-label="Digital Marketing">Learn More</a>
             </div>
             <div class="service-card">
                 <h3 class="text-2xl xl:text-3xl leading-tight tracking-tighter font-semibold">Search Engine Optimization</h3>
                 <ServiceIcon variant="blue" height="125px" icon="magnifier" />
-                <a class="button button-blue" href="/search-engine-optimization">Learn More</a>
+                <a class="button button-blue" href="/search-engine-optimization" aria-label="Search Engine Optimization">Learn More</a>
             </div>
             <div class="service-card">
                 <h3 class="text-2xl xl:text-3xl leading-tight tracking-tighter font-semibold">Managed<br />Hosting</h3>
                 <ServiceIcon variant="blue" height="125px" icon="servers" />
-                <a class="button button-blue" href="/managed-hosting">Learn More</a>
+                <a class="button button-blue" href="/managed-hosting" aria-label="Managed Hosting">Learn More</a>
             </div>
         </nav>
     </section>
