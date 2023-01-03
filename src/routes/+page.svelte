@@ -61,10 +61,12 @@
     <section class="bg-almond" use:scrollRef={'contact'}>
         <h2>Contact</h2>
         <form 
-            data-netlify-recaptcha="true"
             data-netlify="true"
+            data-netlify-recaptcha="true"
             class="max-w-full w-96 m-auto px-4"
+            action="/#success"
         >
+            <input type="hidden" name="form-name" value="contact-form" />
             <fieldset class="flex flex-col gap-4 items-center width-content">
                 {#if $page.url.hash === "#success"}
                     <div id="success" class="p-2 bg-green-500 text-white w-full rounded-md text-center">Thank you for your submission!</div>
