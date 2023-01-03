@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { drawerOpen } from "../stores";
+	import { drawerOpen } from '../stores';
 </script>
 {#if $drawerOpen}
     <div class="z-40 fixed inset-0 bg-black/50" aria-hidden={!$drawerOpen} on:click={() => $drawerOpen = !$drawerOpen} />

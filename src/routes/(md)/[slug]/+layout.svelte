@@ -1,7 +1,7 @@
 <script lang="ts">
-	import { page } from "$app/stores";
-	import { scrollTo } from "$lib/scroll";
-	import ServiceHeader from "$lib/ServiceHeader.svelte";
+	import { page } from '$app/stores';
+	import { scrollTo } from '$lib/scroll';
+	import ServiceHeader from '$lib/ServiceHeader.svelte';
 </script>
 
 <ServiceHeader>

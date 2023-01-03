@@ -1,5 +1,5 @@
 <script>
-	import { page } from "$app/stores"
+	import { page } from '$app/stores'
 </script>
 
 <main class="block bg-croix text-white w-screen h-screen flex flex-col gap-6 px-6 justify-center items-center">

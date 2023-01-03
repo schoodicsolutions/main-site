@@ -1,9 +1,9 @@
-import { get } from "svelte/store";
-import { page } from "$app/stores";
+import { get } from 'svelte/store';
+import { page } from '$app/stores';
 
-import { reserved } from "./constants";
-import { currentSection, sections } from "./stores";
-import { goto } from "$app/navigation";
+import { reserved } from './constants';
+import { currentSection, sections } from './stores';
+import { goto } from '$app/navigation';
 
 interface ScrollLinkOptions {
     pathname?: string;
@@ -58,7 +58,7 @@ export function scrollTo(node: HTMLAnchorElement, options: ScrollLinkOptions) {
 }
 
 export function scrollRef(node: HTMLElement, name: string) {
-    if (name[1] === "+") {
+    if (name[0] === '+') {
         throw new Error(`${name} is a reserved name`);
     }
     

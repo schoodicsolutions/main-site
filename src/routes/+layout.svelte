@@ -1,15 +1,15 @@
 <script lang="ts">
-    import MediaQuery from "svelte-media-queries";
+    import MediaQuery from 'svelte-media-queries';
 
-    import "../app.css";
+    import '../app.css';
 
-	import Drawer from "$lib/Drawer.svelte";
-	import Footer from "$lib/Footer.svelte";
-	import Header from "$lib/Header.svelte";
-    import Meta from "$lib/Meta.svelte";
-	import Nav from "$lib/Nav.svelte";
+	import Drawer from '$lib/Drawer.svelte';
+	import Footer from '$lib/Footer.svelte';
+	import Header from '$lib/Header.svelte';
+    import Meta from '$lib/Meta.svelte';
+	import Nav from '$lib/Nav.svelte';
 
-	import { drawerOpen } from "../stores";
+	import { drawerOpen } from '../stores';
 
     let scrollY: number;
     $: scrollY;

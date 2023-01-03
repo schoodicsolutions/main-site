@@ -1,6 +1,6 @@
 <script lang="ts">
-	import { reserved } from "./constants";
-	import { currentSection, sections } from "./stores";
+	import { reserved } from './constants';
+	import { currentSection, sections } from './stores';
 
     let timer: number | NodeJS.Timeout;
 

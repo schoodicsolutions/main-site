@@ -1,5 +1,5 @@
 <script>
-	import { page } from "$app/stores";
+	import { page } from '$app/stores';
 
     $: titleString = [
         $page.data.title,
