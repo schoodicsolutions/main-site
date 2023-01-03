@@ -53,6 +53,7 @@
                 <!-- svelte-ignore a11y-missing-attribute -->
                 {#if link.scrollTo}
                     <a 
+                        class="navlink"
                         use:scrollTo={{
                             pathname: link.pathname,
                             scrollTo: link.scrollTo,
@@ -64,6 +65,7 @@
                 {/if}
                 {#if !link.scrollTo}
                 <a 
+                    class="navlink"
                     href={link.pathname}
                 >
                     {link.caption}

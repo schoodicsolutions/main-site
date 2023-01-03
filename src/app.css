@@ -27,8 +27,18 @@
 }
 
 @layer components {
+
+    a {
+        @apply hover:underline;
+    }
+
+    .navlink {
+        @apply hover:no-underline;
+    }
+    
     .button {
-        @apply block px-6 py-0 h-12 rounded-md text-lg font-semibold leading-[48px];
+        @apply block px-6 py-0 h-12 rounded-md text-lg font-bold leading-[48px];
+        @apply hover:no-underline;
         @apply transition-colors hover:bg-white/25;
         appearance: button;
     }

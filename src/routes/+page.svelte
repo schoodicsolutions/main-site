@@ -5,6 +5,7 @@
     import Input from '$lib/Input.svelte';
 	import TwoWay from '$lib/scroll/TwoWay.svelte';
 	import ServiceIcon from '$lib/ServiceIcon.svelte';
+	import { page } from '$app/stores';
 </script>
 
 <TwoWay />
@@ -59,13 +60,21 @@
     
     <section class="bg-almond" use:scrollRef={'contact'}>
         <h2>Contact</h2>
-        <form class="max-w-full w-96 m-auto px-4">
+        <form 
+            data-netlify-recaptcha="true"
+            data-netlify="true"
+            class="max-w-full w-96 m-auto px-4"
+        >
             <fieldset class="flex flex-col gap-4 items-center width-content">
+                {#if $page.url.hash === "#success"}
+                    <div id="success" class="p-2 bg-green-500 text-white w-full rounded-md text-center">Thank you for your submission!</div>
+                {/if}
                 <Input name="name" label="Name" placeholder="John Doe" required />
                 <Input name="email" type="email" label="Email" placeholder="john@example.com" required />
                 <Input name="company" label="Organization" placeholder="Acme Industries" />
                 <Input name="phone" label="Phone" placeholder="(207) 555-0195" required />
                 <Input name="message" label="Message" placeholder="Additional information here" required multiline />
+                <div data-netlify-recaptcha="true"></div>
                 <button class="button button-blue ml-auto">Submit</button>
             </fieldset>
         </form>
