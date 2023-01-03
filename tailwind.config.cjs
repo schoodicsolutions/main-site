@@ -13,6 +13,9 @@ module.exports = {
       },
       transitionProperty: {
         'spacing': 'margin, padding',
+      },
+      screens: {
+        'short': { 'raw': '(max-height: 800px)' },
       }
     },
   },

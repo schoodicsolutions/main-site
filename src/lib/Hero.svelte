@@ -27,7 +27,7 @@
                     Your Business<br />
                     Together<br />
                 </h1>
-                <h2 class="text-2xl md:text-4xl leading-6 lg:leading-7 font-semibold tracking-tight">
+                <h2 class="hero-h2">
                     Boutique Website Design<br/>
                     & App Development<br/>
                     in Downeast Maine
