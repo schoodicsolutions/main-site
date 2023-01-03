@@ -64,6 +64,7 @@
             data-netlify="true"
             data-netlify-recaptcha="true"
             class="max-w-full w-96 m-auto px-4"
+            method="POST"
             action="/#success"
         >
             <input type="hidden" name="form-name" value="contact-form" />
