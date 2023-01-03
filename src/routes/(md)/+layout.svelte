@@ -1,11 +1,11 @@
 <script lang="ts">
-	import { metadata } from "../../stores";
+	import { page } from "$app/stores";
 	import { scrollTo } from "$lib/scroll";
 	import ServiceHeader from "$lib/ServiceHeader.svelte";
 </script>
 
 <ServiceHeader>
-    <h1>{$metadata.title}</h1>
+    <h1>{$page.data.title}</h1>
 </ServiceHeader>
 
 <section>
@@ -15,6 +15,6 @@
 </section>
 
 <section class="bg-almond">
-    <h3 class="font-bold text-4xl text-center px-6 tracking-tight">{$metadata.contactBlurb || 'Want to work with us?'}</h3>
+    <h3 class="font-bold text-4xl text-center px-6 tracking-tight">{$page.data.contactBlurb || 'Want to work with us?'}</h3>
     <a class="button button-blue" use:scrollTo={{pathname: '/', scrollTo: 'contact'}}>Get in Touch</a>
 </section>

@@ -3,7 +3,7 @@
 	import Footer from "$lib/Footer.svelte";
 	import Header from "$lib/Header.svelte";
 	import Nav from "$lib/Nav.svelte";
-	import { drawerOpen, metadata } from "../stores";
+	import { drawerOpen } from "../stores";
 	import MediaQuery from "svelte-media-queries";
     import "../app.css";
 	import { page } from "$app/stores";
@@ -16,9 +16,9 @@
 
     const site = 'Schoodic Media';
     $: titleString = [
-        $page.url.pathname !== '/' && $metadata.title,
+        $page.data.title,
         site, 
-        $metadata.suffix
+        $page.data.suffix
     ].filter(v => !!v).join(' | ');
 
 </script>
@@ -26,7 +26,7 @@
 <svelte:head> 
     <title>{titleString}</title>
 
-    <meta name="description" content={$metadata.description} />
+    <meta name="description" content={$page.data.description} />
 
     {#if $drawerOpen}
         <style>
