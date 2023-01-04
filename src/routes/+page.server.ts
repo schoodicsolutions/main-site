@@ -1,6 +1,6 @@
 
 import { error, type Actions } from '@sveltejs/kit';
-import nodemailer from 'nodemailer';
+import nodemailer, { Transport } from 'nodemailer';
 
 import {
     SMTP_SERVER,
@@ -13,6 +13,47 @@ import {
     HCAPTCHA_SECRET_KEY,
     HCAPTCHA_VERIFY_API
 } from '$env/static/private';
+import Mail from 'nodemailer/lib/mailer';
+import type SMTPTransport from 'nodemailer/lib/smtp-transport';
+
+const validateCaptcha = (token: string) => {
+    const hcaptchaBody = new FormData();
+
+    hcaptchaBody.append('secret', HCAPTCHA_SECRET_KEY);
+    hcaptchaBody.append('response', token);
+
+    return fetch(HCAPTCHA_VERIFY_API, {
+        method: 'POST',
+        body: hcaptchaBody,
+    }).then(
+        res => res.json()
+    );
+}
+
+const sendMailPromise = (mailOptions: Mail.Options) => {
+    const transport = nodemailer.createTransport({
+        host: SMTP_SERVER,
+        port: Number(SMTP_PORT),
+        secure: true,
+        authMethod: 'LOGIN',
+        auth: {
+            user: SMTP_USERNAME,
+            pass: SMTP_PASSWORD,
+        }
+    });
+
+    return new Promise<SMTPTransport.SentMessageInfo>(
+        (resolve, reject) => {
+            transport.sendMail(
+                mailOptions, 
+                (err, info) => {
+                    if (err) reject(err);
+                    resolve(info);
+                }
+            );
+        }
+    );
+}
 
 export const actions: Actions = {
     default: async (event) => {
@@ -26,17 +67,7 @@ export const actions: Actions = {
             throw error(401, 'Bad captcha');
         }
 
-        const hcaptchaBody = new FormData();
-
-        hcaptchaBody.append('secret', HCAPTCHA_SECRET_KEY);
-        hcaptchaBody.append('response', hcaptchaResponse);
-
-        const response = await fetch(HCAPTCHA_VERIFY_API, {
-            method: 'POST',
-            body: hcaptchaBody,
-        });
-
-        const hcaptchaStatus = await response.json();
+        const hcaptchaStatus = await validateCaptcha(hcaptchaResponse.toString());
 
         if (!hcaptchaStatus.success) {
             throw error(401, 'Bad captcha');
@@ -53,35 +84,20 @@ export const actions: Actions = {
         ).join('\n');
         
         const fromName = data.get('name') || 'Contact Form';
+        const replyToAddress = data.get('email')?.toString() || SMTP_FROM;
 
-        const transport = nodemailer.createTransport({
-            host: SMTP_SERVER,
-            port: Number(SMTP_PORT),
-            secure: true,
-            authMethod: 'LOGIN',
-            auth: {
-                user: SMTP_USERNAME,
-                pass: SMTP_PASSWORD,
-            }
-        });
-
-        await new Promise(
-            (resolve, reject) => {
-                transport.sendMail({
-                    from: `${fromName} <${SMTP_FROM}>`,
-                    to: SMTP_RCPT,
-                    subject: SMTP_SUBJECT,
-                    headers: {
-                        'Reply-To': data.get('email')?.toString() || SMTP_FROM,
-                    },
-                    html,
-                }, (err, info) => {
-                    if (err) reject(err);
-                    resolve(info);
-                })
+        await sendMailPromise(
+            {
+                from: `${fromName} <${SMTP_FROM}>`,
+                to: SMTP_RCPT,
+                subject: SMTP_SUBJECT,
+                headers: {
+                    'Reply-To': `${fromName} <${replyToAddress}>`,
+                },
+                html,
             }
         ).catch(
-            (e) => { console.log(e); throw error(500, 'Server error') }
-        );
+            () => { throw error(500, 'Server Error') }
+        )
     }
 }

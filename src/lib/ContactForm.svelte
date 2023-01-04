@@ -5,14 +5,9 @@
     import HCaptcha from 'svelte-hcaptcha';
     import { PUBLIC_HCAPTCHA_SITEKEY } from '$env/static/public';
 
-    let disabled: boolean;
     $: disabled = false;
-
-    let loading: boolean;
     $: loading = false;
-
-    let status: boolean | null;
-    $: status = null;
+    $: status = {error: false, success: false};
 
     let hcaptcha: {reset: () => void};
 
@@ -43,9 +38,10 @@
                 body: formData,
             });
 
-            status = response.status < 400;
+            status.success = response.status < 400;
+            status.error = !status.success;
 
-            if (status) {
+            if (status.success) {
                 $form.reset();
             }
 
@@ -55,7 +51,8 @@
             disabled = false;
         } catch {
             disabled = false;
-            status = false;
+            status.success = false;
+            status.error = true;
         }
     }   
 
@@ -74,19 +71,19 @@
 
 <form method="POST" on:submit|preventDefault={handleSubmit} use:form>
     <fieldset class="block flex flex-col gap-4 max-w-96 w-full" {disabled}>
-        {#if status !== null}
-        <div 
-            class:bg-red-500={!status}
-            class:bg-green-500={status}
-            class="text-white p-2 rounded-md w-full"
-        >
-            {#if status}
-                Thank you for your submission!
-            {/if}
-            {#if !status}
-                An error occurred when submitting the form. Please try again.
-            {/if}
-        </div>
+        {#if status.error || status.success}
+            <div 
+                class:bg-red-500={status.error}
+                class:bg-green-500={status.success}
+                class="text-white p-2 rounded-md max-w-96 w-full"
+            >
+                {#if status.success}
+                    Thank you for your submission!
+                {/if}
+                {#if status.error}
+                    An error occurred when submitting the form. Please try again.
+                {/if}
+            </div>
         {/if}
         <div>
             <label for="name">
