@@ -4,8 +4,9 @@ import { error } from '@sveltejs/kit';
 import type { Metadata } from 'src/types';
 
 export async function load({ params }: {params: Record<string, string>}) {
-     const pages = Object.entries(import.meta.glob(`./../*.md`));
-     const [ , page ] = pages.find(([filename]) => filename === `../${params.slug}.md`) || [];
+     const [ , page ] = Object.entries(import.meta.glob(`./../*.md`)).find(
+          ([filename]) => filename === `../${params.slug}.md`
+     ) || [];
 
      if (!page) {
           throw error(404, { message: 'Not Found' });
@@ -13,8 +14,13 @@ export async function load({ params }: {params: Record<string, string>}) {
 
      const {default: content, metadata} = await page() as {default: () => unknown, metadata: Metadata};
 
+     const defaultMetadata: Metadata = {
+          image: '/assets/social/graph-card.jpg',
+     };
+
      return {
           content,
-          ...metadata
+          ...defaultMetadata,
+          ...metadata,
      }
 }

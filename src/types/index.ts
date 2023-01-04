@@ -3,4 +3,5 @@ export interface Metadata {
     description?: string;
     contactBlurb?: string;
     suffix?: string;
+    image?: string;
 }
