@@ -73,7 +73,7 @@
 </script>
 
 <form method="POST" on:submit|preventDefault={handleSubmit} use:form>
-    <fieldset class="flex flex-col gap-4 w-96 max-w-full" {disabled}>
+    <fieldset class="block flex flex-col gap-4 max-w-96 w-full" {disabled}>
         {#if status !== null}
         <div 
             class:bg-red-500={!status}
