@@ -37,7 +37,7 @@
     }
     
     .button {
-        @apply block px-6 py-0 h-12 rounded-md text-lg font-bold leading-[48px];
+        @apply inline-block px-6 py-0 h-12 rounded-md text-lg font-bold leading-[48px] w-fit;
         @apply hover:no-underline;
         @apply transition-colors hover:bg-white/25;
         appearance: button;

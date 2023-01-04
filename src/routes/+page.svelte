@@ -63,14 +63,15 @@
         <form 
             data-netlify="true"
             data-netlify-recaptcha="true"
-            class="max-w-full w-96 m-auto px-4"
+            class="max-w-full w-96 m-auto px-4 scroll-mt-5"
             method="POST"
             action="/#success"
+            id="success"
         >
             <input type="hidden" name="form-name" value="contact-form" />
             <fieldset class="flex flex-col gap-4 items-center width-content">
                 {#if $page.url.hash === "#success"}
-                    <div id="success" class="p-2 bg-green-500 text-white w-full rounded-md text-center">Thank you for your submission!</div>
+                    <div class="p-2 bg-green-500 text-white w-full rounded-md text-center">Thank you for your submission!</div>
                 {/if}
                 <Input name="name" label="Name" placeholder="John Doe" required />
                 <Input name="email" type="email" label="Email" placeholder="john@example.com" required />

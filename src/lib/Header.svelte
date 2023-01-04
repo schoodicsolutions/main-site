@@ -17,7 +17,7 @@
     class:shadow-lg={solid}
 >
     <div class="flex max-w-[1440px] px-3 pl-6 lg:px-8 mx-auto justify-between items-center">
-        <a href="/">
+        <a href="/" class="navlink">
             <Logo variant={transparent ? 'white' : solid ? 'normal' : undefined} />
         </a>
         <MediaQuery query="(min-width: 1024px)" let:matches>
