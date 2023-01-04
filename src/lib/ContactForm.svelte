@@ -24,6 +24,7 @@
 
         try {
             disabled = true;
+            loading = true;
 
             const formData = new FormData();
 
@@ -37,13 +38,10 @@
                 body: formData,
             });
 
-            disabled = true;
-            loading = true;
+            status = response.status < 400;
 
-            if (response.status > 400) {
-            status = false;
-            } else {
-            status = true;
+            if (status) {
+                $form.reset();
             }
 
             loading = false;
@@ -144,7 +142,7 @@
                 Submit
             {/if}
             {#if loading}
-                <Circle size="16" />
+                <Circle size="16" color="currentColor" />
             {/if}
         </button>
     </fieldset>
