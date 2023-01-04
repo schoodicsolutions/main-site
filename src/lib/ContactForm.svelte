@@ -2,6 +2,8 @@
     import { useForm, Hint, required, pattern, email } from "svelte-use-form";
 	import { phoneValidator } from "./constants";
     import { Circle } from 'svelte-loading-spinners';
+    import HCaptcha from 'svelte-hcaptcha';
+    import { PUBLIC_HCAPTCHA_SITEKEY } from '$env/static/public';
 
     let disabled: boolean;
     $: disabled = false;
@@ -12,12 +14,15 @@
     let status: boolean | null;
     $: status = null;
 
+    let hcaptcha: {reset: () => void};
+
     const form = useForm({
         name: { validators: [required] },
         email: { validators: [required, email] },
         phone: { validators: [pattern(phoneValidator)] },
         company: {},
-        message: { validators: [required]},
+        message: { validators: [required] },
+        hcaptchaResponse: { validators: [required] },
     });
 
     const handleSubmit = async () => {
@@ -51,6 +56,18 @@
             status = false;
         }
     }   
+
+    const handleSuccess = (payload: {detail: {token: string}}) => { 
+        console.log(payload.detail.token);
+        $form.hcaptchaResponse.change(payload.detail.token);
+        $form.hcaptchaResponse.touched = true;
+    };
+
+    const handleError = () => {
+        console.log('error occurred');
+        $form.hcaptchaResponse.change('');
+        $form.hcaptchaResponse.touched = true;
+    }
 </script>
 
 <form method="POST" on:submit|preventDefault={handleSubmit} use:form>
@@ -134,6 +151,17 @@
                 placeholder="Additional information here..." 
             />
         </div>
+
+        <div class='ml-auto'>
+            <input name="hcaptchaResponse" id="hcaptchaResponse" hidden />
+            <HCaptcha
+                bind:this={hcaptcha}
+                sitekey={PUBLIC_HCAPTCHA_SITEKEY}
+                on:success={handleSuccess}
+                on:error={handleError}
+            />
+        </div>
+
         <button
             class="button button-blue ml-auto"
             disabled={!$form.valid}

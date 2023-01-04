@@ -1,11 +1,46 @@
-import { SMTP_SERVER, SMTP_USERNAME, SMTP_PASSWORD, SMTP_FROM, SMTP_PORT, SMTP_RCPT, SMTP_SUBJECT } from '$env/static/private'
-import nodemailer from 'nodemailer';
+
 import { error, type Actions } from '@sveltejs/kit';
+import nodemailer from 'nodemailer';
+
+import {
+    SMTP_SERVER,
+    SMTP_USERNAME,
+    SMTP_PASSWORD,
+    SMTP_FROM,
+    SMTP_PORT,
+    SMTP_RCPT,
+    SMTP_SUBJECT,
+    HCAPTCHA_SECRET_KEY,
+    HCAPTCHA_VERIFY_API
+} from '$env/static/private';
 
 export const actions: Actions = {
     default: async (event) => {
 
         const data = await event.request.formData();
+        
+        const hcaptchaResponse = data.get('hcaptchaResponse');
+        data.delete('hcaptchaResponse');
+
+        if (!hcaptchaResponse) {
+            throw error(401, 'Bad captcha');
+        }
+
+        const hcaptchaBody = new FormData();
+
+        hcaptchaBody.append('secret', HCAPTCHA_SECRET_KEY);
+        hcaptchaBody.append('response', hcaptchaResponse);
+
+        const response = await fetch(HCAPTCHA_VERIFY_API, {
+            method: 'POST',
+            body: hcaptchaBody,
+        });
+
+        const hcaptchaStatus = await response.json();
+
+        if (!hcaptchaStatus.success) {
+            throw error(401, 'Bad captcha');
+        }
 
         const html = Array.from(data.entries()).map(
             ([key, value]) => {
@@ -33,7 +68,7 @@ export const actions: Actions = {
         await new Promise(
             (resolve, reject) => {
                 transport.sendMail({
-                    from: `${fromName} <${SMTP_FROM}>`,
+                    from: `${fromName}<${SMTP_FROM}>`,
                     to: SMTP_RCPT,
                     subject: SMTP_SUBJECT,
                     headers: {
