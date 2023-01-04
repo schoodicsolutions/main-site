@@ -39,17 +39,19 @@
     .button {
         @apply inline-block px-6 py-0 h-12 rounded-md text-lg font-bold leading-[48px] w-fit;
         @apply hover:no-underline;
-        @apply transition-colors hover:bg-white/25;
+        @apply transition-colors enabled:hover:bg-white/25;
         appearance: button;
     }
-
+    .button:disabled {
+        @apply bg-gray-200;
+    }
     .button-icon {
         @apply p-0 h-12 w-12 flex rounded-full justify-center items-center;
     }
 
     .button-blue {
         @apply bg-croix text-white;
-        @apply hover:bg-brand;
+        @apply enabled:hover:bg-brand;
     }
 
     section.hero {
@@ -61,6 +63,12 @@
     }
     .textbox {
         @apply rounded-sm p-1 border border-gray-200 w-full;
+    }
+    .invalid {
+        @apply outline outline-red-600;
+    }
+    .hint {
+        @apply text-sm font-bold text-red-600;
     }
     .service-card {
         @apply flex flex-col gap-3 items-center text-center w-72;

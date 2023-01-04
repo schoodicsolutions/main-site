@@ -3,7 +3,7 @@
 	import Nav from './Nav.svelte';
     import MediaQuery from 'svelte-media-queries';
 	import MenuIcon from './icons/MenuIcon.svelte';
-	import { drawerOpen } from '../stores';
+	import { drawerOpen } from './stores';
 
     export let variant: 'transparent' | 'solid' = 'solid';
 

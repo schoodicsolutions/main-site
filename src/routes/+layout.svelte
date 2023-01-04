@@ -9,7 +9,7 @@
     import Meta from '$lib/Meta.svelte';
 	import Nav from '$lib/Nav.svelte';
 
-	import { drawerOpen } from '../stores';
+	import { drawerOpen } from '../lib/stores';
 
     let scrollY: number;
     $: scrollY;
