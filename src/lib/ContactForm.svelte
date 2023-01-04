@@ -49,6 +49,8 @@
                 $form.reset();
             }
 
+            hcaptcha.reset();
+            
             loading = false;
             disabled = false;
         } catch {
