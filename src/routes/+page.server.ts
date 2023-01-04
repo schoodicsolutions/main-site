@@ -68,11 +68,11 @@ export const actions: Actions = {
         await new Promise(
             (resolve, reject) => {
                 transport.sendMail({
-                    from: `${fromName}<${SMTP_FROM}>`,
+                    from: `${fromName} <${SMTP_FROM}>`,
                     to: SMTP_RCPT,
                     subject: SMTP_SUBJECT,
                     headers: {
-                        'Reply-To': SMTP_FROM,
+                        'Reply-To': data.get('email')?.toString() || SMTP_FROM,
                     },
                     html,
                 }, (err, info) => {
