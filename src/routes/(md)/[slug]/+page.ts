@@ -1,6 +1,8 @@
 import { error } from '@sveltejs/kit';
 import type { Metadata } from 'src/types';
 
+export const prerender = false;
+
 export async function load({ params }: {params: Record<string, string>}) {
      const [ , page ] = Object.entries(import.meta.glob(`./../*.md`)).find(
           ([filename]) => filename === `../${params.slug}.md`
