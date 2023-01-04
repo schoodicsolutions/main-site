@@ -16,6 +16,8 @@ export const actions: Actions = {
                 }
             }
         ).join('\n');
+        
+        const fromName = data.get('name') || 'Contact Form';
 
         const transport = nodemailer.createTransport({
             host: SMTP_SERVER,
@@ -31,7 +33,7 @@ export const actions: Actions = {
         await new Promise(
             (resolve, reject) => {
                 transport.sendMail({
-                    from: SMTP_FROM,
+                    from: `${fromName} <${SMTP_FROM}>`,
                     to: SMTP_RCPT,
                     subject: SMTP_SUBJECT,
                     headers: {
