@@ -27,7 +27,6 @@
 }
 
 @layer components {
-
     a {
         @apply hover:underline;
     }
@@ -83,6 +82,7 @@
         @apply text-2xl xl:text-3xl leading-tight tracking-tighter font-semibold
     }
 }
+
 * {
     font-family: Inter;
     font-size: 16px;

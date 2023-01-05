@@ -1,6 +1,9 @@
 
 import { error, type Actions } from '@sveltejs/kit';
-import nodemailer, { Transport } from 'nodemailer';
+
+import { createTransport }from 'nodemailer';
+import type Mail from 'nodemailer/lib/mailer';
+import type SMTPTransport from 'nodemailer/lib/smtp-transport';
 
 import {
     SMTP_SERVER,
@@ -13,8 +16,6 @@ import {
     HCAPTCHA_SECRET_KEY,
     HCAPTCHA_VERIFY_API
 } from '$env/static/private';
-import Mail from 'nodemailer/lib/mailer';
-import type SMTPTransport from 'nodemailer/lib/smtp-transport';
 
 const validateCaptcha = (token: string) => {
     const hcaptchaBody = new FormData();
@@ -31,7 +32,7 @@ const validateCaptcha = (token: string) => {
 }
 
 const sendMailPromise = (mailOptions: Mail.Options) => {
-    const transport = nodemailer.createTransport({
+    const transport = createTransport({
         host: SMTP_SERVER,
         port: Number(SMTP_PORT),
         secure: true,

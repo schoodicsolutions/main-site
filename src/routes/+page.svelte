@@ -1,10 +1,10 @@
 <script lang="ts">
     import { scrollRef } from '$lib/scroll';
 
+	import ContactForm from '$lib/ContactForm.svelte';
 	import Hero from '$lib/Hero.svelte';
 	import TwoWay from '$lib/scroll/TwoWay.svelte';
-	import ServiceIcon from '$lib/ServiceIcon.svelte';
-	import ContactForm from '$lib/ContactForm.svelte';
+	import ServiceCards from '$lib/ServiceCards.svelte';
 </script>
 
 <TwoWay />
@@ -25,36 +25,7 @@
         <h2>
             Services We Offer
         </h2>
-        <nav 
-            class="service-cards"
-            aria-label="Services"
-        >
-            <div class="service-card">
-                <h3>Full-Stack Web Development</h3>
-                <ServiceIcon variant="blue" height="125px" icon="toolbox" />
-                <a class="button button-blue" href="/full-stack" aria-label="Full-Stack Web Development">Learn More</a>
-            </div>
-            <div class="service-card">
-                <h3>Responsive Web Design</h3>
-                <ServiceIcon variant="blue" height="125px" icon="phone" />
-                <a class="button button-blue" href="/responsive-design" aria-label="Responsive Web Design">Learn More</a>
-            </div>
-            <div class="service-card">
-                <h3>Digital Marketing</h3>
-                <ServiceIcon variant="blue" height="125px" icon="megaphone" />
-                <a class="button button-blue" href="/digital-marketing" aria-label="Digital Marketing">Learn More</a>
-            </div>
-            <div class="service-card">
-                <h3>Search Engine Optimization</h3>
-                <ServiceIcon variant="blue" height="125px" icon="magnifier" />
-                <a class="button button-blue" href="/search-engine-optimization" aria-label="Search Engine Optimization">Learn More</a>
-            </div>
-            <div class="service-card">
-                <h3>Managed Hosting</h3>
-                <ServiceIcon variant="blue" height="125px" icon="servers" />
-                <a class="button button-blue" href="/managed-hosting" aria-label="Managed Hosting">Learn More</a>
-            </div>
-        </nav>
+        <ServiceCards />
     </section>
     
     <section class="bg-almond" use:scrollRef={'contact'}>
