@@ -1,7 +1,6 @@
 <script lang="ts">
 	import { page } from '$app/stores';
-	import { scrollTo } from 'svelte-scroll-nav'
-	import { section } from 'svelte-scroll-nav/stores';
+	import { scrollTo, section } from 'svelte-scroll-nav'
 
     export let color: 'black' | 'white' = 'black';
     export let variant: 'row' | 'col' = 'row';
