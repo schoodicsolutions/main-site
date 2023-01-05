@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { page } from '$app/stores';
-	import { scrollTo } from './scroll';
-	import { currentSection } from './scroll/stores';
+	import { scrollTo } from 'svelte-scroll-nav'
+	import { section } from 'svelte-scroll-nav/stores';
 
     export let color: 'black' | 'white' = 'black';
     export let variant: 'row' | 'col' = 'row';
@@ -33,7 +33,6 @@
         },
     ];
 
-    $: section = $currentSection;
 </script>
 
 <nav 
@@ -54,9 +53,9 @@
                 {#if link.scrollTo}
                     <a 
                         class="navlink"
+                        href={link.pathname}
                         use:scrollTo={{
-                            pathname: link.pathname,
-                            scrollTo: link.scrollTo,
+                            section: link.scrollTo,
                             onNavigate,
                         }}
                     >
@@ -75,7 +74,7 @@
                     class="h-0.5 w-full -mt-0.5"
                     class:bg-brand={black}
                     class:bg-white={white}
-                    class:invisible={$page.url.pathname !== link.pathname || section !== link.scrollTo}
+                    class:invisible={$page.url.pathname !== link.pathname || $section !== link.scrollTo}
                 />
             </li>
         {/each}

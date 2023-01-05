@@ -1,13 +1,12 @@
 <script lang="ts">
-    import { scrollRef } from '$lib/scroll';
+    import { ScrollWatcher, scrollRef } from 'svelte-scroll-nav';
 
 	import ContactForm from '$lib/ContactForm.svelte';
 	import Hero from '$lib/Hero.svelte';
-	import TwoWay from '$lib/scroll/TwoWay.svelte';
 	import ServiceCards from '$lib/ServiceCards.svelte';
 </script>
 
-<TwoWay />
+<ScrollWatcher />
 
 <main>
 
