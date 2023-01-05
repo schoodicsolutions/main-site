@@ -26,31 +26,31 @@
             Services We Offer
         </h2>
         <nav 
-            class="flex flex-col gap-16 lg:gap-0 lg:flex-row justify-center items-center pb-6 lg:pb-12"
+            class="service-cards"
             aria-label="Services"
         >
             <div class="service-card">
-                <h3 class="text-2xl xl:text-3xl leading-tight tracking-tighter font-semibold">Full-Stack Web Development</h3>
+                <h3>Full-Stack Web Development</h3>
                 <ServiceIcon variant="blue" height="125px" icon="toolbox" />
                 <a class="button button-blue" href="/full-stack" aria-label="Full-Stack Web Development">Learn More</a>
             </div>
             <div class="service-card">
-                <h3 class="text-2xl xl:text-3xl leading-tight tracking-tighter font-semibold">Responsive<br />Web Design</h3>
+                <h3>Responsive Web Design</h3>
                 <ServiceIcon variant="blue" height="125px" icon="phone" />
                 <a class="button button-blue" href="/responsive-design" aria-label="Responsive Web Design">Learn More</a>
             </div>
             <div class="service-card">
-                <h3 class="text-2xl xl:text-3xl leading-tight tracking-tighter font-semibold">Digital<br>Marketing</h3>
+                <h3>Digital Marketing</h3>
                 <ServiceIcon variant="blue" height="125px" icon="megaphone" />
                 <a class="button button-blue" href="/digital-marketing" aria-label="Digital Marketing">Learn More</a>
             </div>
             <div class="service-card">
-                <h3 class="text-2xl xl:text-3xl leading-tight tracking-tighter font-semibold">Search Engine Optimization</h3>
+                <h3>Search Engine Optimization</h3>
                 <ServiceIcon variant="blue" height="125px" icon="magnifier" />
                 <a class="button button-blue" href="/search-engine-optimization" aria-label="Search Engine Optimization">Learn More</a>
             </div>
             <div class="service-card">
-                <h3 class="text-2xl xl:text-3xl leading-tight tracking-tighter font-semibold">Managed<br />Hosting</h3>
+                <h3>Managed Hosting</h3>
                 <ServiceIcon variant="blue" height="125px" icon="servers" />
                 <a class="button button-blue" href="/managed-hosting" aria-label="Managed Hosting">Learn More</a>
             </div>
