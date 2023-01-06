@@ -43,6 +43,6 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"svelte-scroll-nav": "^1.0.2"
+		"svelte-scroll-nav": "^1.0.4"
 	}
 }
