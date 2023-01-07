@@ -12,6 +12,9 @@
 @tailwind utilities;
 
 @layer base {
+    body {
+        overflow-x: hidden;
+    }
     h1 {
       @apply text-5xl short:text-5xl md:text-6xl font-extrabold tracking-tight text-center;
     }
