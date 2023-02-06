@@ -2,6 +2,7 @@
 	import { page } from '$app/stores';
 	import { scrollTo } from 'svelte-scroll-nav';
 	import ServiceHeader from '$lib/ServiceHeader.svelte';
+	import ContactForm from '$lib/ContactForm.svelte';
 </script>
 
 <ServiceHeader>
@@ -16,5 +17,5 @@
 
 <section class="bg-almond">
     <h3 class="font-bold text-4xl text-center px-6 tracking-tight">{$page.data.contactBlurb || 'Want to work with us?'}</h3>
-    <a class="button button-blue" href="/" use:scrollTo={{section: 'contact'}}>Get in Touch</a>
+    <ContactForm />
 </section>
