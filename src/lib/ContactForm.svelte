@@ -76,12 +76,12 @@
         <div class="flex">
             <ServiceIcon icon="phone" height="60px" />
             <div>
-                <p class="text-center text-2xl font-bold">Reach us by phone</p>
-                <p class="text-center text-xl font-medium mb-3">Mon &ndash; Fri &nbsp; 9AM &ndash; 5PM</p>
+                <p class="text-center text-xl md:text-2xl font-bold">Reach us by phone</p>
+                <p class="text-center text-lg md:text-xl font-medium mb-3">Mon &ndash; Fri &nbsp; 9AM &ndash; 5PM</p>
             </div>
         </div>
 
-        <p class="text-center text-3xl font-bold">+1 (207) 952-3892</p>
+        <p class="text-center text-2xl md:text-3xl font-bold">+1 (207) 952-3892</p>
 
         <MediaQuery query="(max-width: 800px)" let:matches>
             {#if matches}
@@ -91,7 +91,7 @@
     </div>
 
     <div class="mb-6">
-        <p class="text-center text-xl font-medium">&mdash; or, send us a message below &mdash;</p>
+        <p class="text-center text-lg md:text-xl font-medium">&mdash; or, send us a message below &mdash;</p>
     </div>
 
     <form method="POST" on:submit|preventDefault={handleSubmit}>
