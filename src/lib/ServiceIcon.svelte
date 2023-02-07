@@ -3,9 +3,9 @@
     export let height: number | string | null | undefined = undefined;
     export let icon: 'toolbox' | 'magnifier' | 'phone' | 'servers' | 'megaphone';
 
-    export let variant: 'blue' | 'white' = 'blue';
+    export let variant: 'blue' | 'white' | 'black' = 'blue';
 
-    const [blue, white] = [variant === 'blue', variant === 'white'];
+    const [blue, white, black] = [variant === 'blue', variant === 'white', variant === 'black'];
  </script>
  
  
@@ -14,6 +14,7 @@
     {height}
     class:text-croix={blue}
     class:text-white={white}
+    class:text-black={black}
     viewBox="0 0 33.072916 33.072916"
     xmlns="http://www.w3.org/2000/svg"
  >
