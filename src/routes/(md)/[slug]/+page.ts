@@ -30,8 +30,8 @@ export async function load({ params }: {params: Record<string, string>}) {
           const {default: content} = await page() as {default: () => unknown, metadata: Metadata};
 
           const metadata = {
-               title: `Web Design in ${city}, Maine`,
-               description: `Need a website for your business in ${city}, Maine? Schoodic Media in Calais, Maine has you covered. We will work with you remotely to build you a world-class website.`
+               title: `${city} Maine Web Design`,
+               description: `${city} Maine Web Design Since 2023. Your One Stop Shop for Web Design & E-Commerce`
           };
 
           return {
