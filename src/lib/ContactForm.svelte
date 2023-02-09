@@ -76,7 +76,7 @@
         <div class="flex">
             <ServiceIcon icon="phone" height="60px" />
             <div>
-                <p class="text-center text-xl md:text-2xl font-bold">Reach us by phone</p>
+                <p class="text-center text-xl md:text-2xl font-bold">Call or text</p>
                 <p class="text-center text-lg md:text-xl font-medium mb-3">Mon &ndash; Fri &nbsp; 9AM &ndash; 5PM</p>
             </div>
         </div>
