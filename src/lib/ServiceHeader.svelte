@@ -13,10 +13,7 @@
 <svelte:window bind:scrollY />
 
 <section class="hero" bind:clientHeight style:opacity>
-    <div class="w-screen pt-40 h-96 text-white">
+    <div class="w-screen h-20 text-white">
         <slot />
-    </div>
-    <div class="absolute bottom-0 w-full h-8 lg:h-[6vw]">
-        <Wave class="text-white" height="100%" />
     </div>
 </section>
