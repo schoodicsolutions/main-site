@@ -32,7 +32,8 @@ export async function load({ params }: {params: Record<string, string>}) {
           const metadata = {
                title: `${city} Maine Web Design`,
                heading: `Web Design in ${city}, Maine`,
-               description: `${city} Maine Web Design Since 2023. Schoodic Media Is Your #1 Company for Local Web Design. Located in Calais, Maine.`
+               description: `${city} Maine Web Design Since 2023. Schoodic Media Is Your #1 Company for Local Web Design. Located in Calais, Maine.`,
+               contactBlurb: 'Get In Touch',
           };
 
           return {
