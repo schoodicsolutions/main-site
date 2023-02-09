@@ -21,11 +21,11 @@ export async function load({ params }: {params: Record<string, string>}) {
                ({ slug }) => slug === params.slug
           ) || {};
 
-          if (!slug) {
+          if (!city || !slug) {
                throw error(404, { message: 'Not Found' });
           }
 
-          const [ , page ] = Object.entries(import.meta.glob(`./../web-design-in-city.md`))[0];
+          const [ , page ] = Object.entries(import.meta.glob(`./../web-design-in-city.svelte`))[0];
           
           const {default: content} = await page() as {default: () => unknown, metadata: Metadata};
 

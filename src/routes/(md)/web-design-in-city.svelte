@@ -3,7 +3,7 @@
     const city = $page.data.city;
 </script>
 
-<div class="max-w-[640px] w-full m-auto text-center text-lg short:text-xl lg:text-xl">
+<div class="max-w-[640px] w-full m-auto text-center">
     <h3 class="mb-4">Need A Great Website?</h3>
     <div class="flex flex-col gap-4">
         <p>
@@ -18,9 +18,9 @@
     </div>
 </div>
 
-<div class="mt-12 max-w-[640px] w-full m-auto text-center text-lg short:text-xl lg:text-xl flex flex-col">
-    <h3 class="mb-4">What We Can Do For You</h3>
-    <ul class="flex flex-col gap-4 list-disc">
+<div class="mt-12 max-w-[640px] w-full m-auto text-center flex flex-col">
+    <h4>What We Can Do For You</h4>
+    <ul class="flex flex-col gap-4 list-disc w-60 md:w-full m-auto mt-2">
         <li>Boost your presence on Google</li>
         <li>Get you more clicks and more calls</li>
         <li>Build you a new, modern website</li>

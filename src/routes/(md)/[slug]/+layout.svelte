@@ -38,18 +38,15 @@
     {/if}
 </MediaQuery>
 
-<div class="pt-28">
-    <h1 >{$page.data.heading || $page.data.title}</h1>
-</div>
-
-<section>
-    <div class="w-[1440px] max-w-full flex flex-col gap-4 text-xl">
+<section class="pt-28">
+    <h1 class="text-4xl md:text-5xl mb-8">{$page.data.heading || $page.data.title}</h1>
+    <div class="w-[800px] max-w-full flex flex-col gap-4 text-lg">
         <slot />
     </div>
 </section>
 
 <section class="bg-almond">
-    <h3 class="font-bold text-4xl text-center px-6 tracking-tight">{$page.data.contactBlurb || 'Want to work with us?'}</h3>
+    <h3 class="font-bold text-2xl md:text-4xl text-center px-6 tracking-tight">{$page.data.contactBlurb || 'Want to work with us?'}</h3>
     <ContactForm />
 </section>
 

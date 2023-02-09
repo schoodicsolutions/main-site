@@ -13,10 +13,18 @@
     <Hero />
     <section use:scrollRef={'about'}>
         <h2>About Us</h2>
-        <div class="w-[1440px] max-w-full flex flex-col gap-4 text-xl">
-            <p>Welcome to Schoodic Media, your premier web design company located in the beautiful border town of Calais, Maine. Our CEO, Ryan Prescott, has a passion for creating visually stunning and user-friendly websites that help businesses succeed online. We're named after the St. Croix River, originally called the "Schoodic River" during the early settlement of the area.<p>
-            <p>At Schoodic Media, we understand that your website is often the first point of contact for potential customers. That's why we take great care in designing websites that not only look professional, but also effectively convey your brand message and business goals. We will work with you every step of the way to ensure that your website perfectly reflects your unique vision.</p>
-            <p>If you're ready to take your online presence to the next level, look no further than Schoodic Media. Contact us today to schedule a consultation and see how we can help your business thrive online.</p>
+        <div class="w-[800px] max-w-full flex flex-col gap-4 text-lg">
+            <h4>We're a Maine Business</h4>
+            <p class="mb-8">Schoodic Media is a family business located in Calais, Maine overlooking the St. Croix River, surrounded by shadowy evergreens and blooming wildflowers.
+               It's easy to see how we came to have such an appreciation for making beautiful designs!
+               We incorporate our passion and enthusiasm into every job, using our keen eye to deliver stunning results.
+            </p>
+
+            <h4>Modern and Knowledgable</h4>
+            <p>We use the latest technologies like Svelte, React, and WordPress to build slick web applications and websites. 
+               We're attentive to your needs, and we'll be with you 100% of the way from the initial design to the day your site goes live.
+               Schoodic Media is happy to work with you to make sure that your vision comes to life exactly the way you envision it.
+            </p>
         </div>
     </section>
 
