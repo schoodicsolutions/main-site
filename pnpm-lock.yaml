@@ -26,7 +26,7 @@ specifiers:
   svelte-loading-spinners: ^0.3.4
   svelte-media-queries: ^1.5.1
   svelte-scroll-nav: ^1.0.7
-  svelte-use-form: ^2.5.0
+  svelte-use-form: ^2.6.1
   tailwindcss: ^3.2.4
   tslib: ^2.4.1
   typescript: ^4.9.3
@@ -35,6 +35,7 @@ specifiers:
 dependencies:
   '@rodneylab/svelte-social-icons': 0.0.24
   svelte-scroll-nav: 1.0.7
+  svelte-use-form: 2.6.1
 
 devDependencies:
   '@fontsource/inter': 4.5.14
@@ -60,7 +61,6 @@ devDependencies:
   svelte-hcaptcha: 0.1.1
   svelte-loading-spinners: 0.3.4
   svelte-media-queries: 1.5.1_niwyv7xychq2ag6arq5eqxbomm
-  svelte-use-form: 2.5.0
   tailwindcss: 3.2.4_postcss@8.4.20
   tslib: 2.4.1
   typescript: 4.9.4
@@ -1959,16 +1959,15 @@ packages:
     resolution: {integrity: sha512-N3P+3LAbikkC4Q2vISbo364wGKTqZyqK/1MZsZhUH2gtBJC0AuoRS/WX9IarmL9bErIrQy24Zq8YMkO6gj4PuQ==}
     dev: false
 
-  /svelte-use-form/2.5.0:
-    resolution: {integrity: sha512-03elCJk7S1I6rouh/2PdHdlVN8JAthhnkxb/xNHrv4U5s4hp8k2AjTPSzZi7KlThRlZOwgWfCqKm+CR+8JQHlQ==}
+  /svelte-use-form/2.6.1:
+    resolution: {integrity: sha512-+KSZIpel3S6JyqlIKRwDqO3I+L4AtOPkwo9kVzqsNJ8IjhhWRc1bXLSLBxCUlJa6LMbIHRLgO7CfqSVvgVlGgA==}
     dependencies:
       svelte: 3.55.0
-    dev: true
+    dev: false
 
   /svelte/3.55.0:
     resolution: {integrity: sha512-uGu2FVMlOuey4JoKHKrpZFkoYyj0VLjJdz47zX5+gVK5odxHM40RVhar9/iK2YFRVxvfg9FkhfVlR0sjeIrOiA==}
     engines: {node: '>= 8'}
-    dev: true
 
   /svelte2tsx/0.5.23_niwyv7xychq2ag6arq5eqxbomm:
     resolution: {integrity: sha512-jYFnugTQRFmUpvLXPQrKzVYcW5ErT+0QCxg027Zx9BuvYefMZFuoBSTDYe7viPEFGrPPiLgT2m7f5n9khE7f7Q==}

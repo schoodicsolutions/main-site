@@ -59,9 +59,8 @@
     }   
 
     const handleSuccess = (payload: {detail: {token: string}}) => { 
-        console.log(payload.detail.token);
         $form.hcaptchaResponse.change(payload.detail.token);
-        $form.hcaptchaResponse.touched = true;
+        //$form.hcaptchaResponse.touched = true;
     };
 
     const handleError = () => {
@@ -94,7 +93,7 @@
         <p class="text-center text-lg md:text-xl font-medium">&mdash; or, send us a message below &mdash;</p>
     </div>
 
-    <form method="POST" on:submit|preventDefault={handleSubmit}>
+    <form method="POST" on:submit|preventDefault={handleSubmit} use:form>
         <fieldset class="flex flex-col gap-4 max-w-96 w-full" {disabled}>
             {#if status.error || status.success}
                 <div 
