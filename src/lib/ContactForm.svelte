@@ -60,15 +60,24 @@
 
     const handleSuccess = (payload: {detail: {token: string}}) => { 
         $form.hcaptchaResponse.change(payload.detail.token);
-        //$form.hcaptchaResponse.touched = true;
+        $form.hcaptchaResponse.touched = true;
+        $form.touched = true;
     };
 
     const handleError = () => {
         console.log('error occurred');
         $form.hcaptchaResponse.change('');
         $form.hcaptchaResponse.touched = true;
+        $form.touched = true;
     }
 </script>
+
+<p>Form Name: {$form.name.valid}</p>
+<p>Form Email: {$form.email.valid}</p>
+<p>Form Phone: {$form.phone.valid}</p>
+<p>Form Company {$form.company.valid}</p>
+<p>Form Message: {$form.message.valid}</p>
+<p>Form Hcaptcha: {$form.hcaptchaResponse.valid}</p>
 
 <div>
     <div class="mb-4 flex flex-col items-center rounded-md bg-white py-6">
