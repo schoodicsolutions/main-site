@@ -25,7 +25,7 @@ specifiers:
   svelte-hcaptcha: ^0.1.1
   svelte-loading-spinners: ^0.3.4
   svelte-media-queries: ^1.5.1
-  svelte-scroll-nav: ^1.0.5
+  svelte-scroll-nav: ^1.0.7
   svelte-use-form: ^2.5.0
   tailwindcss: ^3.2.4
   tslib: ^2.4.1
@@ -34,7 +34,7 @@ specifiers:
 
 dependencies:
   '@rodneylab/svelte-social-icons': 0.0.24
-  svelte-scroll-nav: 1.0.5
+  svelte-scroll-nav: 1.0.7
 
 devDependencies:
   '@fontsource/inter': 4.5.14
@@ -1955,8 +1955,8 @@ packages:
       typescript: 4.9.4
     dev: true
 
-  /svelte-scroll-nav/1.0.5:
-    resolution: {integrity: sha512-lJ8a+jXEBrbhUV7Kel1drDGS/4sICh+dTWUKFgciDXsA2/eTwUSwyGBEfylF7D034kkIziN3A8E7/NOcEVC00g==}
+  /svelte-scroll-nav/1.0.7:
+    resolution: {integrity: sha512-N3P+3LAbikkC4Q2vISbo364wGKTqZyqK/1MZsZhUH2gtBJC0AuoRS/WX9IarmL9bErIrQy24Zq8YMkO6gj4PuQ==}
     dev: false
 
   /svelte-use-form/2.5.0:

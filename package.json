@@ -44,6 +44,6 @@
 	"type": "module",
 	"dependencies": {
 		"@rodneylab/svelte-social-icons": "^0.0.24",
-		"svelte-scroll-nav": "^1.0.5"
+		"svelte-scroll-nav": "^1.0.7"
 	}
 }
