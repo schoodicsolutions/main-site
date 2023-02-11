@@ -1,14 +1,17 @@
-import { error } from '@sveltejs/kit';
-import type { Metadata } from 'src/types';
-import cities from './cities.json';
+import { PUBLIC_BASEURL } from '$env/static/public';
 
-const defaultMetadata: Metadata = {
-     image: '/assets/social/graph-card.jpg',
-};
+import { error } from '@sveltejs/kit';
+import type { Metadata } from '../../../types';
+import cities from './cities.json';
 
 const cityPrefix = 'web-design-in-';
 
-export async function load({ params }: {params: Record<string, string>}) {
+export async function load({ params, url }: {params: Record<string, string>, url: URL }) {
+
+     const defaultMetadata: Metadata = {
+          image: '/assets/social/graph-card.jpg',
+          canonical: `${PUBLIC_BASEURL}${url.pathname}`,
+     };
 
      if (params.slug.slice(0, cityPrefix.length) === cityPrefix) {
           const citySlugs = cities.map(
@@ -27,7 +30,7 @@ export async function load({ params }: {params: Record<string, string>}) {
           
           const {default: content} = await page() as {default: () => unknown, metadata: Metadata};
 
-          const metadata = {
+          const metadata: Metadata = {
                title: `${city} Maine Web Design`,
                heading: `Web Design in ${city}, Maine`,
                description: `${city} Maine Web Design Since 2023. Schoodic Media Is Your #1 Company for Local Web Design. Located in Calais, Maine.`,
