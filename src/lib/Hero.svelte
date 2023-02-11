@@ -16,7 +16,7 @@
     <div 
         class="lg:h-[768px] h-[calc(100vh+32px)] max-w-[1440px] mx-auto overflow-hidden relative pt-40 justify-center lg:justify-start"
     >
-        <div class="absolute left-1/2 lg:transform-none -translate-x-1/2 bottom-0 lg:static w-[1024px] lg:w-[800px]">
+        <div class="absolute left-1/2 lg:transform-none -translate-x-1/2 bottom-0 lg:static w-[1024px] lg:w-[800px] xl:w-[1024px]">
             <Mark width="100%" />
         </div>
         <div class="flex absolute top-0 h-full w-full flex-col lg:flex-row  px-4">
