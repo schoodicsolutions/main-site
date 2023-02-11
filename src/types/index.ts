@@ -4,4 +4,6 @@ export interface Metadata {
     contactBlurb?: string;
     suffix?: string;
     image?: string;
+    canonical?: string;
+    heading?: string;
 }
