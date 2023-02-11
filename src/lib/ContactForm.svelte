@@ -35,7 +35,7 @@
                 formData.append(key, value);
             }
 
-            const response = await fetch('/', {
+            const response = await fetch('/submit-form', {
                 method: 'POST',
                 body: formData,
             });

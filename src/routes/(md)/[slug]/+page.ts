@@ -2,8 +2,6 @@ import { error } from '@sveltejs/kit';
 import type { Metadata } from 'src/types';
 import cities from './cities.json';
 
-export const prerender = false;
-
 const defaultMetadata: Metadata = {
      image: '/assets/social/graph-card.jpg',
 };
