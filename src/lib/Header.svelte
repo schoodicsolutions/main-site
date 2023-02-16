@@ -19,6 +19,10 @@
     class:bg-croix={solid && blue}
     class:shadow-lg={solid}
 >
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TWV5QZ3"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
     <div class="flex max-w-[1440px] px-3 pl-6 lg:px-8 mx-auto justify-between items-center">
         <a href="/" class="navlink">
             <Logo variant={(blue && solid) || transparent ? 'white' : solid ? 'normal' : undefined} />
