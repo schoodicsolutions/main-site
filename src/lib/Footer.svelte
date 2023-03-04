@@ -8,7 +8,7 @@
     const year = new Date().getFullYear();
 </script>
 
-<footer class="text-center">
+<footer class="text-center z-50">
     {#if !$page.error}
         <div class="w-full h-8 lg:h-[6vw] bg-almond">
             <Wave class="text-croix" height="100%" />
@@ -17,7 +17,7 @@
     <div class="bg-croix text-white h-screen short:h-auto lg:h-auto">
         <div class="flex flex-col lg:flex-row justify-center lg:items-start gap-10 md:gap-20 xl:gap-40 py-20 h-full">
             <section class="flex flex-col items-center lg:order-1 gap-1 lg:gap-4">
-                <Logo variant="white" />
+                <a href="/" class="navlink" aria-label="Back to top"><Logo variant="white" /></a>
                 <div>
                     <p>Proudly built with ❤️ in Washington County</p>
                     <p>Copyright &copy; {year} Schoodic Media</p>

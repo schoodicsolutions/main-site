@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { scrollTo } from 'svelte-scroll-nav';
 	import Mark from './Mark.svelte';
 	import Wave from './Wave.svelte';
 
@@ -32,6 +33,7 @@
                     & App Development<br/>
                     in Downeast Maine
                 </h2>
+                <a class="button button-ghost" href="/" use:scrollTo={{section: "contact"}}>Contact Us</a>
             </div>
         </div>
     </div>

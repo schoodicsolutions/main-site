@@ -57,9 +57,18 @@
         @apply p-0 h-12 w-12 flex rounded-full justify-center items-center;
     }
 
+    a.button-blue {
+        @apply hover:bg-brand;
+    }
+    
     .button-blue {
         @apply bg-croix text-white;
         @apply enabled:hover:bg-brand;
+    }
+
+    .button-ghost {
+        @apply bg-white/30;
+        @apply transition-colors hover:bg-white/40;
     }
 
     section.hero {
