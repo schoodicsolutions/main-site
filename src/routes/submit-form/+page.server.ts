@@ -95,7 +95,8 @@ const createContactAndCompany = async ({ name, company, phone, email }: {
         }
         throw e;
     }
-
+    
+    /*
     if (!company) return;
 
     const forbiddenDomains = ['gmail.com', 'yahoo.com', 'hotmail.com', 'outlook.com', 'roadrunner.com', 'googlemail.com', 'rocketmail.com'];
@@ -123,6 +124,7 @@ const createContactAndCompany = async ({ name, company, phone, email }: {
             }
         ]
     )
+    */
 }
 
 export const actions: Actions = {
