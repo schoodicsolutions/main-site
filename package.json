@@ -42,6 +42,7 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"@hubspot/api-client": "^8.8.0",
 		"@rodneylab/svelte-social-icons": "^0.0.24",
 		"svelte-scroll-nav": "^1.0.7",
 		"svelte-use-form": "^2.6.1"
