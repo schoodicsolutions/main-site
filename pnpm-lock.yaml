@@ -2,6 +2,8 @@ lockfileVersion: 5.4
 
 specifiers:
   '@fontsource/inter': ^4.5.14
+  '@fontsource/montserrat': ^4.5.14
+  '@fontsource/open-sans': ^4.5.14
   '@fontsource/quicksand': ^4.5.12
   '@fontsource/rubik': ^4.5.13
   '@hubspot/api-client': ^8.8.0
@@ -35,6 +37,8 @@ specifiers:
   vite: ^4.0.0
 
 dependencies:
+  '@fontsource/montserrat': 4.5.14
+  '@fontsource/open-sans': 4.5.14
   '@fontsource/quicksand': 4.5.12
   '@hubspot/api-client': 8.8.0
   '@rodneylab/svelte-social-icons': 0.0.24
@@ -290,6 +294,14 @@ packages:
   /@fontsource/inter/4.5.14:
     resolution: {integrity: sha512-JDC9AocdPLuGsASkvWw9hS5gtHE7K9dOwL98XLrk5yjYqxy4uVnScG58NUvFMJDVJRl/7c8Wnap6PEs+7Zvj1Q==}
     dev: true
+
+  /@fontsource/montserrat/4.5.14:
+    resolution: {integrity: sha512-fTvrteVzuFUePhr4QYBGoK8G/YHLJ3IhF1HhKg0AxcFvZajJT7rM7ULdmKLSd2PkX44R3aaFZq1zDbmjbGGI+w==}
+    dev: false
+
+  /@fontsource/open-sans/4.5.14:
+    resolution: {integrity: sha512-mBXIIETBlW8q/ocuUN0hyGow2iuf75hQEHQt8R/RJ/HcphVbLg8KB7pHYGbFGDqs75W+SWvTC7JkVeAjT65BuQ==}
+    dev: false
 
   /@fontsource/quicksand/4.5.12:
     resolution: {integrity: sha512-aSgAR82dAzRsWGupPobU1ubfX6MhrQgKw2xe0AEKyQ5yMMpNhptTajbOIPJ8ZE5CPX3UHYlGY0da/7ztoEM3vQ==}

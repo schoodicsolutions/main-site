@@ -24,14 +24,13 @@
             <div class="w-full" />
             <div class="w-full flex flex-col gap-5 items-center justify-center grow text-white">
                 <h1>
-                    Let's Design<br />
-                    Your Business<br />
-                    Together<br />
+                    Great Geeks at<br />
+                    Great Rates.<br />
                 </h1>
-                <h2 class="hero-h2">
-                    Boutique Website Design<br/>
-                    & App Development<br/>
-                    in Downeast Maine
+                <h2 class="hero-h2 mb-2">
+                    Building high performance <br />
+                    full-stack web applications <br />
+                    at competitive prices <br />
                 </h2>
                 <a class="button button-ghost" href="/" use:scrollTo={{section: "contact"}}>Contact Us</a>
             </div>

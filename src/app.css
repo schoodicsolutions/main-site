@@ -1,10 +1,10 @@
 @import "@fontsource/quicksand/700.css";
 
-@import "@fontsource/inter/400.css";
-@import "@fontsource/inter/500.css";
-@import "@fontsource/inter/600.css";
-@import "@fontsource/inter/700.css";
-@import "@fontsource/inter/800.css";
+@import "@fontsource/montserrat/400.css";
+@import "@fontsource/montserrat/500.css";
+@import "@fontsource/montserrat/600.css";
+@import "@fontsource/montserrat/700.css";
+@import "@fontsource/montserrat/800.css";
 
 @tailwind base;
 @tailwind components;
@@ -30,7 +30,7 @@
         scroll-behavior: smooth;
     }
     section {
-      @apply snap-y scroll-mt-12 flex flex-col gap-6 px-4 lg:px-6 py-6 lg:py-12 justify-center items-center;
+      @apply snap-y scroll-mt-12 flex flex-col gap-6 px-6 lg:px-6 py-10 lg:py-20 justify-center items-center;
     }
 }
 
@@ -75,8 +75,13 @@
     }
 
     .hero-h2 {
-        @apply text-2xl short:text-2xl md:text-4xl short:leading-6 leading-6 lg:leading-10 font-semibold tracking-tight
+        @apply text-2xl short:text-2xl md:text-4xl short:leading-6 leading-6 lg:leading-10 font-semibold tracking-tight m-0
     }
+
+    .hero-h3 {
+        @apply text-xl short:text-xl md:text-3xl short:leading-6 leading-6 lg:leading-10 font-semibold tracking-tight
+    }
+
     .textbox {
         @apply rounded-md p-2 border border-gray-200 w-full;
     }
@@ -106,6 +111,6 @@
 
 body {
     scroll-behavior: smooth;
-    font-family: Inter;
+    font-family: Montserrat;
     font-size: 16px;
 }

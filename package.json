@@ -42,6 +42,8 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"@fontsource/montserrat": "^4.5.14",
+		"@fontsource/open-sans": "^4.5.14",
 		"@fontsource/quicksand": "^4.5.12",
 		"@hubspot/api-client": "^8.8.0",
 		"@rodneylab/svelte-social-icons": "^0.0.24",

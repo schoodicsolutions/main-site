@@ -7,7 +7,7 @@
     aria-label="Services"
 >
     <div class="service-card">
-        <h3>Full-Stack Web Development</h3>
+        <h3>Full-Stack Web Dev</h3>
         <ServiceIcon variant="blue" height="125px" icon="toolbox" />
         <a class="button button-blue" href="/full-stack" aria-label="Learn More About Full-Stack Web Development">Learn More</a>
     </div>
