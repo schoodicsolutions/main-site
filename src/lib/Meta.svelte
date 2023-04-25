@@ -3,7 +3,7 @@
 
     $: titleString = [
         $page.data.title,
-        'Schoodic Media', 
+        'Schoodic Solutions', 
         $page.data.suffix
     ].filter(v => !!v).join(' | ');
 </script>

@@ -20,7 +20,7 @@
                 <a href="/" class="navlink" aria-label="Back to top"><Logo variant="white" /></a>
                 <div>
                     <p>Proudly built with ❤️ in Washington County</p>
-                    <p>Copyright &copy; {year} Schoodic Media</p>
+                    <p>Copyright &copy; {year} Schoodic Solutions</p>
                 </div>
                 <div class="flex gap-2">
                     <a href="https://www.facebook.com/schoodicmedia"><SocialIcons network="facebook" bgColor="white" /></a>

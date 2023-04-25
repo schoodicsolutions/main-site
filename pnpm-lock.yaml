@@ -2,6 +2,7 @@ lockfileVersion: 5.4
 
 specifiers:
   '@fontsource/inter': ^4.5.14
+  '@fontsource/quicksand': ^4.5.12
   '@fontsource/rubik': ^4.5.13
   '@hubspot/api-client': ^8.8.0
   '@rodneylab/svelte-social-icons': ^0.0.24
@@ -34,6 +35,7 @@ specifiers:
   vite: ^4.0.0
 
 dependencies:
+  '@fontsource/quicksand': 4.5.12
   '@hubspot/api-client': 8.8.0
   '@rodneylab/svelte-social-icons': 0.0.24
   svelte-scroll-nav: 1.0.7
@@ -288,6 +290,10 @@ packages:
   /@fontsource/inter/4.5.14:
     resolution: {integrity: sha512-JDC9AocdPLuGsASkvWw9hS5gtHE7K9dOwL98XLrk5yjYqxy4uVnScG58NUvFMJDVJRl/7c8Wnap6PEs+7Zvj1Q==}
     dev: true
+
+  /@fontsource/quicksand/4.5.12:
+    resolution: {integrity: sha512-aSgAR82dAzRsWGupPobU1ubfX6MhrQgKw2xe0AEKyQ5yMMpNhptTajbOIPJ8ZE5CPX3UHYlGY0da/7ztoEM3vQ==}
+    dev: false
 
   /@fontsource/rubik/4.5.13:
     resolution: {integrity: sha512-oykfZOFcr+yHiCisHEbX9byVhr7dH4V0XvUSTFZt6xk1Qx+3FFyi8iV4iy/aiKLJOFfgfN6aPMtgifGR6hvIUA==}

@@ -13,7 +13,7 @@
             Or maybe you've been the local leader in your industry for 50 years!
         </p>
         <p>
-            No matter what you do or how long you've been doing it, we've got you covered here at <strong>Schoodic Media.</strong>
+            No matter what you do or how long you've been doing it, we've got you covered here at <strong>Schoodic Solutions.</strong>
         </p>
     </div>
 </div>
