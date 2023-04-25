@@ -9,7 +9,7 @@ module.exports = {
         almond: '#F2F1EC',
       },
       fontFamily: {
-        'brand': 'Quicksand',
+        'brand': 'Quicksand', 
       },
       transitionProperty: {
         'spacing': 'margin, padding',
