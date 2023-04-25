@@ -13,7 +13,7 @@
         />
     </div>
     <span
-        class="font-brand font-bold text-xl tracking-tight transition-colors"
+        class="font-brand font-bold text-2xl tracking-tight transition-colors ml-1"
         class:text-black={normal}
         class:text-white={white}
     >
