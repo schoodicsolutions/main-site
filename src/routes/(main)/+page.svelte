@@ -17,7 +17,7 @@
             <h4>We're a Maine Business</h4>
             <p class="mb-8">
                Schoodic Solutions is the only tech company in Washington County, Maine offering full stack web application development.
-               We're a family business, founded by cousins Ryan Prescott and Clay Coffin, in order to help businesses near and far
+               We're a family business, located in Calais, Maine and founded by cousins Ryan Prescott and Clay Coffin. Our goal is to help businesses near and far
                make their dreams a reality.
             </p>
 
