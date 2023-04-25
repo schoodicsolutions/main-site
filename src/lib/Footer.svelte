@@ -23,9 +23,9 @@
                     <p>Copyright &copy; {year} Schoodic Solutions</p>
                 </div>
                 <div class="flex gap-2">
-                    <a href="https://www.facebook.com/schoodicmedia"><SocialIcons network="facebook" bgColor="white" /></a>
+                    <a href="https://www.facebook.com/schoodicsolutions"><SocialIcons network="facebook" bgColor="white" /></a>
                     <a href="https://www.linkedin.com/company/schoodic"><SocialIcons network="linkedin" bgColor="white" /></a>
-                    <a href="https://www.github.com/schoodicmedia"><SocialIcons network="github" bgColor="white" /></a>
+                    <a href="https://www.github.com/schoodicsolutions"><SocialIcons network="github" bgColor="white" /></a>
                 </div>
             </section>
             <section class="flex flex-col items-center gap-1 lg:gap-4">
