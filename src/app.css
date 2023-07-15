@@ -41,7 +41,7 @@
     }
 
     .navlink {
-        @apply hover:no-underline font-normal;
+        @apply hover:no-underline font-normal leading-none;
     }
     
     .navlink.active {
@@ -50,6 +50,7 @@
 
     .button {
         @apply inline-block px-12 py-3.5 rounded-full w-fit;
+        @apply flex justify-center shrink-0 w-fit;
         @apply hover:no-underline;
         @apply transition-colors enabled:hover:bg-white/25;
         @apply uppercase font-semibold;
