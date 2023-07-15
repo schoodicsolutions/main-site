@@ -1,13 +1,11 @@
 <script lang="ts">
 	import { page } from '$app/stores';
 	import { scrollTo, section } from 'svelte-scroll-nav';
-
-    export let color: 'black' | 'white' = 'black';
+    
     export let variant: 'row' | 'col' = 'row';
     export let onNavigate: (() => void) | undefined = undefined;
 
     $: [row, col] = [variant === 'row', variant === 'col'];
-    $: [black, white] = [color === 'black', color === 'white']
 
     const menu = [
         {
@@ -26,9 +24,15 @@
             scrollTo: 'services',
         },
         {
-            caption: 'Contact',
+            caption: 'Our Team',
+            pathname: '/',
+            scrollTo: 'team',
+        },
+        {
+            caption: 'Contact Us',
             pathname: '/',
             scrollTo: 'contact',
+            as: 'button',
         },
     ];
 
@@ -36,45 +40,31 @@
 
 <nav 
     aria-label="Main" 
-    class="transition-colors"
-    class:text-black={black}
-    class:text-white={white}
+    class="text-black"
 >
     <ul 
-        class="flex gap-8 font-semibold" 
+        class="flex gap-8 font-semibold items-center" 
         class:flex-row={row}
         class:flex-col={col}
-        class:items-center={col}
     >
         {#each menu as link}
             <li class="flex flex-col mt-1">
                 <!-- svelte-ignore a11y-missing-attribute -->
-                {#if link.scrollTo}
-                    <a 
-                        class="navlink"
-                        href={link.pathname}
-                        use:scrollTo={{
+                <a 
+                    class:navlink={link.as !== 'button'}
+                    class:active={$page.url.pathname === link.pathname && $section === link.scrollTo}
+                    class:button={link.as === 'button'}
+                    class:blue={link.as === 'button'}
+                    href={link.pathname}
+                    use:scrollTo={
+                        link.scrollTo ? {
                             section: link.scrollTo,
                             onNavigate,
-                        }}
-                    >
-                        {link.caption}
-                    </a>
-                {/if}
-                {#if !link.scrollTo}
-                <a 
-                    class="navlink"
-                    href={link.pathname}
+                        } : undefined
+                    }
                 >
                     {link.caption}
                 </a>
-                {/if}
-                <div 
-                    class="h-0.5 w-full -mt-0.5"
-                    class:bg-brand={black}
-                    class:bg-white={white}
-                    class:invisible={$page.url.pathname !== link.pathname || $section !== link.scrollTo}
-                />
             </li>
         {/each}
     </ul>

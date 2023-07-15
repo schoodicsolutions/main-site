@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        brand: '#00A3FF',
+        brand: '#1F5CE2',
         croix: '#0077FF',
         almond: '#F2F1EC',
       },

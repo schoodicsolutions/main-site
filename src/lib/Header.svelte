@@ -4,40 +4,32 @@
     import MediaQuery from 'svelte-media-queries';
 	import MenuIcon from './icons/MenuIcon.svelte';
 	import { drawerOpen } from './stores';
-
-    export let variant: 'transparent' | 'solid' = 'solid';
-    export let bg: 'white' | 'blue' = 'white';
-
-    $: [transparent, solid] = [variant === 'transparent', variant === 'solid'];
-    $: [white, blue] = [bg === 'white', bg === 'blue'];
-    $: padding = transparent ? 'py-3 lg:py-6' : solid ? 'py-1 lg:py-3' : '';
 </script>
 
 <header 
-    class={`fixed w-full transition-colors transition-spacing z-30 ${padding}`}
-    class:bg-white={solid && white}
-    class:bg-croix={solid && blue}
-    class:shadow-lg={solid}
+    class="sticky w-full transition-colors transition-spacing z-30 py-8 lg:border-b border-gray-200"
 >
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TWV5QZ3"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- Google Tag Manager (noscript) -->
+        <noscript>
+            <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TWV5QZ3"
+                title="Google Tag Manager"
+                height="0" width="0" style="display:none;visibility:hidden">
+            </iframe>
+        </noscript>
     <!-- End Google Tag Manager (noscript) -->
-    <div class="flex max-w-[1440px] px-3 pl-6 lg:px-8 mx-auto justify-between items-center">
+    <div class="flex max-w-[1567px] px-10 mx-auto justify-between items-center">
         <a href="/" class="navlink">
-            <Logo variant={(blue && solid) || transparent ? 'white' : solid ? 'normal' : undefined} />
+            <Logo variant="normal" />
         </a>
         <MediaQuery query="(min-width: 1024px)" let:matches>
             {#if matches}
-                <Nav color={(blue && solid) || transparent ? 'white' : solid ? 'black' : undefined} />
+                <Nav />
             {/if}
         </MediaQuery>
         <MediaQuery query="(max-width: 1024px)" let:matches>
             {#if matches}
                 <button 
-                    class="button button-icon"
-                    class:text-white={(blue && solid) || transparent}
-                    class:text-black={white && solid}
+                    class="button icon text-black"
                     aria-haspopup="true"
                     aria-label="Main Menu"
                     on:click={() => $drawerOpen = !$drawerOpen}>

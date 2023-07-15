@@ -1,6 +1,5 @@
 <script lang="ts">
 	import Mark from './Mark.svelte';
-	import Wave from './Wave.svelte';
 
     let scrollY: number;
     let clientHeight: number;

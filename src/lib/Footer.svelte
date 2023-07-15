@@ -1,7 +1,6 @@
 <script>
 	import { page } from '$app/stores';
     import Logo from "./Logo.svelte";
-	import Wave from "./Wave.svelte";
 
     import SocialIcons from '@rodneylab/svelte-social-icons';
 
@@ -9,11 +8,6 @@
 </script>
 
 <footer class="text-center z-50">
-    {#if !$page.error}
-        <div class="w-full h-8 lg:h-[6vw] bg-almond">
-            <Wave class="text-croix" height="100%" />
-        </div>
-    {/if}
     <div class="bg-croix text-white h-screen short:h-auto lg:h-auto">
         <div class="flex flex-col lg:flex-row justify-center lg:items-start gap-10 md:gap-20 xl:gap-40 py-20 h-full">
             <section class="flex flex-col items-center lg:order-1 gap-1 lg:gap-4">

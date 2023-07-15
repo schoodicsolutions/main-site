@@ -1,7 +1,5 @@
 <script lang="ts">
 	import { scrollTo } from 'svelte-scroll-nav';
-	import Mark from './Mark.svelte';
-	import Wave from './Wave.svelte';
 
     let scrollY: number;
     let clientHeight: number;
@@ -13,30 +11,27 @@
 
 <svelte:window bind:scrollY />
 
-<section class="hero" bind:clientHeight style:opacity>
-    <div 
-        class="lg:h-[768px] h-[calc(100vh+32px)] max-w-[1440px] mx-auto overflow-hidden relative pt-40 justify-center lg:justify-start"
-    >
-        <div class="absolute left-1/2 lg:transform-none -translate-x-1/2 bottom-0 lg:static w-[1024px] lg:w-[800px] xl:w-[1024px]">
-            <Mark width="100%" />
-        </div>
-        <div class="flex absolute top-0 h-full w-full flex-col lg:flex-row  px-4">
-            <div class="w-full" />
-            <div class="w-full flex flex-col gap-5 items-center justify-center grow text-white">
-                <h1>
-                    Great Geeks at<br />
-                    Great Rates.<br />
-                </h1>
-                <h2 class="hero-h2 mb-2">
-                    Building high performance <br />
-                    full-stack web applications <br />
-                    at competitive prices <br />
-                </h2>
-                <a class="button button-ghost" href="/" use:scrollTo={{section: "contact"}}>Contact Us</a>
-            </div>
+<section 
+    bind:clientHeight
+    style:opacity
+    class="flex-row"
+>
+    <div class="flex flex-col gap-4">
+        <h1>
+            EMPOWERING <span class="text-brand">BUSINESSES</span><br />
+            WITH <span class="text-brand">CUTTING-EDGE</span> WEB<br/>
+            APPLICATIONS
+        </h1>
+        <p>
+            Transforming Ideas into Seamless Online Experiences for<br />
+            Increased Engagement and Success
+        </p>
+        <div class="flex gap-5">
+            <a class="button blue contained" href="/" use:scrollTo={{section: "contact"}}>Contact Us</a>
+            <a class="button blue outlined" href="/" use:scrollTo={{section: "about"}}>Learn More</a>
         </div>
     </div>
-    <div class="absolute bottom-0 w-full h-8 lg:h-[6vw]">
-        <Wave class="text-white" height="100%" />
+    <div>
+        <img src="/assets/website-examples.png" alt="Hero Image" />
     </div>
 </section>

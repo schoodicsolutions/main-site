@@ -11,8 +11,6 @@
     let scrollY: number;
     $: scrollY;
 
-    let variant: 'solid' | 'transparent' = 'transparent';
-    $: variant = scrollY > 0 ? 'solid' : 'transparent';
 </script>
 
 <svelte:head>
@@ -23,9 +21,7 @@
     {/if}
 </svelte:head>
 
-<svelte:window bind:scrollY />
-
-<Header bind:variant />
+<Header />
 
 <slot />
 
