@@ -10,6 +10,7 @@
   {height}
   class={className}
   viewBox="0 0 24 24"
+  fill="currentColor"
 >
   <slot></slot>
 </svg>

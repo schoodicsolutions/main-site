@@ -7,7 +7,7 @@
 </script>
 
 <header 
-    class="sticky w-full transition-colors transition-spacing z-30 py-8 lg:border-b border-gray-200"
+    class="sticky w-full z-30 py-4 lg:py-8 border-b border-gray-200"
 >
     <!-- Google Tag Manager (noscript) -->
         <noscript>
@@ -19,13 +19,14 @@
     <!-- End Google Tag Manager (noscript) -->
     <div class="flex max-w-[1567px] px-10 mx-auto justify-between items-center">
         <a href="/" class="navlink">
-            <Logo variant="normal" />
+            <MediaQuery query="(max-width: 1024px)" let:matches>
+                {#if matches}
+                    <Logo variant="normal" size="medium"/>
+                {:else}
+                    <Logo variant="normal" size="large"/>
+                {/if}
+            </MediaQuery>
         </a>
-        <MediaQuery query="(min-width: 1024px)" let:matches>
-            {#if matches}
-                <Nav />
-            {/if}
-        </MediaQuery>
         <MediaQuery query="(max-width: 1024px)" let:matches>
             {#if matches}
                 <button 
@@ -35,7 +36,8 @@
                     on:click={() => $drawerOpen = !$drawerOpen}>
                     <MenuIcon />
                 </button>
-
+            {:else}
+                <Nav />
             {/if}
         </MediaQuery>
     </div>

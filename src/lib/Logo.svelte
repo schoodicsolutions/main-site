@@ -2,18 +2,23 @@
 	import Mark from './Mark.svelte';
 
     export let variant: 'normal' | 'white' = 'normal';
+    export let size: 'small' | 'medium' | 'large' = 'large';
     $: [normal, white] = [variant === 'normal', variant === 'white']
+    $: [small, medium, large] = [size === 'small', size === 'medium', size === 'large']
 </script>
 
 <div class="flex items-center select-none" aria-roledescription="logo" aria-label="Schoodic Solutions Logo">
-    <div class="h-7">
+    <div class:h-[35px]={large} class:h-[23px]={medium} class:h-[21px]={small} >
         <Mark 
             height="100%"
             variant={normal ? 'blue' : white ? 'white' : undefined}
         />
     </div>
     <span
-        class="font-brand font-bold text-2xl tracking-tight transition-colors ml-0.5"
+        class="font-brand font-bold tracking-tight transition-colors"
+        class:text-[32px]={large}
+        class:text-[22px]={medium}
+        class:text-[19px]={small}
         class:text-black={normal}
         class:text-white={white}
     >

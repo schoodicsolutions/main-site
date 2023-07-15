@@ -1,7 +1,8 @@
 <script lang="ts">
 	import { page } from '$app/stores';
 	import { scrollTo, section } from 'svelte-scroll-nav';
-    
+	import { linkClicked } from 'svelte-scroll-nav/stores';
+
     export let variant: 'row' | 'col' = 'row';
     export let onNavigate: (() => void) | undefined = undefined;
 
@@ -55,6 +56,7 @@
                     class:active={$page.url.pathname === link.pathname && $section === link.scrollTo}
                     class:button={link.as === 'button'}
                     class:blue={link.as === 'button'}
+                    class:w-full={link.as === 'button' && col}
                     href={link.pathname}
                     use:scrollTo={
                         link.scrollTo ? {

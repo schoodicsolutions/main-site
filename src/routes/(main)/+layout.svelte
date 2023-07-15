@@ -7,6 +7,9 @@
 	import Nav from '$lib/Nav.svelte';
 
 	import { drawerOpen } from '../../lib/stores';
+	import Logo from '$lib/Logo.svelte';
+	import CloseIcon from '$lib/icons/CloseIcon.svelte';
+	import MobileNav from '$lib/MobileNav.svelte';
 
     let scrollY: number;
     $: scrollY;
@@ -29,8 +32,6 @@
 
 <MediaQuery query="(max-width: 1024px)" let:matches>
     {#if matches}
-        <Drawer>
-            <Nav variant="col" onNavigate={() => $drawerOpen = !$drawerOpen}/>
-        </Drawer>
+        <MobileNav />
     {/if}
 </MediaQuery>
