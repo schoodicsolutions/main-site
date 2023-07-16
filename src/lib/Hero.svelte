@@ -1,5 +1,6 @@
 <script lang="ts">
-	import { scrollTo } from 'svelte-scroll-nav';
+	import MediaQuery from 'svelte-media-queries';
+import { scrollTo } from 'svelte-scroll-nav';
 
     let scrollY: number;
     let clientHeight: number;
@@ -14,7 +15,7 @@
 <section 
     bind:clientHeight
     style:opacity
-    class="flex-row"
+    class="flex-col lg:flex-row"
 >
     <div class="flex flex-col gap-4">
         <h1>
@@ -22,16 +23,28 @@
             WITH <span class="text-brand">CUTTING-EDGE</span> WEB<br/>
             APPLICATIONS
         </h1>
-        <p>
-            Transforming Ideas into Seamless Online Experiences for<br />
-            Increased Engagement and Success
-        </p>
-        <div class="flex gap-5">
-            <a class="button blue contained" href="/" use:scrollTo={{section: "contact"}}>Contact Us</a>
-            <a class="button blue outlined" href="/" use:scrollTo={{section: "about"}}>Learn More</a>
-        </div>
+        <MediaQuery query="(max-width: 1024px)" let:matches>
+            <p class="text-center lg:text-left">
+                Transforming Ideas into Seamless Online
+                {#if matches} <br /> {/if}
+                Experiences for
+                {#if !matches} <br /> {/if}
+                Increased Engagement and Success
+            </p>
+            <div class="flex gap-5">
+                <a class="button blue contained w-full md:w-fit m-auto lg:m-0" href="/" use:scrollTo={{section: "contact"}}>Contact Us</a>
+                {#if !matches}
+                    <a class="button blue outlined" href="/" use:scrollTo={{section: "about"}}>Learn More</a>
+                {/if}
+            </div>
+        </MediaQuery>
+
     </div>
     <div>
-        <img src="/assets/website-examples.png" alt="Hero Image" />
+        <img 
+            src="/assets/website-examples.png"
+            alt="A laptop, a mobile phone and a tablet showcasing one of Schoodic's designs"
+            class="w-[733px] -mt-9"
+        />
     </div>
 </section>

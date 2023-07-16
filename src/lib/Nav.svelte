@@ -49,7 +49,7 @@
         class:flex-col={col}
     >
         {#each menu as link}
-            <li class="flex justify-center mt-1 w-full">
+            <li class="flex justify-center mt-1 shrink-0 w-full lg:w-auto">
                 <!-- svelte-ignore a11y-missing-attribute -->
                 <a 
                     class:navlink={link.as !== 'button'}
