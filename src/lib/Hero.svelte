@@ -15,16 +15,16 @@ import { scrollTo } from 'svelte-scroll-nav';
 <section 
     bind:clientHeight
     style:opacity
-    class="flex-col lg:flex-row lg:justify-between"
+    class="flex-col lg:flex-row lg:justify-between -mt-1"
 >
-    <div class="flex flex-col gap-4">
+    <div class="flex flex-col gap-5">
         <h1>
             EMPOWERING <span class="text-brand">BUSINESSES</span><br />
             WITH <span class="text-brand">CUTTING-EDGE</span> WEB<br/>
             APPLICATIONS
         </h1>
         <MediaQuery query="(max-width: 1024px)" let:matches>
-            <p class="text-center lg:text-left lg:text-2xl">
+            <p class="text-center leading-tight lg:leading-normal lg:text-left lg:text-2xl">
                 Transforming Ideas into Seamless Online
                 {#if matches} <br /> {/if}
                 Experiences for
@@ -44,7 +44,7 @@ import { scrollTo } from 'svelte-scroll-nav';
         <img 
             src="/assets/website-examples.png"
             alt="A laptop, a mobile phone and a tablet showcasing one of Schoodic's designs"
-            class="w-[678px] lg:-mt-10"
+            class="w-[334px] m-auto lg:m-0 lg:w-[678px] mt-4 lg:-mt-10"
         />
     </div>
 </section>

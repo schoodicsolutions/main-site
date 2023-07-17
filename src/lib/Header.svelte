@@ -17,20 +17,22 @@
             </iframe>
         </noscript>
     <!-- End Google Tag Manager (noscript) -->
-    <div class="flex max-w-[1647px] px-10 mx-auto justify-between items-center">
+    <div class="flex max-w-[1647px] px-5 lg:px-10 mx-auto justify-between items-center">
         <a href="/" class="navlink">
             <MediaQuery query="(max-width: 1024px)" let:matches>
-                {#if matches}
-                    <Logo variant="normal" size="medium"/>
-                {:else}
-                    <Logo variant="normal" size="large"/>
-                {/if}
+                <div class="ml-4 lg:m-0">
+                    {#if matches}
+                        <Logo variant="normal" size="medium"/>
+                    {:else}
+                        <Logo variant="normal" size="large"/>
+                    {/if}
+                </div>
             </MediaQuery>
         </a>
         <MediaQuery query="(max-width: 1024px)" let:matches>
             {#if matches}
                 <button 
-                    class="button icon text-black"
+                    class="button icon text-black mr-1 mt-1"
                     aria-haspopup="true"
                     aria-label="Main Menu"
                     on:click={() => $drawerOpen = !$drawerOpen}>

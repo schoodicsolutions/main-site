@@ -49,7 +49,7 @@
     }
 
     .button {
-        @apply inline-block px-[50px] py-[17px] rounded-full w-fit;
+        @apply inline-block px-[50px] py-3.5 lg:py-[17px] rounded-full w-fit;
         @apply flex justify-center shrink-0 w-fit;
         @apply hover:no-underline;
         @apply transition-colors enabled:hover:bg-white/25;

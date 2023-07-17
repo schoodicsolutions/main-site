@@ -16,13 +16,12 @@
         />
     </div>
     <span
-        class="font-brand font-bold "
+        class="font-brand font-bold"
         class:text-[32px]={large}
         class:text-[22px]={medium}
         class:text-[19px]={small}
         class:tracking-tight={large}
-        class:tracking-tighter={medium}
-        class:tracking-tightest={small}
+        class:-tracking-[1.2px]={medium || small}
         class:text-black={normal}
         class:text-white={white}
     >
