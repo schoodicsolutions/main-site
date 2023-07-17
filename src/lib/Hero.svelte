@@ -15,7 +15,7 @@ import { scrollTo } from 'svelte-scroll-nav';
 <section 
     bind:clientHeight
     style:opacity
-    class="flex-col lg:flex-row"
+    class="flex-col lg:flex-row lg:justify-between"
 >
     <div class="flex flex-col gap-4">
         <h1>
@@ -24,7 +24,7 @@ import { scrollTo } from 'svelte-scroll-nav';
             APPLICATIONS
         </h1>
         <MediaQuery query="(max-width: 1024px)" let:matches>
-            <p class="text-center lg:text-left">
+            <p class="text-center lg:text-left lg:text-2xl">
                 Transforming Ideas into Seamless Online
                 {#if matches} <br /> {/if}
                 Experiences for
@@ -32,9 +32,9 @@ import { scrollTo } from 'svelte-scroll-nav';
                 Increased Engagement and Success
             </p>
             <div class="flex gap-5">
-                <a class="button blue contained w-full md:w-fit m-auto lg:m-0" href="/" use:scrollTo={{section: "contact"}}>Contact Us</a>
+                <a class="button blue large contained w-full md:w-fit m-auto lg:m-0" href="/" use:scrollTo={{section: "contact"}}>Contact Us</a>
                 {#if !matches}
-                    <a class="button blue outlined" href="/" use:scrollTo={{section: "about"}}>Learn More</a>
+                    <a class="button blue large outlined" href="/" use:scrollTo={{section: "about"}}>Learn More</a>
                 {/if}
             </div>
         </MediaQuery>
@@ -44,7 +44,7 @@ import { scrollTo } from 'svelte-scroll-nav';
         <img 
             src="/assets/website-examples.png"
             alt="A laptop, a mobile phone and a tablet showcasing one of Schoodic's designs"
-            class="w-[733px] -mt-9"
+            class="w-[678px] lg:-mt-10"
         />
     </div>
 </section>

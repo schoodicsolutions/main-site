@@ -49,7 +49,7 @@
         class:flex-col={col}
     >
         {#each menu as link}
-            <li class="flex justify-center mt-1 shrink-0 w-full lg:w-auto">
+            <li class="flex justify-center shrink-0 w-full lg:w-auto">
                 <!-- svelte-ignore a11y-missing-attribute -->
                 <a 
                     class:navlink={link.as !== 'button'}
@@ -57,6 +57,7 @@
                     class:button={link.as === 'button'}
                     class:blue={link.as === 'button'}
                     class:w-full={link.as === 'button' && col}
+                    class:lg:ml-1={link.as === 'button' && row}
                     href={link.pathname}
                     use:scrollTo={
                         link.scrollTo ? {

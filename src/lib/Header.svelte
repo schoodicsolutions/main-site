@@ -17,7 +17,7 @@
             </iframe>
         </noscript>
     <!-- End Google Tag Manager (noscript) -->
-    <div class="flex max-w-[1567px] px-10 mx-auto justify-between items-center">
+    <div class="flex max-w-[1647px] px-10 mx-auto justify-between items-center">
         <a href="/" class="navlink">
             <MediaQuery query="(max-width: 1024px)" let:matches>
                 {#if matches}

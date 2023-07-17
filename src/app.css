@@ -13,10 +13,10 @@
         overflow-x: hidden;
     }
     main {
-        @apply max-w-[1567px] mx-auto;
+        @apply max-w-[1647px] mx-auto;
     }
     h1 {
-      @apply text-[28px] sm:text-[32px] lg:text-[64px] text-center lg:text-left leading-tight font-bold tracking-tight;
+      @apply text-[28px] sm:text-[32px] lg:text-[64px] text-center lg:text-left leading-tight font-bold;
     }
     h2 {
       @apply text-3xl short:text-3xl lg:text-5xl font-extrabold tracking-tight;
@@ -49,7 +49,7 @@
     }
 
     .button {
-        @apply inline-block px-12 py-3.5 rounded-full w-fit;
+        @apply inline-block px-[50px] py-[17px] rounded-full w-fit;
         @apply flex justify-center shrink-0 w-fit;
         @apply hover:no-underline;
         @apply transition-colors enabled:hover:bg-white/25;
@@ -69,6 +69,10 @@
 
     .button:disabled {
         @apply bg-gray-200;
+    }
+
+    .button.large {
+        @apply text-xl;
     }
 
     .button.icon {
