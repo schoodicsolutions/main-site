@@ -31,10 +31,10 @@ import { scrollTo } from 'svelte-scroll-nav';
                 {#if !matches} <br /> {/if}
                 Increased Engagement and Success
             </p>
-            <div class="flex gap-5">
+            <div class="flex gap-5 mt-5">
                 <a class="button blue large contained w-full md:w-fit m-auto lg:m-0" href="/" use:scrollTo={{section: "contact"}}>Contact Us</a>
                 {#if !matches}
-                    <a class="button blue large outlined" href="/" use:scrollTo={{section: "about"}}>Learn More</a>
+                    <a class="button blue large outlined !px-9" href="/" use:scrollTo={{section: "about"}}>Learn More</a>
                 {/if}
             </div>
         </MediaQuery>
