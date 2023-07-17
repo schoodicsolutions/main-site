@@ -16,7 +16,7 @@
         @apply max-w-[1647px] mx-auto;
     }
     h1 {
-      @apply text-[28px] sm:text-[32px] lg:text-[64px] text-center lg:text-left leading-tight font-bold;
+      @apply text-[32px] lg:text-[64px] text-center lg:text-left leading-tight font-bold;
     }
     h2 {
       @apply text-3xl short:text-3xl lg:text-5xl font-extrabold tracking-tight;
@@ -31,7 +31,7 @@
         scroll-behavior: smooth;
     }
     section {
-      @apply snap-y scroll-mt-12 flex flex-col gap-4 px-5 lg:px-10 py-10 lg:py-20 ;
+      @apply snap-y scroll-mt-12 flex flex-col gap-4 px-5 lg:px-10 py-8 lg:py-20 ;
     }
 }
 
@@ -72,7 +72,7 @@
     }
 
     .button.large {
-        @apply text-xl px-[60px];
+        @apply text-lg lg:text-xl lg:px-[60px];
     }
  
     .button.icon {
