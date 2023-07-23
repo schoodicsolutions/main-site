@@ -7,7 +7,7 @@
 </script>
 
 <header 
-    class="sticky w-full z-30 py-4 lg:py-8 border-b border-gray-200"
+    class="sticky w-full z-30 py-4 lg:py-6 border-b border-gray-200"
 >
     <!-- Google Tag Manager (noscript) -->
         <noscript>

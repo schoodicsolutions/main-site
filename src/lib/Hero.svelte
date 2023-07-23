@@ -1,50 +1,48 @@
 <script lang="ts">
 	import MediaQuery from 'svelte-media-queries';
-import { scrollTo } from 'svelte-scroll-nav';
+    import { scrollTo } from 'svelte-scroll-nav';
+	import { fly } from 'svelte/transition';
+	import { onMount } from 'svelte';
 
-    let scrollY: number;
-    let clientHeight: number;
-
-    $: scrollY; $: clientHeight;
-
-    $: opacity = 1 - Math.round(Math.min(1, scrollY / clientHeight) * 100) / 100;
+    let ready = false;
+    onMount(() => {
+        setTimeout(
+            () => ready = true, 10
+        )
+    });
 </script>
 
-<svelte:window bind:scrollY />
-
 <section 
-    bind:clientHeight
-    style:opacity
     class="flex-col lg:flex-row lg:justify-between -mt-1"
 >
-    <div class="flex flex-col gap-5">
-        <h1>
-            EMPOWERING <span class="text-brand">BUSINESSES</span><br />
-            WITH <span class="text-brand">CUTTING-EDGE</span> WEB<br/>
-            APPLICATIONS
-        </h1>
-        <MediaQuery query="(max-width: 1024px)" let:matches>
-            <p class="text-center leading-tight lg:leading-normal lg:text-left lg:text-2xl">
-                Transforming Ideas into Seamless Online
-                {#if matches} <br /> {/if}
-                Experiences for
-                {#if !matches} <br /> {/if}
-                Increased Engagement and Success
-            </p>
-            <div class="flex gap-5 mt-2 lg:mt-5">
-                <a class="button blue large contained w-[360px] md:w-fit m-auto lg:m-0" href="/" use:scrollTo={{section: "contact"}}>Contact Us</a>
-                {#if !matches}
-                    <a class="button blue large outlined !px-9" href="/" use:scrollTo={{section: "about"}}>Learn More</a>
-                {/if}
-            </div>
-        </MediaQuery>
+        <div class="flex flex-col gap-5">
+            <h1 class="parked delay-0" class:flyin={ready}>
+                EMPOWERING <span class="text-brand">BUSINESSES</span><br />
+                WITH <span class="text-brand">CUTTING-EDGE</span> WEB<br/>
+                APPLICATIONS
+            </h1> 
+            <MediaQuery query="(max-width: 1024px)" let:matches>
+                <p class="text-center leading-tight lg:leading-normal lg:text-left lg:text-2xl parked delay-100" class:flyin={ready}>
+                    Transforming Ideas into Seamless Online
+                    {#if matches} <br /> {/if}
+                    Experiences for
+                    {#if !matches} <br /> {/if}
+                    Increased Engagement and Success
+                </p>
+                <div class="flex gap-5 mt-2 lg:mt-5 parked delay-500" class:fadein={ready}>
+                    <a class="button blue large contained w-[360px] md:w-fit m-auto lg:m-0" href="/" use:scrollTo={{section: "contact"}}>Contact Us</a>
+                    {#if !matches}
+                        <a class="button blue large outlined !px-9" href="/" use:scrollTo={{section: "about"}}>Learn More</a>
+                    {/if}
+                </div>
+            </MediaQuery>
 
-    </div>
-    <div>
-        <img 
-            src="/assets/website-examples.png"
-            alt="A laptop, a mobile phone and a tablet showcasing one of Schoodic's designs"
-            class="w-[334px] m-auto lg:m-0 lg:w-[678px] mt-4 lg:-mt-10"
-        />
-    </div>
+        </div>
+        <div>
+            <img 
+                src="/assets/website-examples.png"
+                alt="A laptop, a mobile phone and a tablet showcasing one of Schoodic's designs"
+                class="w-[334px] m-auto lg:m-0 lg:w-[678px] mt-4 lg:-mt-10"
+            />
+        </div>
 </section>

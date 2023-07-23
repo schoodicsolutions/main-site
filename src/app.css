@@ -35,6 +35,18 @@
     }
 }
 
+@layer utilities {
+    .parked {
+        @apply transition-all opacity-0 transform translate-x-[-100vw] duration-500 ease-in-out;
+    }
+    .flyin {
+        @apply opacity-100 translate-x-0;
+    }
+    .fadein {
+        @apply transition-opacity opacity-100 translate-x-0;
+    }
+}
+
 @layer components {
     a {
         @apply hover:underline;
@@ -49,7 +61,7 @@
     }
 
     .button {
-        @apply inline-block px-[50px] py-3.5 lg:py-[17px] rounded-full w-fit;
+        @apply inline-block px-[50px] py-3.5 lg:py-[17px] leading-none rounded-full w-fit;
         @apply flex justify-center shrink-0 w-fit;
         @apply hover:no-underline;
         @apply transition-colors enabled:hover:bg-white/25;
@@ -58,6 +70,7 @@
     }
 
     .button.blue.contained {
+        @apply border-2 border-brand text-brand;
         @apply bg-brand text-white;
         @apply enabled:hover:bg-brand;
     }
