@@ -1,4 +1,6 @@
 /** @type {import('tailwindcss').Config} */
+const defaultTheme = require('tailwindcss/defaultTheme');
+
 module.exports = {
   content: ['./src/**/*.{html,js,svelte,md,ts}'],
   theme: {
@@ -14,10 +16,12 @@ module.exports = {
       transitionProperty: {
         'spacing': 'margin, padding',
       },
-      screens: {
-        'short': { 'raw': '(max-height: 800px)' },
-      }
     },
+    screens: {
+      'xs': '428px',
+      ...defaultTheme.screens,
+      'short': { 'raw': '(max-height: 800px)' },
+    }
   },
   plugins: []
 };
