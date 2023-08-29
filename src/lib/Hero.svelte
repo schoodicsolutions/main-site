@@ -22,19 +22,22 @@
                 APPLICATIONS
             </h1> 
             <MediaQuery query="(max-width: 1024px)" let:matches>
-                <p class="text-center leading-tight lg:leading-normal lg:text-left lg:text-2xl parked delay-100" class:flyinleft={ready}>
-                    Transforming Ideas into Seamless Online
-                    {#if matches} <br /> {/if}
-                    Experiences for
-                    {#if !matches} <br /> {/if}
-                    Increased Engagement and Success
-                </p>
-                <div class="flex gap-5 mt-2 lg:mt-5 parked delay-500" class:fadein={ready}>
-                    <a class="button blue large contained w-[360px] md:w-fit m-auto lg:m-0" href="/" use:scrollTo={{section: "contact"}}>Contact Us</a>
-                    {#if !matches}
-                        <a class="button blue large outlined !px-9" href="/" use:scrollTo={{section: "about"}}>Learn More</a>
-                    {/if}
+                <div class="will-fade delay-500" class:fadein={ready}>
+                    <p class="text-center leading-tight lg:leading-normal lg:text-left lg:text-2xl parked delay-100" class:flyinleft={ready}>
+                        Transforming Ideas into Seamless Online
+                        {#if matches} <br /> {/if}
+                        Experiences for
+                        {#if !matches} <br /> {/if}
+                        Increased Engagement and Success
+                    </p>
+                    <div class="flex gap-5 mt-2 lg:mt-5">
+                        <a class="button blue large contained w-[360px] md:w-fit m-auto lg:m-0" href="/" use:scrollTo={{section: "contact"}}>Contact Us</a>
+                        {#if !matches}
+                            <a class="button blue large outlined !px-9" href="/" use:scrollTo={{section: "about"}}>Learn More</a>
+                        {/if}
+                    </div>
                 </div>
+
             </MediaQuery>
 
         </div>

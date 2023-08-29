@@ -45,8 +45,11 @@
     .flyin {
         @apply opacity-100 translate-x-0;
     }
+    .will-fade {
+        @apply transition-opacity opacity-0 duration-200 ease-in-out;
+    }
     .fadein {
-        @apply transition-opacity opacity-100 translate-x-0;
+        @apply opacity-100;
     }
 }
 
