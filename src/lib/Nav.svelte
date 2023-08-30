@@ -27,7 +27,7 @@
         {
             caption: 'Our Team',
             pathname: '/',
-            scrollTo: 'team',
+            scrollTo: 'our-team',
         },
         {
             caption: 'Contact Us',

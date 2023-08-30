@@ -40,10 +40,10 @@
 
 @layer utilities {
     .parked-left {
-        @apply transition-all opacity-0 transform translate-x-[-100vw] duration-500 ease-in-out;
+        @apply transition-opacity transition-transform opacity-0 transform translate-x-[-100vw] duration-500 ease-in-out;
     }
     .parked-right {
-        @apply transition-all opacity-0 transform translate-x-[100vw] duration-500 ease-in-out;
+        @apply transition-opacity transition-transform opacity-0 transform translate-x-[100vw] duration-500 ease-in-out;
     }
     .flyin {
         @apply opacity-100 translate-x-0;
@@ -75,7 +75,7 @@
         @apply inline-block px-[50px] py-3.5 lg:py-[17px] leading-none rounded-full w-fit;
         @apply flex justify-center shrink-0 w-fit;
         @apply hover:no-underline hover:scale-[1.02] active:scale-[0.9];
-        @apply transition-all enabled:hover:bg-white/25;
+        @apply transition-colors transition-transform enabled:hover:bg-white/25;
         @apply uppercase font-semibold;
         @apply disabled:pointer-events-none;
         appearance: button;

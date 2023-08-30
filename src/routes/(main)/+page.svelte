@@ -44,6 +44,11 @@
         <ServiceCards />
     </section>
     
+    <section use:scrollRef={'our-team'} class="gap-12">
+        <h2 class="mb-9 text-center">Meet Our Talented Team Located Globally</h2>
+        <ServiceCards />
+    </section>
+    
     <section class="bg-almond" use:scrollRef={'contact'}>
         <h2>Contact</h2>
         <ContactForm />
