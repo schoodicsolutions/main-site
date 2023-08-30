@@ -74,21 +74,21 @@
     .button {
         @apply inline-block px-[50px] py-3.5 lg:py-[17px] leading-none rounded-full w-fit;
         @apply flex justify-center shrink-0 w-fit;
-        @apply hover:no-underline;
-        @apply transition-colors enabled:hover:bg-white/25;
+        @apply hover:no-underline hover:scale-[1.02] active:scale-[0.9];
+        @apply transition-all enabled:hover:bg-white/25;
         @apply uppercase font-semibold;
+        @apply disabled:pointer-events-none;
         appearance: button;
     }
 
     .button.blue.contained {
         @apply border-2 border-brand text-brand;
-        @apply bg-brand text-white;
-        @apply enabled:hover:bg-brand;
+        @apply bg-brand hover:bg-brand/90 hover:border-brand/90 text-white;
     }
 
     .button.blue.outlined {
         @apply bg-transparent border-2 border-brand text-brand;
-        @apply enabled:hover:bg-brand;
+        @apply hover:bg-gray-500/10;
     }
 
     .button:disabled {
@@ -100,12 +100,7 @@
     }
  
     .button.icon {
-        @apply p-0 h-12 w-12 flex rounded-full justify-center items-center;
-    }
-
-    .button.blue {
-        @apply bg-brand text-white;
-        @apply enabled:hover:bg-brand;
+        @apply p-0 h-12 w-12 flex rounded-full justify-center items-center hover:scale-100;
     }
 
     .button.ghost {

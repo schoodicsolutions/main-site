@@ -56,6 +56,7 @@
                     class:active={$page.url.pathname === link.pathname && $section === link.scrollTo}
                     class:button={link.as === 'button'}
                     class:blue={link.as === 'button'}
+                    class:contained={link.as === 'button'}
                     class:w-full={link.as === 'button' && col}
                     class:lg:ml-1={link.as === 'button' && row}
                     href={link.pathname}
