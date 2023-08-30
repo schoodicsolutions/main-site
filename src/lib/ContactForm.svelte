@@ -5,7 +5,6 @@
     import HCaptcha from 'svelte-hcaptcha';
     import { PUBLIC_HCAPTCHA_SITEKEY } from '$env/static/public';
 	import MediaQuery from "svelte-media-queries";
-	import ServiceIcon from "./ServiceIcon.svelte";
 
     $: disabled = false;
     $: loading = false;
@@ -75,7 +74,6 @@
 <div>
     <div class="mb-4 flex flex-col items-center rounded-md bg-white py-6">
         <div class="flex">
-            <ServiceIcon icon="phone" height="60px" />
             <div>
                 <p class="text-center text-xl md:text-2xl font-bold">Call or text</p>
                 <p class="text-center text-lg md:text-xl font-medium mb-3">Mon &ndash; Fri &nbsp; 9AM &ndash; 5PM</p>

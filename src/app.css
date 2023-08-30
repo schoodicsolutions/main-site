@@ -27,6 +27,9 @@
     h4 {
         @apply text-[20px] lg:text-[24px] font-semibold tracking-tight;
     }
+    h5 {
+        @apply text-[20px] font-semibold tracking-tight;
+    }
     html {
         scroll-behavior: smooth;
     }
@@ -56,9 +59,11 @@
 @layer components {
     a {
         @apply hover:underline;
+        @apply text-brand;
     }
 
     .navlink {
+        @apply text-black;
         @apply hover:no-underline font-normal leading-none shrink-0;
     }
     
@@ -127,11 +132,14 @@
     }
 
     .service-cards {
-        @apply grid grid-cols-3 grid-rows-2 gap-7;
+        @apply grid flex-col gap-7 max-w-screen-xl m-auto;
+        @apply md:grid-cols-2 md:grid-rows-3;
+        @apply lg:grid-cols-3 lg:grid-rows-2 
     }
 
     .service-card {
-        @apply flex flex-col gap-3 items-center text-center px-12 py-9;
+        @apply flex flex-col items-center text-center px-12 py-9 bg-bone rounded-md;
+        @apply transition-transform hover:scale-[1.02];
     }
 
     .service-card h3 {
