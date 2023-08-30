@@ -129,12 +129,30 @@
     .service-cards {
         @apply grid flex-col gap-7 max-w-screen-xl m-auto;
         @apply md:grid-cols-2 md:grid-rows-3;
-        @apply lg:grid-cols-3 lg:grid-rows-2 
+        @apply lg:grid-cols-3 lg:grid-rows-2 ;
     }
 
     .service-card {
         @apply flex flex-col items-center text-center px-12 py-9 bg-bone rounded-md;
         @apply transition-transform hover:scale-[1.02];
+    }
+
+    .service-card-link {
+        @apply text-black hover:no-underline;
+    }
+
+    .read-more {
+        @apply text-brand;
+    }
+
+    .read-more::after {
+        @apply w-0 h-0.5 block transition-all m-auto;
+        content: '';
+    }
+
+    .service-card:hover > .read-more::after {
+        @apply w-full bg-brand;
+        content: '';
     }
 
     .service-card h3 {
