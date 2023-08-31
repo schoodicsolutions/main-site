@@ -72,29 +72,8 @@
 </script>
 
 <div>
-    <div class="mb-4 flex flex-col items-center rounded-md bg-white py-6">
-        <div class="flex">
-            <div>
-                <p class="text-center text-xl md:text-2xl font-bold">Call or text</p>
-                <p class="text-center text-lg md:text-xl font-medium mb-3">Mon &ndash; Fri &nbsp; 9AM &ndash; 5PM</p>
-            </div>
-        </div>
-
-        <p class="text-center text-2xl md:text-3xl font-bold">+1 (207) 952-3892</p>
-
-        <MediaQuery query="(max-width: 800px)" let:matches>
-            {#if matches}
-                <a class="button button-blue mt-4" href="tel:+12079523892">Call Now</a>
-            {/if}
-        </MediaQuery>
-    </div>
-
-    <div class="mb-6">
-        <p class="text-center text-lg md:text-xl font-medium">&mdash; or, send us a message below &mdash;</p>
-    </div>
-
     <form method="POST" on:submit|preventDefault={handleSubmit} use:form>
-        <fieldset class="flex flex-col gap-4 max-w-96 w-full" {disabled}>
+        <fieldset class="flex flex-col gap-4 max-w-96 w-full text-midnight" {disabled}>
             {#if status.error || status.success}
                 <div 
                     class:bg-red-500={status.error}
@@ -109,21 +88,22 @@
                     {/if}
                 </div>
             {/if}
+            <div class="grid lg:grid-cols-2 gap-4">
             <div>
-                <label for="name">
+                <label for="name" class="text-white">
                     Name
                     <span class="text-red-500">*</span>
                 </label>
                 <input 
                     class="textbox" 
-                    class:invalid={($form.touched || $form.name.touched) && !$form.name.valid}
+                    class:invalid={($form.touched || $form.name.touched || $form.submitted) && !$form.name.valid}
                     name="name"
                     id="name"
                     placeholder="John Q. Sample"
                 />
             </div>
             <div>
-                <label for="email">
+                <label for="email" class="text-white">
                     E-mail
                     <span class="text-red-500">*</span>
                 </label>
@@ -134,10 +114,12 @@
                     id="email"
                     placeholder="john@example.com"
                 />
-                <Hint for="email" on="email" class="hint">E-mail is in an invalid format.</Hint>
+                <Hint for="email" on="email" class="hint">
+                    { $form.email.value.length === 0 ? '' : 'E-mail is in an invalid format.'}
+                </Hint>
             </div>
             <div>
-                <label for="phone">
+                <label for="phone" class="text-white">
                     Phone
                 </label>
                 <input
@@ -150,7 +132,7 @@
                 <Hint for="phone" on="pattern" class="hint">Phone is in an invalid format.</Hint>
             </div>
             <div>
-                <label for="company">
+                <label for="company" class="text-white">
                     Organization
                 </label>
                 <input
@@ -161,21 +143,24 @@
                     placeholder="Acme Industries"
                 />
             </div>
-            <div>
-                <label for="message">
-                    Message
-                    <span class="text-red-500">*</span>
-                </label>
-                <textarea
-                    class="textbox h-40 resize-none"
-                    class:invalid={($form.touched || $form.message.touched) && !$form.message.valid}
-                    name="message" 
-                    id="message"
-                    placeholder="Additional information here..." 
-                />
-            </div>
+        </div>
 
-            <div class='ml-auto'>
+        <div>
+            <label for="message" class="text-white">
+                Message
+                <span class="text-red-500">*</span>
+            </label>
+            <textarea
+                class="textbox h-40 resize-none"
+                class:invalid={($form.touched || $form.message.touched) && !$form.message.valid}
+                name="message" 
+                id="message"
+                placeholder="Additional information here..." 
+            />
+        </div>
+
+        <div class="flex items-center gap-4 m-auto">
+            <div>
                 <input name="hcaptchaResponse" id="hcaptchaResponse" hidden />
                 <HCaptcha
                     bind:this={hcaptcha}
@@ -184,18 +169,19 @@
                     on:error={handleError}
                 />
             </div>
-
-            <button
-                class="button button-blue ml-auto"
-                disabled={!$form.valid}
-            >
-                {#if !loading}
-                    Submit
-                {/if}
-                {#if loading}
-                    <Circle size="16" color="currentColor" />
-                {/if}
-            </button>
+    
+                <button
+                    class="button white outlined"
+                    disabled={!$form.valid}
+                >
+                    {#if !loading}
+                        Submit Now
+                    {/if}
+                    {#if loading}
+                        <Circle size="16" color="currentColor" />
+                    {/if}
+                </button>
+        </div>
         </fieldset>
     </form>
 </div>

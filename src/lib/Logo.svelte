@@ -7,7 +7,7 @@
     $: [small, medium, large] = [size === 'small', size === 'medium', size === 'large']
 </script>
 
-<div class="flex items-center select-none" aria-roledescription="logo" aria-label="Schoodic Solutions Logo">
+<div class="flex items-center select-none" aria-label="Schoodic Solutions Logo">
     <div 
         class:h-[35px]={large} class:h-[23px]={medium} class:h-[21px]={small} >
         <Mark 

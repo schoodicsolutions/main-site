@@ -10,7 +10,7 @@
 
 @layer base {
     body {
-        overflow-x: hidden;
+        @apply text-midnight;
     }
     main {
         @apply max-w-[1647px] mx-auto;
@@ -34,7 +34,7 @@
         scroll-behavior: smooth;
     }
     section {
-      @apply snap-y scroll-mt-12 flex flex-col gap-4 px-5 lg:px-10 py-8 lg:py-20 ;
+      @apply snap-y scroll-mt-12 flex flex-col gap-4 px-5 lg:px-10 py-8 lg:py-10 ;
     }
 }
 
@@ -53,6 +53,17 @@
     }
     .fadein {
         @apply opacity-100;
+    }
+    .a11y-hidden {
+        position: absolute;
+        overflow: hidden;
+        clip: rect(0 0 0 0);
+    }
+
+    .a11y-visible {
+    position: static;
+    overflow: visible;
+    clip: auto;
     }
 }
 
@@ -75,7 +86,7 @@
         @apply inline-block px-[50px] py-3.5 lg:py-[17px] leading-none rounded-full w-fit;
         @apply flex justify-center shrink-0 w-fit;
         @apply hover:no-underline hover:scale-[1.02] active:scale-[0.9];
-        @apply transition-colors transition-transform enabled:hover:bg-white/25;
+        @apply transition-[transform,colors] bg-white/25;
         @apply uppercase font-semibold;
         @apply disabled:pointer-events-none;
         appearance: button;
@@ -89,6 +100,12 @@
     .button.blue.outlined {
         @apply bg-transparent border-2 border-brand text-brand;
         @apply hover:bg-gray-500/10;
+    }
+
+    .button.white.outlined {
+        @apply bg-transparent border-2 border-white text-white;
+        @apply disabled:border-white/50 disabled:text-white/50;
+        @apply hover:bg-white/20;
     }
 
     .button:disabled {
@@ -129,11 +146,11 @@
     .service-cards {
         @apply grid flex-col gap-7 max-w-screen-xl m-auto;
         @apply md:grid-cols-2 md:grid-rows-3;
-        @apply lg:grid-cols-3 lg:grid-rows-2 ;
+        @apply lg:grid-cols-3 lg:grid-rows-2;
     }
 
     .service-card {
-        @apply flex flex-col items-center text-center px-12 py-9 bg-bone rounded-md;
+        @apply flex flex-col items-center text-center px-12 py-9 bg-bone rounded-md h-full;
         @apply transition-transform hover:scale-[1.02];
     }
 
@@ -142,7 +159,7 @@
     }
 
     .read-more {
-        @apply text-brand;
+        @apply text-brand mt-auto;
     }
 
     .read-more::after {
@@ -157,6 +174,28 @@
 
     .service-card h3 {
         @apply text-2xl xl:text-3xl leading-tight tracking-tighter font-semibold
+    }
+
+    ul.accolades {
+        @apply flex flex-col gap-3.5;
+    }
+
+    ul.accolades > li {
+        @apply ml-5 capitalize;
+    }
+
+    ul.accolades > li::before {
+        content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+        @apply text-brand font-bold inline-block w-5 -ml-5 text-3xl leading-4 align-middle mb-2;
+    }
+
+    .team-card {
+        @apply border border-gray-200 p-9 rounded-md w-full lg:w-[411px];
+    }
+
+    .team-cards {
+        @apply grid flex-col gap-7 max-w-screen-xl m-auto;
+        @apply lg:grid-cols-2 lg:grid-rows-2 xl:grid-cols-3 xl:grid-rows-1;
     }
 }
 

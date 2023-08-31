@@ -10,6 +10,7 @@ module.exports = {
         croix: '#0077FF',
         almond: '#F2F1EC',
         bone: '#F6F6F6',
+        midnight: '#0A1534',
       },
       fontFamily: {
         'brand': 'Quicksand', 

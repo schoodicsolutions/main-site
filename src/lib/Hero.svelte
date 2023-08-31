@@ -13,7 +13,7 @@
 </script>
 
 <section 
-    class="flex-col lg:flex-row lg:justify-between -mt-1"
+    class="flex-col lg:flex-row lg:justify-between -mt-1 py-20"
 >
         <div class="flex flex-col gap-5">
             <h1 class="parked-left delay-0" class:flyin={ready}>
