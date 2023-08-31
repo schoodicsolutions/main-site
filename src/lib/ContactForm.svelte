@@ -73,7 +73,7 @@
 
 <div>
     <form method="POST" on:submit|preventDefault={handleSubmit} use:form>
-        <fieldset class="flex flex-col gap-4 max-w-96 w-full text-midnight" {disabled}>
+        <fieldset class="flex flex-col gap-4 w-full text-midnight" {disabled}>
             {#if status.error || status.success}
                 <div 
                     class:bg-red-500={status.error}
@@ -159,7 +159,7 @@
             />
         </div>
 
-        <div class="flex items-center gap-4 m-auto">
+        <div class="flex flex-col md:flex-row items-center gap-4 m-auto">
             <div>
                 <input name="hcaptchaResponse" id="hcaptchaResponse" hidden />
                 <HCaptcha

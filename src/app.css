@@ -134,7 +134,7 @@
     }
 
     .textbox {
-        @apply rounded-md p-2 border border-gray-200 w-full;
+        @apply rounded-md p-2 border border-gray-200 w-full box-border;
     }
     .invalid {
         @apply outline outline-red-600;
