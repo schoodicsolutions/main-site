@@ -11,7 +11,7 @@
 <footer class="text-center border-gray-300 border-t">
     <div class="h-screen short:h-auto lg:h-auto">
         <div class="flex flex-col lg:flex-row justify-center lg:items-start gap-10 md:gap-20 xl:gap-40 py-12 h-full">
-            <section class="flex flex-col items-start gap-1 lg:gap-4 p-0">
+            <section class="flex flex-col items-center lg:items-start gap-1 lg:gap-4 p-0">
                 <a href="/" class="navlink">
                     <span class="a11y-hidden">Back to top</span>
                     <div aria-hidden={true}><Logo variant="normal" size="medium" /></div>
@@ -53,7 +53,8 @@
     </div>
     <div class="border-gray-300 border-t py-3">
         Copyright &copy; { new Date().getFullYear() } Schoodic Media LLC d/b/a Schoodic Solutions, All Rights Reserved
-        <span aria-hidden={true}>&nbsp;&bull;&nbsp;</span>
+        <span aria-hidden={true} class="hidden lg:inline">&nbsp;&bull;&nbsp;</span>
+        <br class="block lg:hidden"/>
         <a class="text-black" href="/privacy-policy">Privacy Policy</a>
         <span aria-hidden={true}>&nbsp;&bull;&nbsp;</span>
         <a class="text-black" href="/terms-and-conditions">Terms and Conditions</a>

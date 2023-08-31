@@ -102,7 +102,7 @@
     </section>
     
     <section use:scrollRef={'contact'}>
-        <div class="w-full max-w-screen-xl m-auto bg-brand text-white rounded-md px-4 xl:px-40 pt-14 pb-12">
+        <div class="w-full max-w-screen-xl m-auto bg-brand text-white rounded-md px-4 sm:px-8 xl:px-40 pt-14 pb-12">
             <h2 class="mb-9 text-center">Get In Touch</h2>
             <ContactForm />
         </div>
