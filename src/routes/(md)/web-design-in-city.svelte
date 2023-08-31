@@ -3,29 +3,53 @@
     const city = $page.data.city;
 </script>
 
-<div class="max-w-[640px] w-full m-auto text-center">
-    <h3 class="mb-4">Need A Great Website?</h3>
-    <div class="flex flex-col gap-4">
-        <p>
-            So - maybe you just started a small business in <strong>{ city }</strong>.
-        </p>
-        <p>
-            Or maybe you've been the local leader in your industry for 50 years!
-        </p>
-        <p>
-            No matter what you do or how long you've been doing it, we've got you covered here at <strong>Schoodic Solutions.</strong>
-        </p>
-    </div>
+<p class="mb-6">
+    Whether you're a budding entrepreneur launching a new venture in { city } or a seasoned industry titan with five decades of excellence under your belt, Schoodic Solutions is your ultimate partner. We specialize in crafting tailored solutions that drive real results for businesses of all sizes and backgrounds.
+</p>
+
+<h2 class="text-center mb-6">Our Offerings</h2>
+
+<div class="service-cards md:grid-cols-1 lg:grid-cols-2 mb-12">
+    <a href="/search-engine-optimization" class="service-card-link">
+        <div class="service-card">
+            <h4 class="mb-3">🚀 Skyrocket Your Google Visibility</h4>
+            <p class="mb-4">Dominate search results and capture the attention of your target audience with our proven strategies.</p>
+            <span class="read-more">
+                Read More &rsaquo;
+            </span>
+        </div>
+    </a>
+    <a href="/search-engine-optimization" class="service-card-link">
+        <div class="service-card">
+            <h4 class="mb-3">📈 Amplify Clicks and Calls</h4>
+            <p class="mb-4">Experience a surge in website traffic, clicks, and incoming calls as we implement strategies to boost engagement.</p>
+            <span class="read-more">
+                Read More &rsaquo;
+            </span>
+        </div>
+    </a>
+    <a href="/responsive-design" class="service-card-link">
+        <div class="service-card">
+            <h4 class="mb-3">💻 Modernize Your Website</h4>
+            <p class="mb-4">Your online headquarters deserves the best. Let us create a cutting-edge website that captivates visitors and reflects your brand's uniqueness.</p>
+            <span class="read-more">
+                Read More &rsaquo;
+            </span>
+        </div>
+    </a>
+    <a href="/full-stack" class="service-card-link">
+        <div class="service-card">
+            <h4 class="mb-3">🌐 Enhance User-Friendliness</h4>
+            <p class="mb-4">We're experts at making navigation seamless and enjoyable for your site visitors, translating clicks into conversions effortlessly.</p>
+            <span class="read-more">
+                Read More &rsaquo;
+            </span>
+        </div>
+    </a>
 </div>
 
-<div class="mt-12 max-w-[640px] w-full m-auto text-center flex flex-col">
-    <h4>What We Can Do For You</h4>
-    <ul class="flex flex-col gap-4 list-disc w-60 md:w-full m-auto mt-2">
-        <li>Boost your presence on Google</li>
-        <li>Get you more clicks and more calls</li>
-        <li>Build you a new, modern website</li>
-        <li>Make your site friendlier and easier to use</li>
-        <li>Spruce up your socials</li>
-    </ul>
-    <p class="text-center text-lg short:text-2xl lg:text-2xl flex flex-col mt-8">... and much, much more!</p>
-</div>
+<h5 class="text-center">... and that's just the tip of the iceberg!</h5>
+
+<p>
+    Unlock the full potential of your online presence with Schoodic Solutions. Partner with us today for unrivaled expertise, innovative strategies, and transformative results that will take your business to new heights!
+</p>

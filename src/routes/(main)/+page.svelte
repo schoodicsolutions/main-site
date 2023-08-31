@@ -106,6 +106,5 @@
             <h2 class="mb-9 text-center">Get In Touch</h2>
             <ContactForm />
         </div>
-
     </section>
 </main>

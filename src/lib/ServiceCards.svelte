@@ -11,7 +11,7 @@
     class="service-cards"
     aria-label="Services"
 >
-    <a class="service-card-link" href="/managed-hosting">
+    <a class="service-card-link" href="/full-stack">
         <div class="service-card">
             <RulerPencilIcon width="55" height="55" class="mb-6"/>
             <div class="mb-12">
@@ -25,7 +25,7 @@
             </span>
         </div>
     </a>
-    <a class="service-card-link" href="/managed-hosting">
+    <a class="service-card-link" href="/responsive-design">
         <div class="service-card">
             <StackLineIcon width="55" height="55" class="mb-6"/>
             <div class="mb-12">
@@ -53,7 +53,7 @@
             </span>
         </div>
     </a>
-    <a class="service-card-link" href="/managed-hosting">
+    <a class="service-card-link" href="/search-engine-optimization">
         <div class="service-card">
             <SearchIcon width="55" height="55" class="mb-6"/>
             <div class="mb-12">

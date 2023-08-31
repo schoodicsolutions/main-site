@@ -28,7 +28,7 @@
 
 <svelte:window bind:scrollY />
 
-<Header bind:bg variant="solid" />
+<Header />
 
 <MediaQuery query="(max-width: 1024px)" let:matches>
     {#if matches}
@@ -38,16 +38,21 @@
     {/if}
 </MediaQuery>
 
-<section class="pt-28">
-    <h1 class="text-4xl md:text-5xl mb-8">{$page.data.heading || $page.data.title}</h1>
-    <div class="w-[800px] max-w-full flex flex-col gap-4 text-lg">
-        <slot />
-    </div>
-</section>
+<main>
+    <section class="pt-12">
+        <h1 class="text-4xl md:text-5xl mb-8 text-center">{$page.data.heading || $page.data.title}</h1>
+        <div class="flex flex-col gap-4 text-lg max-w-screen-xl m-auto">
+            <slot />
+        </div>
+    </section>
+    
+    <section>
+        <div class="w-full max-w-screen-xl m-auto bg-brand text-white rounded-md px-4 sm:px-8 xl:px-40 pt-14 pb-12">
+            <h2 class="mb-9 text-center">Get In Touch</h2>
+            <ContactForm />
+        </div>
+    </section>
+</main>
 
-<section class="bg-almond">
-    <h3 class="font-bold text-2xl md:text-4xl text-center px-6 tracking-tight">{$page.data.contactBlurb || 'Want to work with us?'}</h3>
-    <ContactForm />
-</section>
 
 <Footer />
