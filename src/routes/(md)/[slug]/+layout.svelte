@@ -3,13 +3,12 @@
     import { page } from '$app/stores';
     import MediaQuery from 'svelte-media-queries';
 
-	import Drawer from '$lib/Drawer.svelte';
 	import Footer from '$lib/Footer.svelte';
 	import Header from '$lib/Header.svelte';
-	import Nav from '$lib/Nav.svelte';
-
+    
 	import { drawerOpen } from '$lib/stores';
 	import ContactForm from '$lib/ContactForm.svelte';
+	import MobileNav from '$lib/MobileNav.svelte';
 
     let scrollY: number;
     $: scrollY;
@@ -32,9 +31,7 @@
 
 <MediaQuery query="(max-width: 1024px)" let:matches>
     {#if matches}
-        <Drawer>
-            <Nav variant="col" onNavigate={() => $drawerOpen = !$drawerOpen}/>
-        </Drawer>
+        <MobileNav />
     {/if}
 </MediaQuery>
 

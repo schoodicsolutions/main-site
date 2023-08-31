@@ -1,14 +1,10 @@
 <script lang="ts">
     import MediaQuery from 'svelte-media-queries';
 
-	import Drawer from '$lib/Drawer.svelte';
 	import Footer from '$lib/Footer.svelte';
 	import Header from '$lib/Header.svelte';
-	import Nav from '$lib/Nav.svelte';
 
 	import { drawerOpen } from '../../lib/stores';
-	import Logo from '$lib/Logo.svelte';
-	import CloseIcon from '$lib/icons/CloseIcon.svelte';
 	import MobileNav from '$lib/MobileNav.svelte';
 
     let scrollY: number;
