@@ -9,6 +9,10 @@
 @tailwind utilities;
 
 @layer base {
+    html {
+        overflow-x: hidden;
+        width: 100vw;
+    }
     body {
         @apply text-midnight;
     }
