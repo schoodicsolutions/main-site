@@ -19,7 +19,7 @@
             </span>
         </div>
     </a>
-    <a href="/search-engine-optimization" class="service-card-link">
+    <a href="/digital-marketing" class="service-card-link">
         <div class="service-card">
             <h4 class="mb-3">📈 Amplify Clicks and Calls</h4>
             <p class="mb-4">Experience a surge in website traffic, clicks, and incoming calls as we implement strategies to boost engagement.</p>
@@ -37,7 +37,7 @@
             </span>
         </div>
     </a>
-    <a href="/full-stack" class="service-card-link">
+    <a href="/ui-ux-design" class="service-card-link">
         <div class="service-card">
             <h4 class="mb-3">🌐 Enhance User-Friendliness</h4>
             <p class="mb-4">We're experts at making navigation seamless and enjoyable for your site visitors, translating clicks into conversions effortlessly.</p>

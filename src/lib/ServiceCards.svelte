@@ -39,7 +39,7 @@
             </span>
         </div>
     </a>
-    <a class="service-card-link" href="/managed-hosting">
+    <a class="service-card-link" href="/digital-marketing">
         <div class="service-card">
             <MarketingIcon width="55" height="55" class="mb-6"/>
             <div class="mb-12">
