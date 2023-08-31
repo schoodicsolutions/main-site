@@ -76,7 +76,7 @@
                     </div>
                 </div>
                 <ul class="accolades">
-                    <li>3+ years experience in UI/UX Design and Figma.</li>
+                    <li>5+ years experience in UI/UX Design and Figma.</li>
                     <li>Skilled in mocking up application dashboards that merge functionality with aesthetics seamlessly.</li>
                     <li>Accomplished in designing and building engaging landing pages and websites with user-centered design principles.</li>
                 </ul>

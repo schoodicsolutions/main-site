@@ -40,19 +40,27 @@
 
 @layer utilities {
     .parked-left {
-        @apply transition-opacity transition-transform opacity-0 transform translate-x-[-100vw] duration-500 ease-in-out;
+        transition: transform 0.75s, opacity 1.25s;
+        transform: translateX(-100vw);
     }
     .parked-right {
-        @apply transition-opacity transition-transform opacity-0 transform translate-x-[100vw] duration-500 ease-in-out;
+        transition: transform 0.75s, opacity 1.25s;
+        transform: translateX(100vw);
     }
     .flyin {
-        @apply opacity-100 translate-x-0;
+        opacity: 1;
+        transform: translateX(0);
     }
     .will-fade {
-        @apply transition-opacity opacity-0 duration-200 ease-in-out;
+        transition: transform 0.75, opacity 1.25s;
+        opacity: 0;
     }
     .fadein {
-        @apply opacity-100;
+        transition: transform 0.75, opacity 1.25s;
+        opacity: 1;
+    }
+    .delay {
+        transition-delay: 0.5s;
     }
     .a11y-hidden {
         position: absolute;

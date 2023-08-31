@@ -16,13 +16,13 @@
     class="flex-col lg:flex-row lg:justify-between -mt-1 py-20"
 >
         <div class="flex flex-col gap-5">
-            <h1 class="parked-left delay-0" class:flyin={ready}>
+            <h1 class="parked-left will-fade" class:flyin={ready} class:fadein={ready}>
                 EMPOWERING <span class="text-brand">BUSINESSES</span><br />
                 WITH <span class="text-brand">CUTTING-EDGE</span> WEB<br/>
                 APPLICATIONS
             </h1> 
             <MediaQuery query="(max-width: 1024px)" let:matches>
-                <div class="will-fade delay-500" class:fadein={ready}>
+                <div class="parked-left will-fade !translate-x-0 delay" class:fadein={ready}>
                     <p class="text-center leading-tight mb-7 lg:leading-normal lg:text-left lg:text-2xl parked delay-100 lg:mb-0" class:flyinleft={ready}>
                         Transforming Ideas into Seamless Online
                         {#if matches} <br /> {/if}
