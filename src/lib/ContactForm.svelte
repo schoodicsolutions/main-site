@@ -160,11 +160,12 @@
         </div>
 
         <div class="flex flex-col md:flex-row items-center gap-4 m-auto">
-            <div>
+            <div class="hcaptcha-container">
                 <input name="hcaptchaResponse" id="hcaptchaResponse" hidden />
                 <HCaptcha
                     bind:this={hcaptcha}
                     sitekey={PUBLIC_HCAPTCHA_SITEKEY}
+                    style="width: 100%;"
                     on:success={handleSuccess}
                     on:error={handleError}
                 />

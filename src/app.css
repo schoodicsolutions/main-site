@@ -147,7 +147,7 @@
     }
 
     .textbox {
-        @apply rounded-md p-2 border border-gray-200 w-full box-border bg-white;
+        @apply block rounded-md p-2 border border-gray-200 w-full bg-white;
         @apply disabled:text-gray-300 disabled:bg-white;
     }
     .invalid {
@@ -210,6 +210,10 @@
     .team-cards {
         @apply grid flex-col gap-7 max-w-screen-xl m-auto;
         @apply lg:grid-cols-2 lg:grid-rows-2 xl:grid-cols-3 xl:grid-rows-1;
+    }
+
+    .hcaptcha-container iframe {
+        @apply !w-full;
     }
 }
 
