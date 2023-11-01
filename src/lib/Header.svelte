@@ -4,10 +4,20 @@
     import MediaQuery from 'svelte-media-queries';
 	import MenuIcon from './icons/MenuIcon.svelte';
 	import { drawerOpen } from './stores';
+
+    let scrollY: number = 0;
+    let scrolled = false;
+
+    $: scrollY;
+    $: scrolled = scrollY > 100;
+
+    console.log(scrollY, scrolled);
 </script>
 
+<svelte:window bind:scrollY={scrollY} />
+
 <header 
-    class="sticky w-full z-30 py-4 lg:py-6 border-b border-gray-200"
+    class={"sticky w-full z-30 py-2 lg:py-4 border-b border-gray-200 top-0 bg-white transition-all" + (scrolled ? ' shadow-lg' : '')}
 >
     <!-- Google Tag Manager (noscript) -->
         <noscript>

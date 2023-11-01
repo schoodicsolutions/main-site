@@ -9,15 +9,14 @@
 @tailwind utilities;
 
 @layer base {
-    html {
-        overflow-x: hidden;
-        max-width: 100vw;
-    }
     body {
         @apply text-midnight;
-        overflow-x: hidden;
-        max-width: 100vw;
     }
+
+    body.scrolled header {
+        @apply bg-white shadow-md;
+    }
+
     main {
         @apply max-w-[1647px] mx-auto;
     }
