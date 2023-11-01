@@ -9,12 +9,6 @@
 	import { drawerOpen } from '$lib/stores';
 	import ContactForm from '$lib/ContactForm.svelte';
 	import MobileNav from '$lib/MobileNav.svelte';
-
-    let scrollY: number;
-    $: scrollY;
-
-    let bg: 'blue' | 'white' = 'blue';
-    $: bg = scrollY > 0 ? 'white' : 'blue';
 </script>
 
 <svelte:head>
@@ -24,8 +18,6 @@
         </style>
     {/if}
 </svelte:head>
-
-<svelte:window bind:scrollY />
 
 <Header />
 
@@ -50,6 +42,5 @@
         </div>
     </section>
 </main>
-
 
 <Footer />
