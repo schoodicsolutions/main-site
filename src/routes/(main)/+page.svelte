@@ -73,7 +73,7 @@
 				</figure>
 			</a>
 			<a
-				class="button blue large contained rounded-lg shadow-lg w-full lg:w-auto xl:h-[288px] h-[200px] !text-3xl items-center"
+				class="button blue large contained rounded-lg shadow-lg w-full lg:w-auto xl:h-[288px] lg:h-[200px] lg:!text-3xl items-center"
 				target="_blank"
 				referrerpolicy="no-referrer"
 				href="/"
