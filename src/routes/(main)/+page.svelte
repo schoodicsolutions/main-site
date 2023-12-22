@@ -4,6 +4,7 @@
 	import ContactForm from '$lib/ContactForm.svelte';
 	import Hero from '$lib/Hero.svelte';
 	import ServiceCards from '$lib/ServiceCards.svelte';
+	import CaretRight from '$lib/icons/CaretRight.svelte';
 </script>
 
 <ScrollWatcher />
@@ -71,12 +72,16 @@
 					</figcaption>
 				</figure>
 			</a>
-			<figure class="lg:block hidden">
-				<div class="w-full lg:w-auto xl:h-[288px] h-[200px] rounded-lg shadow-lg bg-gray-400" />
-				<figcaption class="text-center mt-6 text-xl font-semibold text-gray-500">
-					Coming Soon
-				</figcaption>
-			</figure>
+			<a
+				class="button blue large contained rounded-lg shadow-lg w-full lg:w-auto xl:h-[288px] h-[200px] !text-3xl items-center"
+				target="_blank"
+				referrerpolicy="no-referrer"
+				href="/"
+				use:scrollTo={{ section: 'contact' }}
+			>
+				GET YOUR QUOTE
+				<CaretRight class="ml-3" />
+			</a>
 		</div>
 	</section>
 
