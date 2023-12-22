@@ -23,19 +23,21 @@
 			<div class="grow">
 				<h2 class="mb-7">About Schoodic Solutions</h2>
 				<h4 class="mb-3">We're a Maine Business</h4>
-				<p class="mb-7">
+				<p class="mb-3">
 					<strong class="font-semibold">Schoodic Solutions</strong> is the only tech company in Washington
-					County, Maine offering unparalleled full-stack web development and design. With Ryan Prescott
-					as the founder in Calais, Maine, our diverse team excels at bringing business aspirations to
-					life on both local and global fronts.
+					County, Maine offering unparalleled full-stack web development and design .
+				</p>
+				<p class="mb-5">
+					We offer our services to clients in Calais, Machias, Eastport, Lubec, and all of
+					Washington County, Maine, as well as clients in the rest of the United States and around
+					the world.
 				</p>
 
 				<h4 class="mb-3">Modern and Knowledgable</h4>
 				<p class="mb-7">
-					We use the latest in modern full-stack technologies to build beautiful and performant
+					We use the latest in modern web technologies to build speedy and responsive web
 					applications. We're attentive to your needs, and we'll be with you 100% of the way from
-					the initial design to the day your product goes live. Schoodic Solutions is happy to work
-					with you to make sure that your vision comes to life exactly the way you pictured it.
+					the initial design to the day your product goes live.
 				</p>
 
 				<a
