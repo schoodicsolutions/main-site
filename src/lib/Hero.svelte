@@ -10,9 +10,7 @@
 	});
 </script>
 
-<section
-	class="hero flex-col lg:flex-row lg:justify-between -mt-1 py-20 overflow-x-hidden max-w-full"
->
+<section class="hero flex-col lg:flex-row lg:justify-between -mt-1 py-20 overflow-x-hidden">
 	<div class="flex flex-col gap-5">
 		<h1 class="parked-left will-fade" class:flyin={ready} class:fadein={ready}>
 			EMPOWERING <span class="text-brand">BUSINESSES</span><br />
