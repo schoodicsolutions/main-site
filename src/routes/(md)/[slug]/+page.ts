@@ -9,7 +9,7 @@ const cityPrefix = 'web-design-in-';
 export async function load({ params, url }: {params: Record<string, string>, url: URL }) {
 
      const defaultMetadata: Metadata = {
-          image: `${PUBLIC_BASEURL}/assets/social/graph-card.jpg`,
+          image: `${PUBLIC_BASEURL}/assets/social/graph-card2.jpg`,
           canonical: `${PUBLIC_BASEURL}${url.pathname}`,
      };
 
