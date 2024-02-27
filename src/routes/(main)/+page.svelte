@@ -121,7 +121,7 @@
 					<img
 						src="/assets/team/muneeb-ahmed.webp"
 						class="w-24 h-24 rounded-full border-4 border-black"
-						alt="Ryan Prescott"
+						alt="Muneeb Ahmed"
 					/>
 					<div>
 						<h5 class="text-brand">Muneeb Ahmed</h5>
@@ -148,7 +148,7 @@
 					<img
 						src="/assets/team/abdul-ghani.webp"
 						class="w-24 h-24 rounded-full border-4 border-black"
-						alt="Ryan Prescott"
+						alt="Abdul Ghani"
 					/>
 					<div>
 						<h5 class="text-brand">Abdul Ghani</h5>
