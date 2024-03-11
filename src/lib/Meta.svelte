@@ -11,6 +11,7 @@
 <svelte:head>
     <title>{titleString}</title>
     <meta name="description" content={$page.data.description || ''} />
+    <meta name="keywords" content={$page.data.keywords || ''} />
     <meta property="og:url" content={$page.data.canonical} />
     <meta property="og:title" content={titleString || ''} />
     <meta property="og:description" content={$page.data.description || ''} />
