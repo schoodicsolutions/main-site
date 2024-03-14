@@ -75,7 +75,31 @@
 				</figure>
 			</a>
 			<a
-				class="button blue large contained rounded-lg shadow-lg w-full lg:w-auto xl:h-[288px] lg:h-[200px] lg:!text-3xl items-center"
+				href="https://wcut.maine.gov"
+				class="text-black !no-underline group"
+				target="_blank"
+				referrerpolicy="no-referrer"
+			>
+				<figure>
+					<img
+						src="/assets/meadowbrook.webp"
+						alt="A preview of the Meadowbrook Materials website"
+						class="w-full lg:w-auto xl:h-[288px] h-[200px] rounded-lg shadow-lg group-hover:shadow-xl group-hover:scale-[1.02] group-hover:brightness-90 transition-all duration-300 ease-in-out"
+					/>
+					<figcaption
+						class="text-center mt-6 text-xl font-semibold w-fit mx-auto group-hover:text-brand transition-colors"
+					>
+						Meadowbrook Materials
+						<div
+							class="group-hover:w-full w-0 h-0.5 bg-current transition-all group-hover:ml-auto"
+						/>
+					</figcaption>
+				</figure>
+			</a>
+		</div>
+		<div class="inner max-w-lg">
+			<a
+				class="button blue large contained w-full items-center"
 				target="_blank"
 				referrerpolicy="no-referrer"
 				href="/"
@@ -126,7 +150,7 @@
 					<div>
 						<h5 class="text-brand">Muneeb Ahmed</h5>
 						<p class="text-base">
-							Lead UI/UX Designer<br />
+							Chief Design Officer<br />
 							Full Stack Developer
 						</p>
 					</div>
@@ -152,10 +176,7 @@
 					/>
 					<div>
 						<h5 class="text-brand">Abdul Ghani</h5>
-						<p class="text-base">
-							Full Stack Developer<br />
-							Digital Marketing Strategist
-						</p>
+						<p class="text-base">Staff Engineer</p>
 					</div>
 				</div>
 				<ul class="accolades">
