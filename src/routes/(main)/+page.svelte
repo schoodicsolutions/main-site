@@ -5,7 +5,6 @@
 	import Hero from '$lib/Hero.svelte';
 	import ServiceCards from '$lib/ServiceCards.svelte';
 	import CaretRight from '$lib/icons/CaretRight.svelte';
-	
 </script>
 
 <ScrollWatcher />
@@ -120,7 +119,6 @@
 	<section use:scrollRef={'our-team'}>
 		<h2 class="mb-9 text-center">Meet Our Talented Team Located Globally</h2>
 		<div class="team-cards">
-
 			<div class="team-card">
 				<div class="flex gap-7 mb-12">
 					<img
@@ -151,15 +149,23 @@
 					/>
 					<div>
 						<h5 class="text-brand">PJ Wise</h5>
-						<p class="text-base">
-							Chief Experience Officer
-						</p>
+						<p class="text-base">Chief Experience Officer</p>
+						<p class="text-base">Lead Front-End Developer</p>
 					</div>
 				</div>
 				<ul class="accolades">
-					<li>10+ years mastering customer service and sales, with a knack for making every interaction count.</li>
-					<li>5+ Years Of Translating Customer Needs And Wants Into Beautifully Developed And Engaging Frontend UIs.</li>
-					<li>Over a decade shaping customer journeys with the latest tech, leading teams to deliver memorable service.</li>
+					<li>
+						10+ years mastering customer service and sales, with a knack for making every
+						interaction count.
+					</li>
+					<li>
+						5+ Years Of Translating Customer Needs And Wants Into Beautifully Developed And Engaging
+						Frontend UIs.
+					</li>
+					<li>
+						Over a decade shaping customer journeys with the latest tech, leading teams to deliver
+						memorable service.
+					</li>
 				</ul>
 			</div>
 			<div class="team-card">
@@ -198,7 +204,8 @@
 					/>
 					<div>
 						<h5 class="text-brand">Abdul Ghani</h5>
-						<p class="text-base">Staff Engineer</p>
+						<p class="text-base">SEO and Content Strategy Lead</p>
+						<p class="text-base">Social Media Manager</p>
 					</div>
 				</div>
 				<ul class="accolades">
@@ -214,7 +221,6 @@
 					</li>
 				</ul>
 			</div>
-			
 		</div>
 	</section>
 
