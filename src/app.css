@@ -212,13 +212,14 @@
 	}
 
 	.team-card {
-		@apply border border-gray-200 p-9 rounded-md w-full lg:w-[411px];
+		@apply border border-gray-200 p-9 rounded-md w-full lg:w-[600px];
 	}
 
 	.team-cards {
 		@apply grid flex-col gap-7 max-w-screen-xl m-auto;
-		@apply lg:grid-cols-2 lg:grid-rows-2 xl:grid-cols-3 xl:grid-rows-1;
+		@apply lg:grid-cols-2 lg:grid-rows-2 ;
 	}
+	
 
 	.hcaptcha-container iframe {
 		@apply !w-full;
