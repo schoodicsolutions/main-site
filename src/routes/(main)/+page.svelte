@@ -22,15 +22,18 @@
 			</div>
 			<div class="grow">
 				<h2 class="mb-7">About Schoodic Solutions</h2>
-				<h4 class="mb-3">We're a Maine Business</h4>
+				<h4 class="mb-3">We're A Maine Business</h4>
 				<p class="mb-3">
-					<strong class="font-semibold">Schoodic Solutions</strong> is the only tech company in Washington
-					County, Maine offering unparalleled full-stack web development and design .
+					At <strong class="font-semibold">Schoodic Solutions</strong>, we stand apart as the only
+					tech company in Washington County offering full-stack web development and design services.
 				</p>
 				<p class="mb-5">
-					We offer our services to clients in Calais, Machias, Eastport, Lubec, and all of
-					Washington County, Maine, as well as clients in the rest of the United States and around
-					the world.
+					Nestled in the heart of Maine, we extend our expertise to clients in
+					<strong class="font-semibold">Calais</strong>,
+					<strong class="font-semibold">Eastport</strong>,
+					<strong class="font-semibold">Machias</strong>,
+					<strong class="font-semibold">Lubec</strong>, and beyond, serving businesses not just
+					across the United States but around the globe.
 				</p>
 
 				<h4 class="mb-3">Modern and Knowledgable</h4>
