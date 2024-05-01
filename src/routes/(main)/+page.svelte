@@ -207,8 +207,7 @@
 					/>
 					<div>
 						<h5 class="text-brand">Abdul Ghani</h5>
-						<p class="text-base">SEO and Content Strategy Lead</p>
-						<p class="text-base">Social Media Manager</p>
+						<p class="text-base">Director of Project Management</p>
 					</div>
 				</div>
 				<ul class="accolades">
