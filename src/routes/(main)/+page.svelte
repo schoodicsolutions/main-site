@@ -199,7 +199,7 @@
 						alt="Abdul Ghani"
 					/>
 					<div>
-						<p class="text-md lg:text-lg uppercase">Chief Design Officer</p>
+						<p class="text-md lg:text-lg uppercase">Director of Project Management</p>
 						<h5 class="text-brand text-xl lg:text-2xl">Abdul Ghani</h5>
 					</div>
 				</div>
