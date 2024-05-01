@@ -123,18 +123,15 @@
 		<h2 class="mb-9 text-center">Meet Our Talented Team Located Globally</h2>
 		<div class="team-cards">
 			<div class="team-card">
-				<div class="flex gap-7 mb-12">
+				<div class="flex gap-7 mb-6 items-center">
 					<img
 						src="/assets/team/ryan-prescott.webp"
 						class="w-24 h-24 rounded-full border-4 border-black"
 						alt="Ryan Prescott"
 					/>
 					<div>
-						<h5 class="text-brand">Ryan Prescott</h5>
-						<p class="text-base">
-							Founder, Owner, CEO<br />
-							Lead Full Stack Developer
-						</p>
+						<p class="text-md lg:text-lg uppercase">Founder, Owner, CEO</p>
+						<h5 class="text-brand text-xl lg:text-2xl">Ryan Prescott</h5>
 					</div>
 				</div>
 				<ul class="accolades">
@@ -144,16 +141,15 @@
 				</ul>
 			</div>
 			<div class="team-card">
-				<div class="flex gap-7 mb-12">
+				<div class="flex gap-7 mb-6 items-center">
 					<img
 						src="/assets/team/pj-wise.webp"
 						class="w-24 h-24 rounded-full border-4 border-black"
 						alt="Ryan Prescott"
 					/>
 					<div>
-						<h5 class="text-brand">PJ Wise</h5>
-						<p class="text-base">Chief Experience Officer</p>
-						<p class="text-base">Lead Front-End Developer</p>
+						<p class="text-md lg:text-lg uppercase">Chief Experience Officer</p>
+						<h5 class="text-brand text-xl lg:text-2xl">PJ Wise</h5>
 					</div>
 				</div>
 				<ul class="accolades">
@@ -172,18 +168,15 @@
 				</ul>
 			</div>
 			<div class="team-card">
-				<div class="flex gap-7 mb-12">
+				<div class="flex gap-7 mb-6 items-center">
 					<img
 						src="/assets/team/muneeb-ahmed.webp"
 						class="w-24 h-24 rounded-full border-4 border-black"
 						alt="Muneeb Ahmed"
 					/>
 					<div>
-						<h5 class="text-brand">Muneeb Ahmed</h5>
-						<p class="text-base">
-							Chief Design Officer<br />
-							Full Stack Developer
-						</p>
+						<p class="text-md lg:text-lg uppercase">Chief Design Officer</p>
+						<h5 class="text-brand text-xl lg:text-2xl">Muneeb Ahmed</h5>
 					</div>
 				</div>
 				<ul class="accolades">
@@ -199,15 +192,15 @@
 				</ul>
 			</div>
 			<div class="team-card">
-				<div class="flex gap-7 mb-12">
+				<div class="flex gap-7 mb-6 items-center">
 					<img
 						src="/assets/team/abdul-ghani.webp"
 						class="w-24 h-24 rounded-full border-4 border-black"
 						alt="Abdul Ghani"
 					/>
 					<div>
-						<h5 class="text-brand">Abdul Ghani</h5>
-						<p class="text-base">Director of Project Management</p>
+						<p class="text-md lg:text-lg uppercase">Chief Design Officer</p>
+						<h5 class="text-brand text-xl lg:text-2xl">Abdul Ghani</h5>
 					</div>
 				</div>
 				<ul class="accolades">

@@ -217,9 +217,8 @@
 
 	.team-cards {
 		@apply grid flex-col gap-7 max-w-screen-xl m-auto;
-		@apply lg:grid-cols-2 lg:grid-rows-2 ;
+		@apply lg:grid-cols-2 lg:grid-rows-2;
 	}
-	
 
 	.hcaptcha-container iframe {
 		@apply !w-full;
