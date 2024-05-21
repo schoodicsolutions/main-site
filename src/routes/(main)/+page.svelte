@@ -130,41 +130,14 @@
 						alt="Ryan Prescott"
 					/>
 					<div>
-						<p class="text-md lg:text-lg uppercase">Founder, Owner, CEO</p>
+						<p class="text-md lg:text-lg uppercase">Owner, CEO & Senior Engineer</p>
 						<h5 class="text-brand text-xl lg:text-2xl">Ryan Prescott</h5>
 					</div>
 				</div>
 				<ul class="accolades">
 					<li>5+ years freelancing with strong leadership and business management expertise.</li>
-					<li>Lifelong exposure to computers and tech, nurturing a comprehensive understanding.</li>
+					<li>Lifelong hands-on experience with tech, nurturing a comprehensive understanding.</li>
 					<li>5+ years in web technologies, system administration and project management.</li>
-				</ul>
-			</div>
-			<div class="team-card">
-				<div class="flex gap-7 mb-6 items-center">
-					<img
-						src="/assets/team/pj-wise.webp"
-						class="w-24 h-24 rounded-full border-4 border-black"
-						alt="Ryan Prescott"
-					/>
-					<div>
-						<p class="text-md lg:text-lg uppercase">Chief Experience Officer</p>
-						<h5 class="text-brand text-xl lg:text-2xl">PJ Wise</h5>
-					</div>
-				</div>
-				<ul class="accolades">
-					<li>
-						10+ years mastering customer service and sales, with a knack for making every
-						interaction count.
-					</li>
-					<li>
-						5+ Years Of Translating Customer Needs And Wants Into Beautifully Developed And Engaging
-						Frontend UIs.
-					</li>
-					<li>
-						Over a decade shaping customer journeys with the latest tech, leading teams to deliver
-						memorable service.
-					</li>
 				</ul>
 			</div>
 			<div class="team-card">
@@ -175,7 +148,7 @@
 						alt="Muneeb Ahmed"
 					/>
 					<div>
-						<p class="text-md lg:text-lg uppercase">Chief Design Officer</p>
+						<p class="text-md lg:text-lg uppercase">Chief Design Officer & Staff Engineer</p>
 						<h5 class="text-brand text-xl lg:text-2xl">Muneeb Ahmed</h5>
 					</div>
 				</div>
@@ -199,20 +172,51 @@
 						alt="Abdul Ghani"
 					/>
 					<div>
-						<p class="text-md lg:text-lg uppercase">Director of Project Management</p>
+						<p class="text-md lg:text-lg uppercase">Chief Marketing Officer</p>
 						<h5 class="text-brand text-xl lg:text-2xl">Abdul Ghani</h5>
 					</div>
 				</div>
 				<ul class="accolades">
 					<li>
-						Expertise in SEO and marketing strategies to enhance online presence and engagement.
+						Develops and implements comprehensive marketing strategies to drive brand awareness,
+						customer acquisition, and revenue growth in alignment with the company's overall
+						business objectives.
 					</li>
 					<li>
-						Proficient in full Stack development, creating dynamic and responsive web solutions.
+						Leads and mentors a high-performing marketing team, fostering a culture of creativity,
+						innovation, and excellence to deliver impactful marketing campaigns and initiatives.
 					</li>
 					<li>
-						Adaptable in working with different technologies for development tasks and content
-						management.
+						Conducts thorough market research and competitive analysis to identify emerging trends,
+						opportunities, and threats, ensuring the company remains ahead of industry developments
+						and maintains a competitive edge.
+					</li>
+				</ul>
+			</div>
+			<div class="team-card">
+				<div class="flex gap-7 mb-6 items-center">
+					<img
+						src="/assets/team/mason-fortier.webp"
+						class="w-24 h-24 rounded-full border-4 border-black"
+						alt="Mason Fortier"
+					/>
+					<div>
+						<p class="text-md lg:text-lg uppercase">Lead Project Manager</p>
+						<h5 class="text-brand text-xl lg:text-2xl">Mason Fortier</h5>
+					</div>
+				</div>
+				<ul class="accolades">
+					<li>
+						Spearheads the planning, execution, and closing of projects, ensuring they meet
+						deadlines, budget constraints, and quality standards.
+					</li>
+					<li>
+						Facilitates effective communication and collaboration among team members, stakeholders,
+						and clients to achieve project goals.
+					</li>
+					<li>
+						Identifies potential risks, develops mitigation strategies, and monitors progress to
+						ensure project success and stakeholder satisfaction.
 					</li>
 				</ul>
 			</div>
