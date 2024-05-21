@@ -212,7 +212,7 @@
 	}
 
 	.team-card {
-		@apply border border-gray-200 p-9 rounded-md w-full lg:w-[600px];
+		@apply bg-stone-100 hover:bg-stone-50 shadow-[5px_6px_0_0_rgba(0,0,0,0.3)] pl-8 py-5 w-full lg:w-[600px] select-none hover:scale-[1.01] transition-all;
 	}
 
 	.team-cards {

@@ -123,7 +123,7 @@
 		<h2 class="mb-9 text-center">Meet Our Talented Team Located Globally</h2>
 		<div class="team-cards">
 			<div class="team-card">
-				<div class="flex gap-7 mb-6 items-center">
+				<div class="flex gap-7 items-center">
 					<img
 						src="/assets/team/ryan-prescott.webp"
 						class="w-24 h-24 rounded-full border-4 border-black"
@@ -134,14 +134,9 @@
 						<h5 class="text-brand text-xl lg:text-2xl">Ryan Prescott</h5>
 					</div>
 				</div>
-				<ul class="accolades">
-					<li>5+ years freelancing with strong leadership and business management expertise.</li>
-					<li>Lifelong hands-on experience with tech, nurturing a comprehensive understanding.</li>
-					<li>5+ years in web technologies, system administration and project management.</li>
-				</ul>
 			</div>
 			<div class="team-card">
-				<div class="flex gap-7 mb-6 items-center">
+				<div class="flex gap-7 items-center">
 					<img
 						src="/assets/team/muneeb-ahmed.webp"
 						class="w-24 h-24 rounded-full border-4 border-black"
@@ -152,20 +147,9 @@
 						<h5 class="text-brand text-xl lg:text-2xl">Muneeb Ahmed</h5>
 					</div>
 				</div>
-				<ul class="accolades">
-					<li>5+ years experience in UI/UX Design and Figma.</li>
-					<li>
-						Skilled in mocking up application dashboards that merge functionality with aesthetics
-						seamlessly.
-					</li>
-					<li>
-						Accomplished in designing and building engaging landing pages and websites with
-						user-centered design principles.
-					</li>
-				</ul>
 			</div>
 			<div class="team-card">
-				<div class="flex gap-7 mb-6 items-center">
+				<div class="flex gap-7 items-center">
 					<img
 						src="/assets/team/abdul-ghani.webp"
 						class="w-24 h-24 rounded-full border-4 border-black"
@@ -176,25 +160,9 @@
 						<h5 class="text-brand text-xl lg:text-2xl">Abdul Ghani</h5>
 					</div>
 				</div>
-				<ul class="accolades">
-					<li>
-						Develops and implements comprehensive marketing strategies to drive brand awareness,
-						customer acquisition, and revenue growth in alignment with the company's overall
-						business objectives.
-					</li>
-					<li>
-						Leads and mentors a high-performing marketing team, fostering a culture of creativity,
-						innovation, and excellence to deliver impactful marketing campaigns and initiatives.
-					</li>
-					<li>
-						Conducts thorough market research and competitive analysis to identify emerging trends,
-						opportunities, and threats, ensuring the company remains ahead of industry developments
-						and maintains a competitive edge.
-					</li>
-				</ul>
 			</div>
 			<div class="team-card">
-				<div class="flex gap-7 mb-6 items-center">
+				<div class="flex gap-7 items-center">
 					<img
 						src="/assets/team/mason-fortier.webp"
 						class="w-24 h-24 rounded-full border-4 border-black"
@@ -205,20 +173,6 @@
 						<h5 class="text-brand text-xl lg:text-2xl">Mason Fortier</h5>
 					</div>
 				</div>
-				<ul class="accolades">
-					<li>
-						Spearheads the planning, execution, and closing of projects, ensuring they meet
-						deadlines, budget constraints, and quality standards.
-					</li>
-					<li>
-						Facilitates effective communication and collaboration among team members, stakeholders,
-						and clients to achieve project goals.
-					</li>
-					<li>
-						Identifies potential risks, develops mitigation strategies, and monitors progress to
-						ensure project success and stakeholder satisfaction.
-					</li>
-				</ul>
 			</div>
 		</div>
 	</section>
