@@ -10,8 +10,6 @@
 
 	$: scrollY;
 	$: scrolled = scrollY > 100;
-
-	console.log(scrollY, scrolled);
 </script>
 
 <svelte:window bind:scrollY />
