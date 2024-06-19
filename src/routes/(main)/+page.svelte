@@ -102,13 +102,13 @@
 		</div>
 		<div class="inner max-w-lg">
 			<a
-				class="button blue large contained w-full items-center"
+				class="button blue large contained w-full items-center uppercase"
 				target="_blank"
 				referrerpolicy="no-referrer"
 				href="/"
 				use:scrollTo={{ section: 'contact' }}
 			>
-				GET YOUR QUOTE
+				Get Your Quote
 				<CaretRight class="ml-3" />
 			</a>
 		</div>
@@ -143,7 +143,7 @@
 						alt="Muneeb Ahmed"
 					/>
 					<div>
-						<p class="text-md lg:text-lg uppercase">Chief Design Officer & Staff Engineer</p>
+						<p class="text-md lg:text-lg uppercase">Chief Design Officer</p>
 						<h5 class="text-brand text-xl lg:text-2xl">Muneeb Ahmed</h5>
 					</div>
 				</div>
@@ -177,11 +177,28 @@
 		</div>
 	</section>
 
-	<section use:scrollRef={'contact'}>
+	<section use:scrollRef={'contact'} class="w-full max-w-none bg-almond">
+		<div class="w-full bg-almond text-center">
+			<h2 class="mb-6">Ready to make your dreams come to life?</h2>
+			<div class="mx-auto max-w-lg">
+				<a
+					class="button blue large contained w-full items-center uppercase mb-5"
+					target="_blank"
+					referrerpolicy="no-referrer"
+					href="https://calendly.com/schoodic"
+					use:scrollTo={{ section: 'contact' }}
+				>
+					Schedule&nbsp;
+					<span class="hidden xs:inline whitespace-nowrap">{' '}Your Consultation</span>
+					<span class="inline xs:hidden">{' '}Now</span>
+					<CaretRight class="ml-3" />
+				</a>
+				<p class="mb-2">&mdash; or, contact us using the form below &mdash;</p>
+			</div>
+		</div>
 		<div
-			class="w-full max-w-screen-xl m-auto bg-brand text-white rounded-md px-4 sm:px-8 xl:px-40 pt-14 pb-12"
+			class="w-full max-w-screen-lg m-auto bg-black text-white rounded-md px-4 sm:px-8 xl:px-20 pt-14 pb-12"
 		>
-			<h2 class="mb-9 text-center">Get In Touch</h2>
 			<ContactForm />
 		</div>
 	</section>
