@@ -161,19 +161,6 @@
 					</div>
 				</div>
 			</div>
-			<div class="team-card">
-				<div class="flex gap-7 items-center">
-					<img
-						src="/assets/team/mason-fortier.webp"
-						class="w-24 h-24 rounded-full border-4 border-black"
-						alt="Mason Fortier"
-					/>
-					<div>
-						<p class="text-md lg:text-lg uppercase">Lead Project Manager</p>
-						<h5 class="text-brand text-xl lg:text-2xl">Mason Fortier</h5>
-					</div>
-				</div>
-			</div>
 		</div>
 	</section>
 
