@@ -8,7 +8,7 @@
 
 **Privacy Policy**
 
-Schoodic Media LLC ("we" or "us") values the privacy of our users (“user” or “you”). This Privacy Policy explains how we collect, use, and share information about you when you visit our website, [www.schoodic.io](http://www.schoodic.io) (the "Site").
+Schoodic Solutions ("we" or "us") values the privacy of our users (“user” or “you”). This Privacy Policy explains how we collect, use, and share information about you when you visit our website, [www.schoodic.io](http://www.schoodic.io) (the "Site").
 
 By using the Site, you agree to the collection, use, and sharing of your information as described in this Privacy Policy. If you do not agree with our policies and practices, do not use the Site.
 

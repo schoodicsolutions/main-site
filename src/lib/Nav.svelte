@@ -29,11 +29,11 @@
 			pathname: '/',
 			scrollTo: 'services',
 		},
-		{
+		/*{
 			caption: 'Our Team',
 			pathname: '/',
 			scrollTo: 'our-team',
-		},
+		},*/
 		{
 			caption: 'Contact Us',
 			pathname: '/',

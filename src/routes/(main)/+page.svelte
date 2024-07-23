@@ -25,7 +25,8 @@
 				<h4 class="mb-3">We're A Maine Business</h4>
 				<p class="mb-3">
 					At <strong class="font-semibold">Schoodic Solutions</strong>, we stand apart as the only
-					tech company in Washington County offering full-stack web development and design services.
+					tech company in Washington County offering full-stack web development and design services
+					so your business shines brightly online.
 				</p>
 				<p class="mb-5">
 					Nestled in the heart of Maine, we extend our expertise to clients in
@@ -117,51 +118,6 @@
 	<section use:scrollRef={'services'} class="mb-1">
 		<h2 class="mb-9 text-center">Services We Offer To Our Clients</h2>
 		<ServiceCards />
-	</section>
-
-	<section use:scrollRef={'our-team'}>
-		<h2 class="mb-9 text-center">Meet Our Talented Team Located Globally</h2>
-		<div class="team-cards">
-			<div class="team-card">
-				<div class="flex gap-7 items-center">
-					<img
-						src="/assets/team/ryan-prescott.webp"
-						class="w-24 h-24 rounded-full border-4 border-black"
-						alt="Ryan Prescott"
-					/>
-					<div>
-						<p class="text-md lg:text-lg uppercase">Owner, CEO & Senior Engineer</p>
-						<h5 class="text-brand text-xl lg:text-2xl">Ryan Prescott</h5>
-					</div>
-				</div>
-			</div>
-			<div class="team-card">
-				<div class="flex gap-7 items-center">
-					<img
-						src="/assets/team/muneeb-ahmed.webp"
-						class="w-24 h-24 rounded-full border-4 border-black"
-						alt="Muneeb Ahmed"
-					/>
-					<div>
-						<p class="text-md lg:text-lg uppercase">Chief Design Officer</p>
-						<h5 class="text-brand text-xl lg:text-2xl">Muneeb Ahmed</h5>
-					</div>
-				</div>
-			</div>
-			<div class="team-card">
-				<div class="flex gap-7 items-center">
-					<img
-						src="/assets/team/abdul-ghani.webp"
-						class="w-24 h-24 rounded-full border-4 border-black"
-						alt="Abdul Ghani"
-					/>
-					<div>
-						<p class="text-md lg:text-lg uppercase">Chief Marketing Officer</p>
-						<h5 class="text-brand text-xl lg:text-2xl">Abdul Ghani</h5>
-					</div>
-				</div>
-			</div>
-		</div>
 	</section>
 
 	<section use:scrollRef={'contact'} class="w-full max-w-none bg-almond">

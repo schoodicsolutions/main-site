@@ -54,7 +54,7 @@
 						<li><a use:scrollTo={{ section: '+top' }} href="/" aria-hidden={true}>Home</a></li>
 						<li><a use:scrollTo={{ section: 'about' }} href="/">About</a></li>
 						<li><a use:scrollTo={{ section: 'services' }} href="/">Services</a></li>
-						<li><a use:scrollTo={{ section: 'our-team' }} href="/">Our Team</a></li>
+						<!--<li><a use:scrollTo={{ section: 'our-team' }} href="/">Our Team</a></li> -->
 						<li><a use:scrollTo={{ section: 'contact' }} href="/">Contact Us</a></li>
 					</ul>
 				</nav>
@@ -62,8 +62,7 @@
 		</div>
 	</div>
 	<div class="border-gray-300 border-t py-3 px-4">
-		Copyright &copy; {new Date().getFullYear()} Schoodic Media LLC d/b/a Schoodic Solutions, All Rights
-		Reserved
+		Copyright &copy; {new Date().getFullYear()} Schoodic Solutions, All Rights Reserved
 		<span aria-hidden={true} class="hidden lg:inline">&nbsp;&bull;&nbsp;</span>
 		<br class="block lg:hidden" />
 		<a class="text-black" href="/privacy-policy">Privacy Policy</a>

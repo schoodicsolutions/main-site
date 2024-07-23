@@ -8,7 +8,7 @@
 
 **Terms and Conditions**
 
-Welcome to Schoodic Media LLC's website, [www.schoodic.io](http://www.schoodic.io) (the "Site"). The following terms and conditions (these "Terms") apply to your access and use of the Site. Please read these Terms carefully before using the Site. By using the Site, you agree to be bound by these Terms. If you do not agree to these Terms, please do not use the Site.
+Welcome to Schoodic Solutions's website, [www.schoodic.io](http://www.schoodic.io) (the "Site"). The following terms and conditions (these "Terms") apply to your access and use of the Site. Please read these Terms carefully before using the Site. By using the Site, you agree to be bound by these Terms. If you do not agree to these Terms, please do not use the Site.
 
 **Use of the Site**
 
@@ -16,7 +16,7 @@ You may use the Site for your personal, non-commercial use only. You may not use
 
 **Intellectual Property**
 
-The content on the Site, including text, graphics, logos, images, and software, is the property of Schoodic Media LLC or its licensors and is protected by United States and international copyright and trademark laws. You may not use any content on the Site for any commercial purpose without the express written consent of Schoodic Media LLC.
+The content on the Site, including text, graphics, logos, images, and software, is the property of Schoodic Solutions or its licensors and is protected by United States and international copyright and trademark laws. You may not use any content on the Site for any commercial purpose without the express written consent of Schoodic Solutions.
 
 **Links to Other Websites**
 
