@@ -100,6 +100,28 @@
 					</figcaption>
 				</figure>
 			</a>
+			<a
+				href="https://fitzseepropertymanagement.com"
+				class="text-black !no-underline group"
+				target="_blank"
+				referrerpolicy="no-referrer"
+			>
+				<figure>
+					<img
+						src="/assets/fitzsee.webp"
+						alt="A preview of the Fitzsee Property Management website"
+						class="w-full lg:w-auto xl:h-[288px] h-[200px] rounded-lg shadow-lg group-hover:shadow-xl group-hover:scale-[1.02] group-hover:brightness-90 transition-all duration-300 ease-in-out"
+					/>
+					<figcaption
+						class="text-center mt-6 text-xl font-semibold w-fit mx-auto group-hover:text-brand transition-colors"
+					>
+						Fitzsee Property Management
+						<div
+							class="group-hover:w-full w-0 h-0.5 bg-current transition-all group-hover:ml-auto"
+						/>
+					</figcaption>
+				</figure>
+			</a>
 		</div>
 		<div class="inner max-w-lg">
 			<a
