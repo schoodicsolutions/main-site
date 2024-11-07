@@ -38,7 +38,6 @@ const sendMailPromise = (mailOptions: Mail.Options) => {
 	const transport = createTransport({
 		host: SMTP_SERVER,
 		port: Number(SMTP_PORT),
-		secure: true,
 		authMethod: 'LOGIN',
 		auth: {
 			user: SMTP_USERNAME,
