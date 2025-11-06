@@ -122,7 +122,7 @@
 					</figcaption>
 				</figure>
 			</a>
-			<a
+			<!-- <a
 				href="https://thehigherclass420.com"
 				class="text-black !no-underline group"
 				target="_blank"
@@ -143,7 +143,7 @@
 						/>
 					</figcaption>
 				</figure>
-			</a>
+			</a> -->
 			<a
 				href="https://devonspropertymaintenance.com"
 				class="text-black !no-underline group"
