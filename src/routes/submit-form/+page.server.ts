@@ -3,7 +3,6 @@ import { error, type Actions } from '@sveltejs/kit';
 import { createTransport } from 'nodemailer';
 import type Mail from 'nodemailer/lib/mailer';
 import type SMTPTransport from 'nodemailer/lib/smtp-transport';
-import hubspot, { AssociationTypes } from '@hubspot/api-client';
 
 import {
 	SMTP_SERVER,
@@ -15,12 +14,7 @@ import {
 	SMTP_SUBJECT,
 	HCAPTCHA_SECRET_KEY,
 	HCAPTCHA_VERIFY_API,
-	HUBSPOT_APP_TOKEN,
-	HUBSPOT_CONTACT_OWNER,
 } from '$env/static/private';
-import type { ApiException } from '@hubspot/api-client/lib/codegen/communication_preferences';
-
-const hubspotClient = new hubspot.Client({ accessToken: HUBSPOT_APP_TOKEN });
 
 const validateCaptcha = (token: string) => {
 	const hcaptchaBody = new FormData();
@@ -80,47 +74,6 @@ const createContactAndCompany = async ({
 	};
 
 	if (phone) contactObj.properties.phone = phone;
-
-	// let createContactResponse;
-	// try {
-	//     createContactResponse = await hubspotClient.crm.contacts.basicApi.create(contactObj);
-	// } catch (e) {
-	//     const error = e as any;
-	//     if (error?.code === 409) {
-	//         return;
-	//     }
-	//     throw e;
-	// }
-
-	/*
-    if (!company) return;
-
-    const forbiddenDomains = ['gmail.com', 'yahoo.com', 'hotmail.com', 'outlook.com', 'roadrunner.com', 'googlemail.com', 'rocketmail.com'];
-
-    const companyObj: { properties: Record<string, string> }= {
-        properties: {
-            name: company,
-        },
-    }
-
-    const domain = email.split('@')[1];
-    if (!forbiddenDomains.includes(domain)) companyObj.properties.domain = domain;
-
-    const createCompanyResponse = await hubspotClient.crm.companies.basicApi.create(companyObj)
-
-    await hubspotClient.crm.companies.associationsApi.create(
-        parseInt(createCompanyResponse.id),
-        'contacts',
-        parseInt(createContactResponse.id),
-        [
-            {
-                  "associationCategory": "HUBSPOT_DEFINED",
-                  "associationTypeId": AssociationTypes.companyToContact 
-                  // AssociationTypes contains the most popular HubSpot defined association types
-            }
-        ]
-    )
-    */
 };
 
 export const actions: Actions = {
