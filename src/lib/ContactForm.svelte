@@ -151,8 +151,7 @@
 					class:invalid={($form.touched || $form.message.touched) && !$form.message.valid}
 					name="message"
 					id="message"
-					placeholder="Additional information here..."
-				/>
+					placeholder="Additional information here..."></textarea>
 			</div>
 
 			<div class="flex flex-col md:flex-row items-center gap-4 m-auto">

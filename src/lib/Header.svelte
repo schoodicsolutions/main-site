@@ -25,8 +25,7 @@
 			title="Google Tag Manager"
 			height="0"
 			width="0"
-			style="display:none;visibility:hidden"
-		/>
+			style="display:none;visibility:hidden"></iframe>
 	</noscript>
 	<!-- End Google Tag Manager (noscript) -->
 	<div class="flex max-w-screen-2xl px-5 lg:px-10 mx-auto justify-between items-center">

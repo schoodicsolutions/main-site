@@ -10,7 +10,7 @@
 <Drawer>
     <div class="px-12 py-3.5 mb-11">
         <div class="flex mb-9">
-            <div class="w-12 h-12" />
+            <div class="w-12 h-12"></div>
             <div class="flex-grow flex items-center justify-center">
                 <Logo variant="normal" size="small" />
             </div>

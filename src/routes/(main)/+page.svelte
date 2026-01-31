@@ -73,8 +73,7 @@
 					>
 						Washington County Unorganized Territories
 						<div
-							class="group-hover:w-full w-0 h-0.5 bg-current transition-all group-hover:ml-auto"
-						/>
+							class="group-hover:w-full w-0 h-0.5 bg-current transition-all group-hover:ml-auto"></div>
 					</figcaption>
 				</figure>
 			</a>
@@ -95,8 +94,7 @@
 					>
 						Meadowbrook Materials
 						<div
-							class="group-hover:w-full w-0 h-0.5 bg-current transition-all group-hover:ml-auto"
-						/>
+							class="group-hover:w-full w-0 h-0.5 bg-current transition-all group-hover:ml-auto"></div>
 					</figcaption>
 				</figure>
 			</a>
@@ -117,8 +115,7 @@
 					>
 						Fitzsee Property Management
 						<div
-							class="group-hover:w-full w-0 h-0.5 bg-current transition-all group-hover:ml-auto"
-						/>
+							class="group-hover:w-full w-0 h-0.5 bg-current transition-all group-hover:ml-auto"></div>
 					</figcaption>
 				</figure>
 			</a>
@@ -139,8 +136,7 @@
 					>
 						The Higher Class
 						<div
-							class="group-hover:w-full w-0 h-0.5 bg-current transition-all group-hover:ml-auto"
-						/>
+							class="group-hover:w-full w-0 h-0.5 bg-current transition-all group-hover:ml-auto"></div>
 					</figcaption>
 				</figure>
 			</a>
@@ -161,8 +157,7 @@
 					>
 						Devon's Property Maintenance
 						<div
-							class="group-hover:w-full w-0 h-0.5 bg-current transition-all group-hover:ml-auto"
-						/>
+							class="group-hover:w-full w-0 h-0.5 bg-current transition-all group-hover:ml-auto"></div>
 					</figcaption>
 				</figure>
 			</a>
@@ -183,8 +178,7 @@
 					>
 						Unvibe.it
 						<div
-							class="group-hover:w-full w-0 h-0.5 bg-current transition-all group-hover:ml-auto"
-						/>
+							class="group-hover:w-full w-0 h-0.5 bg-current transition-all group-hover:ml-auto"></div>
 					</figcaption>
 				</figure>
 			</a>
