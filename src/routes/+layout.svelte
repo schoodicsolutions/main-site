@@ -3,27 +3,9 @@
 	import Footer from '$lib/Footer.svelte';
 	import Header from '$lib/Header.svelte';
 	import Meta from '$lib/Meta.svelte';
-	import { site } from '$lib/content/site';
 	import '../app.css';
 
 	let { children }: { children: Snippet } = $props();
-
-	const jsonLd = JSON.stringify({
-		'@context': 'https://schema.org',
-		'@type': 'ProfessionalService',
-		name: site.name,
-		legalName: site.legalName,
-		url: site.url,
-		logo: `${site.url}/android-chrome-512x512.png`,
-		description:
-			'AI, machine learning, cloud infrastructure, DevOps, and business automation for Washington County, Maine.',
-		address: { '@type': 'PostalAddress', addressRegion: 'ME', addressCountry: 'US' },
-		areaServed: [
-			{ '@type': 'AdministrativeArea', name: 'Washington County, Maine' },
-			...site.towns.map((town) => ({ '@type': 'City', name: `${town}, Maine` })),
-		],
-		sameAs: site.socials.map((social) => social.href),
-	});
 </script>
 
 <Meta />
@@ -34,8 +16,6 @@
 	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
 	<link rel="manifest" href="/site.webmanifest" />
 	<meta name="theme-color" content="#0A1534" />
-
-	{@html `<script type="application/ld+json">${jsonLd}</script>`}
 
 	<!-- Google Tag Manager -->
 	<script>

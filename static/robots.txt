@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /submit-form
+
+Sitemap: https://schoodic.io/sitemap.xml

@@ -7,4 +7,6 @@ export interface Metadata {
 	description?: string;
 	image?: string;
 	canonical?: string;
+	/** Extra schema.org nodes merged into the page's JSON-LD graph */
+	schema?: Record<string, unknown>[];
 }

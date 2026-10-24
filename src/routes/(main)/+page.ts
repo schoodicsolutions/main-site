@@ -1,10 +1,16 @@
-import { baseMeta } from '$lib/content/site';
-import type { Metadata } from '../../types';
+import { homeFaqs } from '$lib/content/faqs';
+import { services } from '$lib/content/services';
+import { baseMeta, site } from '$lib/content/site';
+import { faqPage, serviceNode } from '$lib/seo/schema';
 import type { PageLoad } from './$types';
 
-export const load: PageLoad = ({ url }): Metadata => ({
-	fullTitle: 'Schoodic · AI, Cloud & Automation in Washington County, Maine',
-	description:
-		'Schoodic helps Down East Maine businesses put AI, data, cloud infrastructure, DevOps, and workflow automation to work. Local team based in Washington County.',
-	...baseMeta(url),
-});
+export const load: PageLoad = ({ url }) => {
+	const meta = baseMeta(url);
+
+	return {
+		fullTitle: 'Schoodic · AI, Cloud & Automation Consulting in Maine',
+		description: site.description,
+		...meta,
+		schema: [faqPage(meta.canonical, homeFaqs), ...services.map(serviceNode)],
+	};
+};

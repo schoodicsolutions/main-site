@@ -94,13 +94,20 @@ Each service page has: hero (name + one-line promise) → "What we do" (4–6 ca
 
 ## 7. Phases
 
-- [ ] **1 · Foundation.** Baseline build; tokens, fonts, base CSS; remove dead code and deps; shared layout; Svelte 5 Header / Nav / MobileNav / Footer / Logo (wordmark → "Schoodic"); native anchor nav.
-- [ ] **2 · Home page.** Hero, services grid, approach, why-local, use cases, contact section.
-- [ ] **3 · Service pages.** `services.ts` content, `/services/[slug]` template, copy for all six.
-- [ ] **4 · SEO & redirects.** Remove city pages and old md services, `_redirects`, sitemap route, JSON-LD, meta cleanup, OG image.
+- [x] **1 · Foundation.** Baseline build; tokens, fonts, base CSS; remove dead code and deps; shared layout; Svelte 5 Header / Nav / MobileNav / Footer / Logo (wordmark → "Schoodic"); native anchor nav.
+- [x] **2 · Home page.** Hero, services grid, approach, why-local, use cases, contact section.
+- [x] **3 · Service pages.** `services.ts` content, `/services/[slug]` template, copy for all six.
+- [x] **4 · SEO & redirects.** Remove city pages and old md services, `_redirects`, sitemap route, JSON-LD, meta cleanup, OG image.
 - [ ] **5 · Polish.** Contact form refresh (runes, interest chips, escaping), legal page styling, 404 page, a11y/reduced-motion pass, Lighthouse, README.
 
-## 8. Open questions
+## 8. SEO follow-ups (off-site, owner action)
+
+- Submit `https://schoodic.io/sitemap.xml` in Google Search Console and Bing Webmaster Tools; watch the 301s from retired URLs drop out of the index.
+- Claim/refresh the Google Business Profile (category: "Computer consultant" / "Software company"), matching name "Schoodic" and service area Washington County.
+- Add a phone number and street (or service-area) address to `site.ts` and the Organization schema once decided, keeping NAP identical everywhere.
+- Ask happy clients for Google reviews; get listed with local chambers (Calais Regional, Machias Bay, Eastport) and Maine tech directories for local backlinks.
+
+## 9. Open questions
 
 - Is the Calendly link (`calendly.com/schoodic`) still current?
 - Do we have real numbers (years in business, uptime, response time) for the "Why local" section, or should it stay qualitative?

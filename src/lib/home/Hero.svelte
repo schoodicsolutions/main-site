@@ -29,15 +29,15 @@
 	></div>
 
 	<div
-		class="container-site relative grid items-center gap-16 py-20 lg:grid-cols-[1.25fr_1fr] lg:py-32"
+		class="container-site relative grid items-center gap-16 py-16 lg:min-h-[calc(100svh-5rem)] lg:grid-cols-[1.4fr_1fr] lg:py-12"
 	>
 		<div>
-			<p class="eyebrow mb-6">// Washington County, Maine</p>
+			<p class="eyebrow mb-6">// AI &amp; technology consulting</p>
 			<h1 class="mb-6">
 				Modern <span class="highlight">AI</span>, <span class="highlight">cloud</span>, and
 				<span class="highlight">automation</span> for businesses big and small.
 			</h1>
-			<p class="text-muted mb-10 max-w-xl text-lg lg:text-xl">
+			<p class="text-muted mb-8 max-w-xl text-lg lg:text-xl">
 				Schoodic plans, builds, and supports the technology behind your business, from AI assistants
 				and data pipelines to cloud infrastructure and the workflows that tie it all together.
 			</p>
@@ -49,7 +49,7 @@
 				<a class="button ghost-dark large" href="#services">Explore services</a>
 			</div>
 			<ul
-				class="mt-12 flex flex-wrap gap-x-6 gap-y-2 font-mono text-xs uppercase tracking-wider text-white/45"
+				class="mt-10 flex flex-wrap gap-x-6 gap-y-2 font-mono text-xs uppercase tracking-wider text-white/45"
 			>
 				{#each capabilities as capability (capability)}
 					<li>{capability}</li>

@@ -1,9 +1,16 @@
-// See https://kit.svelte.dev/docs/types#app
-// for information about these interfaces
-// and what to do when importing types
+// See https://svelte.dev/docs/kit/types#app.d.ts
 declare namespace App {
 	// interface Error {}
 	// interface Locals {}
-	// interface PageData {}
+	/** Page metadata every load function may return; consumed by Meta.svelte */
+	interface PageData {
+		title?: string;
+		fullTitle?: string;
+		heading?: string;
+		description?: string;
+		image?: string;
+		canonical?: string;
+		schema?: Record<string, unknown>[];
+	}
 	// interface Platform {}
 }

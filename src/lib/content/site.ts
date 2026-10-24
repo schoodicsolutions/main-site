@@ -4,6 +4,9 @@ export const site = {
 	name: 'Schoodic',
 	legalName: 'Schoodic Solutions',
 	tagline: 'Technology partner for Down East Maine',
+	description:
+		'Schoodic helps Maine businesses put AI, machine learning, cloud infrastructure, DevOps, and workflow automation to work. Local team based in Washington County.',
+	ogImage: '/assets/social/og.png',
 	calendly: 'https://calendly.com/schoodic',
 	towns: ['Calais', 'Eastport', 'Machias', 'Lubec', 'Baileyville', 'Princeton'],
 	socials: [
@@ -31,6 +34,6 @@ export const mainNav: NavItem[] = [
 
 /** Canonical URL and social image shared by every page's load function */
 export const baseMeta = (url: URL) => ({
-	image: `${site.url}/assets/social/graph-card2.jpg`,
+	image: `${site.url}${site.ogImage}`,
 	canonical: `${site.url}${url.pathname}`,
 });
