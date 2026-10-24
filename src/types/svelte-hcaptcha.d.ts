@@ -9,6 +9,7 @@ declare module 'svelte-hcaptcha' {
 		theme?: 'light' | 'dark';
 		size?: 'normal' | 'compact' | 'invisible';
 		tabindex?: number;
+		style?: string;
 		on?: {
 			error?: (event: any) => void;
 			verified?: (event: any) => void;
@@ -19,5 +20,7 @@ declare module 'svelte-hcaptcha' {
 		};
 	}
 
-	export default class HCaptcha extends SvelteComponent<HCaptchaProps> {}
+	export default class HCaptcha extends SvelteComponent<HCaptchaProps> {
+		reset(): void;
+	}
 }

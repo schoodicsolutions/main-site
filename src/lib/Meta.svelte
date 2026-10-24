@@ -1,21 +1,27 @@
-<script>
-	import { page } from '$app/stores';
+<script lang="ts">
+	import { page } from '$app/state';
+	import { site } from './content/site';
 
-    $: titleString = [
-        $page.data.title,
-        'Schoodic Solutions', 
-        $page.data.suffix
-    ].filter(v => !!v).join(' | ');
+	const title = $derived(
+		page.data.fullTitle ?? (page.data.title ? `${page.data.title} · ${site.name}` : site.name),
+	);
 </script>
 
 <svelte:head>
-    <title>{titleString}</title>
-    <meta name="description" content={$page.data.description || ''} />
-    <meta name="keywords" content={$page.data.keywords || ''} />
-    <meta property="og:url" content={$page.data.canonical} />
-    <meta property="og:title" content={titleString || ''} />
-    <meta property="og:description" content={$page.data.description || ''} />
-    <meta property="og:image" content={$page.data.image || ''} />
-
-    <link rel="canonical" href={$page.data.canonical} />
+	<title>{title}</title>
+	{#if page.data.description}
+		<meta name="description" content={page.data.description} />
+		<meta property="og:description" content={page.data.description} />
+	{/if}
+	<meta property="og:title" content={title} />
+	<meta property="og:type" content="website" />
+	<meta property="og:site_name" content={site.name} />
+	{#if page.data.image}
+		<meta property="og:image" content={page.data.image} />
+		<meta name="twitter:card" content="summary_large_image" />
+	{/if}
+	{#if page.data.canonical}
+		<meta property="og:url" content={page.data.canonical} />
+		<link rel="canonical" href={page.data.canonical} />
+	{/if}
 </svelte:head>

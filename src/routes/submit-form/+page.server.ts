@@ -4,25 +4,15 @@ import { createTransport } from 'nodemailer';
 import type Mail from 'nodemailer/lib/mailer';
 import type SMTPTransport from 'nodemailer/lib/smtp-transport';
 
-import {
-	SMTP_SERVER,
-	SMTP_USERNAME,
-	SMTP_PASSWORD,
-	SMTP_FROM,
-	SMTP_PORT,
-	SMTP_RCPT,
-	SMTP_SUBJECT,
-	HCAPTCHA_SECRET_KEY,
-	HCAPTCHA_VERIFY_API,
-} from '$env/static/private';
+import { env } from '$env/dynamic/private';
 
 const validateCaptcha = (token: string) => {
 	const hcaptchaBody = new FormData();
 
-	hcaptchaBody.append('secret', HCAPTCHA_SECRET_KEY);
+	hcaptchaBody.append('secret', env.HCAPTCHA_SECRET_KEY ?? '');
 	hcaptchaBody.append('response', token);
 
-	return fetch(HCAPTCHA_VERIFY_API, {
+	return fetch(env.HCAPTCHA_VERIFY_API ?? 'https://api.hcaptcha.com/siteverify', {
 		method: 'POST',
 		body: hcaptchaBody,
 	}).then((res) => res.json());
@@ -30,12 +20,12 @@ const validateCaptcha = (token: string) => {
 
 const sendMailPromise = (mailOptions: Mail.Options) => {
 	const transport = createTransport({
-		host: SMTP_SERVER,
-		port: Number(SMTP_PORT),
+		host: env.SMTP_SERVER,
+		port: Number(env.SMTP_PORT),
 		authMethod: 'LOGIN',
 		auth: {
-			user: SMTP_USERNAME,
-			pass: SMTP_PASSWORD,
+			user: env.SMTP_USERNAME,
+			pass: env.SMTP_PASSWORD,
 		},
 	});
 
@@ -47,34 +37,8 @@ const sendMailPromise = (mailOptions: Mail.Options) => {
 	});
 };
 
-const createContactAndCompany = async ({
-	name,
-	company,
-	phone,
-	email,
-}: {
-	name?: string;
-	company?: string;
-	phone?: string;
-	email?: string;
-}) => {
-	if (!name || !email) return;
-
-	const nameParts = name.split(' ');
-
-	const firstname = nameParts.slice(0, -1).join(' ');
-	const lastname = nameParts.slice(-1).at(0) || '';
-
-	const contactObj: { properties: Record<string, string> } = {
-		properties: {
-			firstname,
-			lastname,
-			email,
-		},
-	};
-
-	if (phone) contactObj.properties.phone = phone;
-};
+const escapeHtml = (value: string) =>
+	value.replace(/[&<>"']/g, (char) => `&#${char.charCodeAt(0)};`);
 
 export const actions: Actions = {
 	default: async (event) => {
@@ -95,34 +59,27 @@ export const actions: Actions = {
 
 		const html = Array.from(data.entries())
 			.map(([key, value]) => {
+				const safeValue = escapeHtml(value.toString());
 				if (key === 'message') {
-					return `<br><br>${value}`;
+					return `<br><br>${safeValue.replace(/\n/g, '<br>')}`;
 				} else {
-					return `<b>${key[0].toUpperCase() + key.slice(1)}</b>: ${value}<br>`;
+					return `<b>${escapeHtml(key[0].toUpperCase() + key.slice(1))}</b>: ${safeValue}<br>`;
 				}
 			})
 			.join('\n');
 
 		const fromName = data.get('name')?.toString() || 'Contact Form';
-		const replyToAddress = data.get('email')?.toString() || SMTP_FROM;
+		const replyToAddress = data.get('email')?.toString() || env.SMTP_FROM;
 
-		await Promise.all([
-			sendMailPromise({
-				from: `${fromName} <${SMTP_FROM}>`,
-				to: SMTP_RCPT,
-				subject: SMTP_SUBJECT,
-				headers: {
-					'Reply-To': `${fromName} <${replyToAddress}>`,
-				},
-				html,
-			}),
-			createContactAndCompany({
-				name: fromName,
-				company: data.get('company')?.toString(),
-				phone: data.get('phone')?.toString(),
-				email: data.get('email')?.toString(),
-			}),
-		]).catch((e) => {
+		await sendMailPromise({
+			from: `${fromName} <${env.SMTP_FROM}>`,
+			to: env.SMTP_RCPT,
+			subject: env.SMTP_SUBJECT,
+			headers: {
+				'Reply-To': `${fromName} <${replyToAddress}>`,
+			},
+			html,
+		}).catch((e) => {
 			console.log(e);
 			throw error(500, 'Server Error');
 		});

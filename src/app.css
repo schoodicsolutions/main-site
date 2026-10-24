@@ -1,236 +1,213 @@
+@import '@fontsource-variable/inter';
+@import '@fontsource/jetbrains-mono/400.css';
+@import '@fontsource/jetbrains-mono/500.css';
 @import '@fontsource/quicksand/700.css';
-
-@import '@fontsource/source-sans-pro/400.css';
-@import '@fontsource/source-sans-pro/600.css';
-@import '@fontsource/source-sans-pro/700.css';
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
-	body {
-		@apply text-midnight;
-	}
-
-	body.scrolled header {
-		@apply bg-white shadow-md;
-	}
-
-	main {
-		@apply mx-auto;
-	}
-	h1 {
-		@apply text-[32px] lg:text-[64px] text-center lg:text-left leading-tight font-bold;
-	}
-	h2 {
-		@apply text-[24px] lg:text-[36px] font-extrabold tracking-tight;
-	}
-	h3 {
-		@apply text-[20px] lg:text-[24px]  font-bold tracking-tight;
-	}
-	h4 {
-		@apply text-[20px] lg:text-[24px] font-semibold tracking-tight;
-	}
-	h5 {
-		@apply text-[20px] font-semibold tracking-tight;
-	}
 	html {
-		scroll-behavior: smooth;
-	}
-	section,
-	footer > div.inner,
-	section > div.inner {
-		@apply snap-y lg:scroll-mt-20 scroll-mt-16 flex flex-col gap-4 px-5 lg:px-10 py-8 lg:py-10;
-		@apply max-w-screen-2xl mx-auto;
+		@apply scroll-smooth antialiased;
+		font-feature-settings: 'cv11', 'ss01';
 	}
 
-	footer > div.inner,
-	section > div.inner {
-		@apply scroll-mt-0 pt-0;
-	}
-}
-
-@layer utilities {
-	.parked-left {
-		transition: transform 0.75s, opacity 1.25s;
-		transform: translateX(-100vw);
-	}
-	.parked-right {
-		transition: transform 0.75s, opacity 1.25s;
-		transform: translateX(100vw);
-	}
-	.flyin {
-		opacity: 1;
-		transform: translateX(0);
-	}
-	.will-fade {
-		transition: transform 0.75, opacity 1.25s;
-		opacity: 0;
-	}
-	.fadein {
-		transition: transform 0.75, opacity 1.25s;
-		opacity: 1;
-	}
-	.delay {
-		transition-delay: 0.5s;
-	}
-	.a11y-hidden {
-		position: absolute;
-		overflow: hidden;
-		clip: rect(0 0 0 0);
+	body {
+		@apply bg-white text-ink font-sans text-[17px] leading-relaxed;
 	}
 
-	.a11y-visible {
-		position: static;
-		overflow: visible;
-		clip: auto;
+	h1,
+	h2,
+	h3,
+	h4,
+	h5 {
+		@apply font-semibold tracking-tight text-balance;
+	}
+
+	h1 {
+		@apply text-4xl sm:text-5xl lg:text-6xl leading-[1.05] tracking-[-0.03em];
+	}
+
+	h2 {
+		@apply text-3xl lg:text-4xl leading-tight tracking-[-0.02em];
+	}
+
+	h3 {
+		@apply text-xl lg:text-2xl leading-snug;
+	}
+
+	h4 {
+		@apply text-lg leading-snug;
+	}
+
+	[id] {
+		@apply scroll-mt-20;
+	}
+
+	:focus-visible {
+		@apply outline-2 outline-offset-2 outline-croix;
+	}
+
+	@media (prefers-reduced-motion: reduce) {
+		html {
+			scroll-behavior: auto;
+		}
+
+		*,
+		*::before,
+		*::after {
+			animation-duration: 0.01ms !important;
+			transition-duration: 0.01ms !important;
+		}
 	}
 }
 
 @layer components {
-	a {
-		@apply hover:underline;
+	/* Layout */
+	.container-site {
+		@apply w-full max-w-site mx-auto px-5 lg:px-10;
+	}
+
+	.section {
+		@apply py-20 lg:py-28;
+	}
+
+	.surface-dark {
+		@apply bg-midnight text-white;
+	}
+
+	.surface-dark .text-muted {
+		@apply text-white/65;
+	}
+
+	.text-muted {
+		@apply text-ink/70;
+	}
+
+	.eyebrow {
+		@apply font-mono text-xs font-medium uppercase tracking-[0.18em] text-brand;
+	}
+
+	.surface-dark .eyebrow {
+		@apply text-croix;
+	}
+
+	.highlight {
 		@apply text-brand;
 	}
 
+	.surface-dark .highlight {
+		@apply text-croix;
+	}
+
+	/* Links */
+	.link {
+		@apply text-brand underline-offset-4 hover:underline;
+	}
+
 	.navlink {
-		@apply text-black;
-		@apply hover:no-underline font-normal leading-none shrink-0;
+		@apply text-white/75 hover:text-white transition-colors;
 	}
 
 	.navlink.active {
-		@apply font-bold text-brand;
+		@apply text-white;
 	}
 
+	/* Buttons */
 	.button {
-		@apply inline-block px-[50px] py-3.5 lg:py-[17px] leading-none rounded-full w-fit;
-		@apply flex justify-center shrink-0 w-fit;
-		@apply hover:no-underline hover:scale-[1.02] active:scale-[0.9];
-		@apply transition-[transform,colors] bg-white/25;
-		@apply uppercase font-semibold;
-		@apply disabled:pointer-events-none;
-		appearance: button;
-	}
-
-	.button.blue.contained {
-		@apply border-2 border-brand text-brand;
-		@apply bg-brand hover:bg-brand/90 hover:border-brand/90 text-white;
-	}
-
-	.button.blue.outlined {
-		@apply bg-transparent border-2 border-brand text-brand;
-		@apply hover:bg-gray-500/10;
-	}
-
-	.button.white.outlined {
-		@apply bg-transparent border-2 border-white text-white;
-		@apply disabled:border-white/50 disabled:text-white/50;
-		@apply hover:bg-white/20;
-	}
-
-	.button:disabled {
-		@apply bg-gray-200;
+		@apply inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 leading-none font-semibold;
+		@apply transition-[transform,background-color,border-color,color] duration-200;
+		@apply hover:-translate-y-px active:translate-y-0;
+		@apply disabled:pointer-events-none disabled:opacity-50;
 	}
 
 	.button.large {
-		@apply text-lg lg:text-xl lg:px-[60px];
+		@apply px-8 py-4 text-lg;
+	}
+
+	.button.primary {
+		@apply bg-brand text-white hover:bg-croix;
+	}
+
+	.button.outlined {
+		@apply border border-brand text-brand hover:bg-brand/5;
+	}
+
+	.button.ghost-dark {
+		@apply border border-white/20 text-white hover:border-white/40 hover:bg-white/5;
 	}
 
 	.button.icon {
-		@apply p-0 h-12 w-12 flex rounded-full justify-center items-center hover:scale-100;
+		@apply p-0 h-11 w-11 hover:translate-y-0;
 	}
 
-	.button.ghost {
-		@apply bg-white/30;
-		@apply transition-colors hover:bg-white/40;
-	}
-
-	.hero-h2 {
-		@apply text-2xl short:text-2xl md:text-4xl short:leading-6 leading-6 lg:leading-10 font-semibold tracking-tight m-0;
-	}
-
-	.hero-h3 {
-		@apply text-xl short:text-xl md:text-3xl short:leading-6 leading-6 lg:leading-10 font-semibold tracking-tight;
-	}
-
+	/* Forms */
 	.textbox {
-		@apply block rounded-md p-2 border border-gray-200 w-full bg-white;
-		@apply disabled:text-gray-300 disabled:bg-white;
+		@apply block w-full rounded-lg border border-line bg-white px-3 py-2.5 text-ink;
+		@apply placeholder:text-ink/40 focus:border-brand focus:outline-none focus:ring-2 focus:ring-brand/20;
+		@apply disabled:opacity-60;
 	}
+
 	.invalid {
-		@apply outline outline-red-600;
+		@apply border-red-500 ring-2 ring-red-500/20;
 	}
+
 	.hint {
-		@apply text-sm font-bold text-red-600;
-	}
-
-	.service-cards {
-		@apply grid flex-col gap-7 max-w-screen-xl m-auto;
-		@apply md:grid-cols-2 md:grid-rows-3;
-		@apply lg:grid-cols-3 lg:grid-rows-2;
-	}
-
-	.service-card {
-		@apply flex flex-col items-center text-center px-12 py-9 bg-bone rounded-md h-full;
-		@apply transition-transform hover:scale-[1.02];
-	}
-
-	.service-card-link {
-		@apply text-black hover:no-underline;
-	}
-
-	.read-more {
-		@apply text-brand mt-auto;
-	}
-
-	.read-more::after {
-		@apply w-0 h-0.5 block transition-all m-auto;
-		content: '';
-	}
-
-	.service-card:hover > .read-more::after {
-		@apply w-full bg-brand;
-		content: '';
-	}
-
-	.service-card h3 {
-		@apply text-2xl xl:text-3xl leading-tight tracking-tighter font-semibold;
-	}
-
-	ul.accolades {
-		@apply flex flex-col gap-3.5;
-	}
-
-	ul.accolades > li {
-		@apply ml-5 capitalize;
-	}
-
-	ul.accolades > li::before {
-		content: '\2022'; /* Add content: \2022 is the CSS Code/unicode for a bullet */
-		@apply text-brand font-bold inline-block w-5 -ml-5 text-3xl leading-4 align-middle mb-2;
-	}
-
-	.team-card {
-		@apply bg-bone hover:bg-stone-50 rounded-md px-8 py-5 max-w-full w-full md:w-[600px] select-none hover:scale-[1.01] transition-all;
-	}
-
-	.team-cards {
-		@apply grid flex-col gap-7 max-w-screen-xl m-auto;
-		@apply lg:grid-cols-2 lg:grid-rows-2;
+		@apply text-sm font-medium text-red-600;
 	}
 
 	.hcaptcha-container iframe {
 		@apply !w-full;
 	}
+
+	/* Long-form content (legal pages, markdown) */
+	.prose-site {
+		@apply max-w-3xl text-ink/85;
+	}
+
+	.prose-site > * + * {
+		@apply mt-5;
+	}
+
+	.prose-site h2 {
+		@apply text-2xl mt-12 text-ink;
+	}
+
+	.prose-site h3 {
+		@apply text-xl mt-8 text-ink;
+	}
+
+	.prose-site a {
+		@apply link;
+	}
+
+	.prose-site ul {
+		@apply list-disc pl-6 space-y-2;
+	}
+
+	.prose-site ol {
+		@apply list-decimal pl-6 space-y-2;
+	}
 }
 
-* {
-	box-sizing: border-box;
-}
+@layer utilities {
+	.a11y-hidden {
+		@apply sr-only;
+	}
 
-body {
-	scroll-behavior: smooth;
-	font-family: 'Source Sans Pro';
-	font-size: 18px;
+	/* Scroll reveal, toggled by the `reveal` action */
+	.reveal {
+		@apply opacity-0 translate-y-4 transition duration-700 ease-out;
+	}
+
+	.reveal.revealed {
+		@apply opacity-100 translate-y-0;
+	}
+
+	@media (prefers-reduced-motion: reduce) {
+		.reveal {
+			@apply opacity-100 translate-y-0;
+		}
+	}
 }

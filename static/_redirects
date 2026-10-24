@@ -1,0 +1,10 @@
+# Retired local SEO landing pages
+/web-design-in-*              /                             301
+
+# Old service pages → new service pillars
+/full-stack                   /services/software            301
+/responsive-design            /services/software            301
+/ui-ux-design                 /services/software            301
+/managed-hosting              /services/cloud               301
+/digital-marketing            /                             301
+/search-engine-optimization   /                             301

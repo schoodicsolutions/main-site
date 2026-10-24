@@ -1,10 +1,9 @@
 <script lang="ts">
 	import { useForm, Hint, required, pattern, email } from 'svelte-use-form';
 	import { phoneValidator } from './constants';
-	import { Circle } from 'svelte-loading-spinners';
 	import HCaptcha from 'svelte-hcaptcha';
-	import { PUBLIC_HCAPTCHA_SITEKEY } from '$env/static/public';
-	import MediaQuery from 'svelte-media-queries';
+	import { browser } from '$app/environment';
+	import { env } from '$env/dynamic/public';
 
 	$: disabled = false;
 	$: loading = false;
@@ -72,12 +71,12 @@
 
 <div>
 	<form method="POST" on:submit|preventDefault={handleSubmit} use:form>
-		<fieldset class="flex flex-col gap-4 w-full text-midnight" {disabled}>
+		<fieldset class="flex flex-col gap-5 w-full" {disabled}>
 			{#if status.error || status.success}
 				<div
 					class:bg-red-500={status.error}
 					class:bg-green-500={status.success}
-					class="text-white p-2 rounded-md max-w-96 w-full"
+					class="text-white px-4 py-3 rounded-lg w-full"
 				>
 					{#if status.success}
 						Thank you for your submission!
@@ -89,9 +88,9 @@
 			{/if}
 			<div class="grid lg:grid-cols-2 gap-4">
 				<div>
-					<label for="name" class="text-white">
+					<label for="name" class="mb-1.5 block text-sm font-medium">
 						Name
-						<span class="text-red-500">*</span>
+						<span class="text-red-500" aria-hidden="true">*</span>
 					</label>
 					<input
 						class="textbox"
@@ -99,27 +98,27 @@
 							!$form.name.valid}
 						name="name"
 						id="name"
-						placeholder="John Q. Sample"
+						placeholder="Jane Doe"
 					/>
 				</div>
 				<div>
-					<label for="email" class="text-white">
+					<label for="email" class="mb-1.5 block text-sm font-medium">
 						E-mail
-						<span class="text-red-500">*</span>
+						<span class="text-red-500" aria-hidden="true">*</span>
 					</label>
 					<input
 						class="textbox"
 						class:invalid={($form.touched || $form.email.touched) && !$form.email.valid}
 						name="email"
 						id="email"
-						placeholder="john@example.com"
+						placeholder="jane@example.com"
 					/>
 					<Hint for="email" on="email" class="hint">
 						{$form.email.value.length === 0 ? '' : 'E-mail is in an invalid format.'}
 					</Hint>
 				</div>
 				<div>
-					<label for="phone" class="text-white"> Phone </label>
+					<label for="phone" class="mb-1.5 block text-sm font-medium"> Phone </label>
 					<input
 						class="textbox"
 						class:invalid={($form.touched || $form.phone.touched) && !$form.phone.valid}
@@ -130,7 +129,7 @@
 					<Hint for="phone" on="pattern" class="hint">Phone is in an invalid format.</Hint>
 				</div>
 				<div>
-					<label for="company" class="text-white"> Organization </label>
+					<label for="company" class="mb-1.5 block text-sm font-medium"> Organization </label>
 					<input
 						class="textbox"
 						class:invalid={($form.touched || $form.company.touched) && !$form.company.valid}
@@ -142,36 +141,42 @@
 			</div>
 
 			<div>
-				<label for="message" class="text-white">
+				<label for="message" class="mb-1.5 block text-sm font-medium">
 					Message
-					<span class="text-red-500">*</span>
+					<span class="text-red-500" aria-hidden="true">*</span>
 				</label>
 				<textarea
-					class="textbox h-40 resize-none"
+					class="textbox h-36 resize-none"
 					class:invalid={($form.touched || $form.message.touched) && !$form.message.valid}
 					name="message"
 					id="message"
-					placeholder="Additional information here..."></textarea>
+					placeholder="What are you hoping to improve?"
+				></textarea>
 			</div>
 
-			<div class="flex flex-col md:flex-row items-center gap-4 m-auto">
+			<div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
 				<div class="hcaptcha-container">
 					<input name="hcaptchaResponse" id="hcaptchaResponse" hidden />
-					<HCaptcha
-						bind:this={hcaptcha}
-						sitekey={PUBLIC_HCAPTCHA_SITEKEY}
-						style="width: 100%;"
-						on:success={handleSuccess}
-						on:error={handleError}
-					/>
+					<!-- Runtime env can't be read while prerendering, so the widget is client-only -->
+					{#if browser}
+						<HCaptcha
+							bind:this={hcaptcha}
+							sitekey={env.PUBLIC_HCAPTCHA_SITEKEY}
+							style="width: 100%;"
+							on:success={handleSuccess}
+							on:error={handleError}
+						/>
+					{/if}
 				</div>
 
-				<button class="button white outlined" disabled={!$form.valid}>
+				<button class="button primary min-w-36" disabled={!$form.valid}>
 					{#if !loading}
-						Submit Now
-					{/if}
-					{#if loading}
-						<Circle size="16" color="currentColor" />
+						Send message
+					{:else}
+						<span
+							class="h-4 w-4 animate-spin rounded-full border-2 border-current border-t-transparent"
+							aria-label="Sending"
+						></span>
 					{/if}
 				</button>
 			</div>

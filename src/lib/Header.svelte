@@ -1,22 +1,31 @@
 <script lang="ts">
+	import { fade, fly } from 'svelte/transition';
+	import { afterNavigate } from '$app/navigation';
+	import Icon from './Icon.svelte';
 	import Logo from './Logo.svelte';
 	import Nav from './Nav.svelte';
-	import MediaQuery from 'svelte-media-queries';
-	import MenuIcon from './icons/MenuIcon.svelte';
-	import { drawerOpen } from './stores';
 
-	let scrollY: number = 0;
-	let scrolled = false;
+	let scrollY = $state(0);
+	let menuOpen = $state(false);
 
-	$: scrollY;
-	$: scrolled = scrollY > 100;
+	const scrolled = $derived(scrollY > 24);
+
+	afterNavigate(() => (menuOpen = false));
+
+	$effect(() => {
+		document.body.style.overflow = menuOpen ? 'hidden' : '';
+	});
 </script>
 
-<svelte:window bind:scrollY />
+<svelte:window bind:scrollY onkeydown={(e) => e.key === 'Escape' && (menuOpen = false)} />
 
 <header
-	class={'sticky w-full z-30 py-2 lg:py-4 border-b border-gray-200 top-0 bg-white transition-all' +
-		(scrolled ? ' shadow-lg' : '')}
+	class="sticky top-0 z-30 w-full border-b transition-colors duration-300"
+	class:bg-midnight={!scrolled}
+	class:border-transparent={!scrolled}
+	class:bg-midnight-950={scrolled}
+	class:border-white={scrolled}
+	class:border-opacity-10={scrolled}
 >
 	<!-- Google Tag Manager (noscript) -->
 	<noscript>
@@ -25,34 +34,58 @@
 			title="Google Tag Manager"
 			height="0"
 			width="0"
-			style="display:none;visibility:hidden"></iframe>
+			style="display:none;visibility:hidden"
+		></iframe>
 	</noscript>
-	<!-- End Google Tag Manager (noscript) -->
-	<div class="flex max-w-screen-2xl px-5 lg:px-10 mx-auto justify-between items-center">
-		<a href="/" class="navlink">
-			<MediaQuery query="(max-width: 1024px)" let:matches>
-				<div class="ml-4 lg:m-0">
-					{#if matches}
-						<Logo variant="normal" size="medium" />
-					{:else}
-						<Logo variant="normal" size="large" />
-					{/if}
-				</div>
-			</MediaQuery>
+
+	<div class="container-site flex h-16 lg:h-20 items-center justify-between">
+		<a href="/" aria-label="Schoodic home">
+			<Logo size="medium" />
 		</a>
-		<MediaQuery query="(max-width: 1024px)" let:matches>
-			{#if matches}
-				<button
-					class="button icon text-black mr-1 mt-1"
-					aria-haspopup="true"
-					aria-label="Main Menu"
-					on:click={() => ($drawerOpen = !$drawerOpen)}
-				>
-					<MenuIcon />
-				</button>
-			{:else}
-				<Nav />
-			{/if}
-		</MediaQuery>
+
+		<div class="hidden lg:block">
+			<Nav />
+		</div>
+
+		<button
+			class="button icon ghost-dark lg:hidden"
+			aria-label="Open menu"
+			aria-expanded={menuOpen}
+			aria-controls="mobile-menu"
+			onclick={() => (menuOpen = true)}
+		>
+			<Icon name="menu" />
+		</button>
 	</div>
 </header>
+
+{#if menuOpen}
+	<div
+		transition:fade={{ duration: 200 }}
+		class="fixed inset-0 z-40 bg-midnight-950/60 backdrop-blur-sm lg:hidden"
+		aria-hidden="true"
+		onclick={() => (menuOpen = false)}
+	></div>
+	<div
+		id="mobile-menu"
+		role="dialog"
+		aria-modal="true"
+		aria-label="Menu"
+		transition:fly={{ duration: 300, y: -24 }}
+		class="fixed inset-x-0 top-0 z-50 bg-midnight px-5 pb-8 shadow-2xl lg:hidden"
+	>
+		<div class="flex h-16 items-center justify-between">
+			<Logo size="medium" />
+			<button
+				class="button icon ghost-dark"
+				aria-label="Close menu"
+				onclick={() => (menuOpen = false)}
+			>
+				<Icon name="close" />
+			</button>
+		</div>
+		<div class="pt-4">
+			<Nav variant="col" onNavigate={() => (menuOpen = false)} />
+		</div>
+	</div>
+{/if}

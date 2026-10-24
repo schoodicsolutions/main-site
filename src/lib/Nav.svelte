@@ -1,75 +1,52 @@
 <script lang="ts">
-	import { page } from '$app/stores';
-	import { scrollTo, section } from 'svelte-scroll-nav';
-	import { linkClicked } from 'svelte-scroll-nav/stores';
+	import { page } from '$app/state';
+	import { activeSection } from './activeSection.svelte';
+	import { mainNav } from './content/site';
 
-	export let variant: 'row' | 'col' = 'row';
-	export let onNavigate: (() => void) | undefined = undefined;
+	interface Props {
+		variant?: 'row' | 'col';
+		onNavigate?: () => void;
+	}
 
-	$: [row, col] = [variant === 'row', variant === 'col'];
+	let { variant = 'row', onNavigate }: Props = $props();
 
-	const menu = [
-		{
-			caption: 'Home',
-			pathname: '/',
-			scrollTo: '+top',
-		},
-		{
-			caption: 'About',
-			pathname: '/',
-			scrollTo: 'about',
-		},
-		{
-			caption: 'Our Work',
-			pathname: '/',
-			scrollTo: 'our-work',
-		},
-		{
-			caption: 'Services',
-			pathname: '/',
-			scrollTo: 'services',
-		},
-		/*{
-			caption: 'Our Team',
-			pathname: '/',
-			scrollTo: 'our-team',
-		},*/
-		{
-			caption: 'Contact Us',
-			pathname: '/',
-			scrollTo: 'contact',
-			as: 'button',
-		},
-	];
+	const onHome = $derived(page.url.pathname === '/');
 </script>
 
-<nav aria-label="Main" class="text-black">
+<nav aria-label="Main">
 	<ul
-		class="flex xl:gap-8 gap-6 font-semibold items-center xl:text-lg text-base"
-		class:flex-row={row}
-		class:flex-col={col}
+		class="flex items-center font-medium"
+		class:gap-8={variant === 'row'}
+		class:flex-col={variant === 'col'}
+		class:items-stretch={variant === 'col'}
+		class:gap-2={variant === 'col'}
 	>
-		{#each menu as link}
-			<li class="flex justify-center shrink-0 w-full lg:w-auto">
-				<!-- svelte-ignore a11y-missing-attribute -->
-				<a
-					class:navlink={link.as !== 'button'}
-					class:active={$page.url.pathname === link.pathname && $section === link.scrollTo}
-					class:button={link.as === 'button'}
-					class:blue={link.as === 'button'}
-					class:contained={link.as === 'button'}
-					class:w-full={link.as === 'button' && col}
-					class:lg:ml-1={link.as === 'button' && row}
-					href={link.pathname}
-					use:scrollTo={link.scrollTo
-						? {
-								section: link.scrollTo,
-								onNavigate,
-						  }
-						: undefined}
-				>
-					{link.caption}
-				</a>
+		{#each mainNav as link (link.section)}
+			<li>
+				{#if link.cta}
+					<a
+						class="button primary"
+						class:w-full={variant === 'col'}
+						class:mt-4={variant === 'col'}
+						href="/#{link.section}"
+						onclick={onNavigate}
+					>
+						{link.caption}
+					</a>
+				{:else}
+					<a
+						class="navlink"
+						class:block={variant === 'col'}
+						class:py-3={variant === 'col'}
+						class:text-lg={variant === 'col'}
+						class:active={onHome && activeSection.id === link.section}
+						aria-current={onHome && activeSection.id === link.section ? 'location' : undefined}
+						href="/#{link.section}"
+						onclick={onNavigate}
+					>
+						{link.caption}
+					</a>
+				{/if}
 			</li>
 		{/each}
 	</ul>
