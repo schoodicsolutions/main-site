@@ -10,7 +10,7 @@
 <footer class="surface-dark bg-midnight-950">
 	<div class="container-site grid gap-12 py-16 md:grid-cols-2 lg:grid-cols-[1.5fr_1fr_1fr]">
 		<div class="flex flex-col gap-4">
-			<a href="/" aria-label="Back to home" class="w-fit"><Logo size="medium" /></a>
+			<a href="/" aria-label="Schoodic home" class="w-fit"><Logo size="medium" /></a>
 			<p class="text-muted max-w-xs">
 				AI, cloud, and automation for Down East Maine, built in Washington County.
 			</p>

@@ -14,7 +14,9 @@ const config = {
 		adapter: adapter({
 			edge: false,
 			split: false,
-		})
+		}),
+		// Inline the (small, gzip ~10 KB) stylesheet so first paint doesn't wait on another request
+		inlineStyleThreshold: 64 * 1024,
 	},
 };
 

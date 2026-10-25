@@ -121,7 +121,7 @@
 			</div>
 			<div>
 				<label for="phone" class="label"
-					>Phone <span class="font-normal text-ink/50">(optional)</span></label
+					>Phone <span class="font-normal text-ink/65">(optional)</span></label
 				>
 				<input
 					id="phone"
@@ -139,7 +139,7 @@
 			</div>
 			<div>
 				<label for="company" class="label"
-					>Organization <span class="font-normal text-ink/50">(optional)</span></label
+					>Organization <span class="font-normal text-ink/65">(optional)</span></label
 				>
 				<input
 					id="company"

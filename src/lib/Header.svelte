@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { fade, fly } from 'svelte/transition';
 	import { afterNavigate } from '$app/navigation';
+	import { trapFocus } from './actions/trapFocus';
 	import Icon from './Icon.svelte';
 	import Logo from './Logo.svelte';
 	import Nav from './Nav.svelte';
@@ -68,6 +69,7 @@
 	></div>
 	<div
 		id="mobile-menu"
+		use:trapFocus
 		role="dialog"
 		aria-modal="true"
 		aria-label="Menu"

@@ -1,4 +1,7 @@
 // See https://svelte.dev/docs/kit/types#app.d.ts
+/** hCaptcha site key, inlined by vite.config.js */
+declare const __HCAPTCHA_SITEKEY__: string;
+
 declare namespace App {
 	// interface Error {}
 	// interface Locals {}

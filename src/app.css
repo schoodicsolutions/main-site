@@ -90,7 +90,7 @@
 	}
 
 	.surface-dark .eyebrow {
-		@apply text-croix;
+		@apply text-sky;
 	}
 
 	.highlight {
@@ -98,7 +98,7 @@
 	}
 
 	.surface-dark .highlight {
-		@apply text-croix;
+		@apply text-sky;
 	}
 
 	/* Links */
@@ -127,7 +127,7 @@
 	}
 
 	.button.primary {
-		@apply bg-brand text-white hover:bg-croix;
+		@apply bg-brand text-white hover:bg-brand-dark;
 	}
 
 	.button.outlined {
@@ -145,7 +145,7 @@
 	/* Forms */
 	.textbox {
 		@apply block w-full rounded-lg border border-line bg-white px-3 py-2.5 text-ink;
-		@apply placeholder:text-ink/40 focus:border-brand focus:outline-none focus:ring-2 focus:ring-brand/20;
+		@apply placeholder:text-ink/55 focus:border-brand focus:outline-none focus:ring-2 focus:ring-brand/20;
 		@apply disabled:opacity-60;
 	}
 

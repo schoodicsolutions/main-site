@@ -32,8 +32,6 @@
 </script>
 
 <script lang="ts">
-	import { env } from '$env/dynamic/public';
-
 	interface Props {
 		/** Called with a fresh token, or `null` when the token expires or errors */
 		onchange: (token: string | null) => void;
@@ -53,21 +51,30 @@
 	$effect(() => {
 		let destroyed = false;
 
-		// Runtime env is only read in the browser; it isn't available while prerendering
-		loadApi()
-			.then((hcaptcha) => {
-				if (destroyed) return;
-				widgetId = hcaptcha.render(container, {
-					sitekey: env.PUBLIC_HCAPTCHA_SITEKEY,
-					callback: (token: string) => onchange(token),
-					'expired-callback': () => onchange(null),
-					'error-callback': () => onchange(null),
-				});
-			})
-			.catch(() => (failed = true));
+		// hCaptcha is heavy (~300 KB and a third-party cookie), so wait until the form is close
+		const observer = new IntersectionObserver(
+			([entry]) => {
+				if (!entry.isIntersecting) return;
+				observer.disconnect();
+				loadApi()
+					.then((hcaptcha) => {
+						if (destroyed) return;
+						widgetId = hcaptcha.render(container, {
+							sitekey: __HCAPTCHA_SITEKEY__,
+							callback: (token: string) => onchange(token),
+							'expired-callback': () => onchange(null),
+							'error-callback': () => onchange(null),
+						});
+					})
+					.catch(() => (failed = true));
+			},
+			{ rootMargin: '600px 0px' },
+		);
+		observer.observe(container);
 
 		return () => {
 			destroyed = true;
+			observer.disconnect();
 			if (widgetId !== undefined) window.hcaptcha?.remove(widgetId);
 			widgetId = undefined;
 		};

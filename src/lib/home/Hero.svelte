@@ -49,7 +49,7 @@
 				<a class="button ghost-dark large" href="#services">Explore services</a>
 			</div>
 			<ul
-				class="mt-10 flex flex-wrap gap-x-6 gap-y-2 font-mono text-xs uppercase tracking-wider text-white/45"
+				class="mt-10 flex flex-wrap gap-x-6 gap-y-2 font-mono text-xs uppercase tracking-wider text-white/60"
 			>
 				{#each capabilities as capability (capability)}
 					<li>{capability}</li>
@@ -86,7 +86,7 @@
 								{#if step.done}<Icon name="check" size={16} />{:else}{i + 1}{/if}
 							</span>
 							<span class="grow text-white/85">{step.text}</span>
-							<span class="font-mono text-xs text-white/40">{step.time}</span>
+							<span class="font-mono text-xs text-white/55">{step.time}</span>
 						</li>
 					{/each}
 				</ol>

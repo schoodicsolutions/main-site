@@ -6,7 +6,12 @@ module.exports = {
 	theme: {
 		extend: {
 			colors: {
-				brand: '#1F5CE2',
+				brand: {
+					DEFAULT: '#1F5CE2',
+					dark: '#1A4FC4',
+				},
+				/** Accent text on dark surfaces; croix alone is too dim for small text there */
+				sky: '#3B8BFF',
 				croix: '#0077FF',
 				almond: '#F2F1EC',
 				bone: '#F6F6F6',

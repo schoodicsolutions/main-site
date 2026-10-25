@@ -43,7 +43,7 @@
 		>
 			{#each steps as step, i (step.name)}
 				<li class="flex flex-col gap-4 bg-midnight p-8" use:reveal={{ delay: i * 100 }}>
-					<span class="font-mono text-sm text-croix">0{i + 1}</span>
+					<span class="font-mono text-sm text-sky">0{i + 1}</span>
 					<h3 class="text-2xl">{step.name}</h3>
 					<p class="text-muted">{step.text}</p>
 				</li>

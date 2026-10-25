@@ -45,7 +45,7 @@
 					class="rounded-2xl border border-black/5 bg-white p-7"
 					use:reveal={{ delay: (i % 3) * 80 }}
 				>
-					<p class="eyebrow mb-3 !text-ink/50">{useCase.industry}</p>
+					<p class="eyebrow mb-3 !text-ink/65">{useCase.industry}</p>
 					<p class="text-lg leading-snug text-ink">{useCase.text}</p>
 				</li>
 			{/each}
