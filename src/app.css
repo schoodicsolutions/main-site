@@ -149,16 +149,27 @@
 		@apply disabled:opacity-60;
 	}
 
+	.label {
+		@apply mb-1.5 block text-sm font-medium text-ink;
+	}
+
 	.invalid {
 		@apply border-red-500 ring-2 ring-red-500/20;
 	}
 
 	.hint {
-		@apply text-sm font-medium text-red-600;
+		@apply mt-1.5 text-sm font-medium text-red-600;
 	}
 
-	.hcaptcha-container iframe {
-		@apply !w-full;
+	.hint:empty {
+		@apply hidden;
+	}
+
+	.chip {
+		@apply cursor-pointer select-none rounded-full border border-line px-3.5 py-1.5 text-sm text-ink/80 transition-colors;
+		@apply hover:border-brand/40;
+		@apply has-[:checked]:border-brand has-[:checked]:bg-brand has-[:checked]:text-white;
+		@apply has-[:focus-visible]:outline has-[:focus-visible]:outline-2 has-[:focus-visible]:outline-offset-2 has-[:focus-visible]:outline-croix;
 	}
 
 	/* Long-form content (legal pages, markdown) */

@@ -1,87 +1,81 @@
-import { error, type Actions } from '@sveltejs/kit';
-
+import { error, fail, type Actions } from '@sveltejs/kit';
 import { createTransport } from 'nodemailer';
-import type Mail from 'nodemailer/lib/mailer';
-import type SMTPTransport from 'nodemailer/lib/smtp-transport';
-
 import { env } from '$env/dynamic/private';
+import { emailPattern, phonePattern } from '$lib/constants';
 
-const validateCaptcha = (token: string) => {
-	const hcaptchaBody = new FormData();
+const verifyCaptcha = async (token: string) => {
+	const body = new FormData();
+	body.append('secret', env.HCAPTCHA_SECRET_KEY ?? '');
+	body.append('response', token);
 
-	hcaptchaBody.append('secret', env.HCAPTCHA_SECRET_KEY ?? '');
-	hcaptchaBody.append('response', token);
-
-	return fetch(env.HCAPTCHA_VERIFY_API ?? 'https://api.hcaptcha.com/siteverify', {
+	const res = await fetch(env.HCAPTCHA_VERIFY_API ?? 'https://api.hcaptcha.com/siteverify', {
 		method: 'POST',
-		body: hcaptchaBody,
-	}).then((res) => res.json());
-};
-
-const sendMailPromise = (mailOptions: Mail.Options) => {
-	const transport = createTransport({
-		host: env.SMTP_SERVER,
-		port: Number(env.SMTP_PORT),
-		authMethod: 'LOGIN',
-		auth: {
-			user: env.SMTP_USERNAME,
-			pass: env.SMTP_PASSWORD,
-		},
+		body,
 	});
-
-	return new Promise<SMTPTransport.SentMessageInfo>((resolve, reject) => {
-		transport.sendMail(mailOptions, (err, info) => {
-			if (err) reject(err);
-			resolve(info);
-		});
-	});
+	const { success } = (await res.json()) as { success: boolean };
+	return success;
 };
 
 const escapeHtml = (value: string) =>
 	value.replace(/[&<>"']/g, (char) => `&#${char.charCodeAt(0)};`);
 
 export const actions: Actions = {
-	default: async (event) => {
-		const data = await event.request.formData();
+	default: async ({ request }) => {
+		const data = await request.formData();
+		const field = (key: string) => data.get(key)?.toString().trim() ?? '';
 
-		const hcaptchaResponse = data.get('hcaptchaResponse');
-		data.delete('hcaptchaResponse');
+		const name = field('name');
+		const email = field('email');
+		const phone = field('phone');
+		const company = field('company');
+		const message = field('message');
+		const interests = data.getAll('interests').map(String);
+		const token = field('h-captcha-response');
 
-		if (!hcaptchaResponse) {
-			throw error(401, 'Bad captcha');
+		if (!name || !emailPattern.test(email) || !message || (phone && !phonePattern.test(phone))) {
+			return fail(400, { reason: 'invalid' });
 		}
 
-		const hcaptchaStatus = await validateCaptcha(hcaptchaResponse.toString());
-
-		if (!hcaptchaStatus.success) {
-			throw error(401, 'Bad captcha');
+		if (!token || !(await verifyCaptcha(token))) {
+			return fail(400, { reason: 'captcha' });
 		}
 
-		const html = Array.from(data.entries())
-			.map(([key, value]) => {
-				const safeValue = escapeHtml(value.toString());
-				if (key === 'message') {
-					return `<br><br>${safeValue.replace(/\n/g, '<br>')}`;
-				} else {
-					return `<b>${escapeHtml(key[0].toUpperCase() + key.slice(1))}</b>: ${safeValue}<br>`;
-				}
-			})
-			.join('\n');
+		const details: [string, string][] = [
+			['Name', name],
+			['Email', email],
+			['Phone', phone],
+			['Organization', company],
+			['Interested in', interests.join(', ')],
+		];
+		const filled = details.filter(([, value]) => value);
 
-		const fromName = data.get('name')?.toString() || 'Contact Form';
-		const replyToAddress = data.get('email')?.toString() || env.SMTP_FROM;
+		const html = [
+			...filled.map(([label, value]) => `<b>${label}</b>: ${escapeHtml(value)}<br>`),
+			`<br>${escapeHtml(message).replace(/\n/g, '<br>')}`,
+		].join('\n');
+		const text = [...filled.map(([label, value]) => `${label}: ${value}`), '', message].join('\n');
 
-		await sendMailPromise({
-			from: `${fromName} <${env.SMTP_FROM}>`,
-			to: env.SMTP_RCPT,
-			subject: env.SMTP_SUBJECT,
-			headers: {
-				'Reply-To': `${fromName} <${replyToAddress}>`,
-			},
-			html,
-		}).catch((e) => {
-			console.log(e);
-			throw error(500, 'Server Error');
+		const transport = createTransport({
+			host: env.SMTP_SERVER,
+			port: Number(env.SMTP_PORT),
+			authMethod: 'LOGIN',
+			auth: { user: env.SMTP_USERNAME, pass: env.SMTP_PASSWORD },
 		});
+
+		try {
+			await transport.sendMail({
+				from: { name, address: env.SMTP_FROM ?? '' },
+				replyTo: { name, address: email },
+				to: env.SMTP_RCPT,
+				subject: env.SMTP_SUBJECT,
+				html,
+				text,
+			});
+		} catch (e) {
+			console.error(e);
+			error(500, 'Server Error');
+		}
+
+		return { success: true };
 	},
 };

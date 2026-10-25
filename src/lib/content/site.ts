@@ -10,9 +10,7 @@ export const site = {
 	calendly: 'https://calendly.com/schoodic',
 	towns: ['Calais', 'Eastport', 'Machias', 'Lubec', 'Baileyville', 'Princeton'],
 	socials: [
-		{ network: 'linkedin', label: 'LinkedIn', href: 'https://www.linkedin.com/company/schoodic' },
 		{ network: 'github', label: 'GitHub', href: 'https://www.github.com/schoodicsolutions' },
-		{ network: 'facebook', label: 'Facebook', href: 'https://www.facebook.com/schoodicsolutions' },
 	],
 } as const;
 

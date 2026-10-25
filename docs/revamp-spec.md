@@ -104,11 +104,11 @@ Each service page has: hero (name + one-line promise) → "What we do" (4–6 ca
 
 - Submit `https://schoodic.io/sitemap.xml` in Google Search Console and Bing Webmaster Tools; watch the 301s from retired URLs drop out of the index.
 - Claim/refresh the Google Business Profile (category: "Computer consultant" / "Software company"), matching name "Schoodic" and service area Washington County.
-- Add a phone number and street (or service-area) address to `site.ts` and the Organization schema once decided, keeping NAP identical everywhere.
+- No phone number or street address on the site (owner decision, 2026-10-25).
 - Ask happy clients for Google reviews; get listed with local chambers (Calais Regional, Machias Bay, Eastport) and Maine tech directories for local backlinks.
 
 ## 9. Open questions
 
 - Is the Calendly link (`calendly.com/schoodic`) still current?
 - Do we have real numbers (years in business, uptime, response time) for the "Why local" section, or should it stay qualitative?
-- Social links: keep Facebook, LinkedIn, and GitHub as they are?
+- ~~Social links~~ — resolved 2026-10-25: GitHub only (Facebook and LinkedIn retired).
