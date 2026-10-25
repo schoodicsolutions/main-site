@@ -98,7 +98,7 @@ Each service page has: hero (name + one-line promise) → "What we do" (4–6 ca
 - [x] **2 · Home page.** Hero, services grid, approach, why-local, use cases, contact section.
 - [x] **3 · Service pages.** `services.ts` content, `/services/[slug]` template, copy for all six.
 - [x] **4 · SEO & redirects.** Remove city pages and old md services, `_redirects`, sitemap route, JSON-LD, meta cleanup, OG image.
-- [ ] **5 · Polish.** Contact form refresh (runes, interest chips, escaping), legal page styling, 404 page, a11y/reduced-motion pass, Lighthouse, README.
+- [x] **5 · Polish.** Contact form refresh (runes, interest chips, escaping), legal page styling, 404 page, a11y/reduced-motion pass, Lighthouse, README.
 
 ## 8. SEO follow-ups (off-site, owner action)
 
